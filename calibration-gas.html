@@ -5,162 +5,137 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Calibration gas cylinders — 28,000+ SKUs manufactured at our ISO 17025 & 17034 lab. 4-gas mix, H₂S, CO, LEL, bump test gas, EPA protocol gas. Ships 24-48h. WSM Specialty Gases Miami.">
 <title>Calibration Gas Cylinders — Certified Mixtures & EPA Protocol | WSM Specialty Gases</title>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-:root{--nv:#0b1d3a;--bl:#0369a1;--ac:#0ea5e9;--gn:#059669;--gnl:#d1fae5;--gnb:#34d399;--gd:#b8860b;--gdb:#f59e0b;--gdl:#fef3c7;--tx:#1e293b;--tm:#475569;--tl:#64748b;--bd:#e2e8f0;--bl-l:#e0f2fe;--bl-m:#bae6fd;--bg:#f7f9fb;--rd:#e11d48;--rdl:#ffe4e6;--rdb:#fb7185}
+:root{--blue:#0056b8;--blue-d:#003a7a;--blue-dd:#001f45;--lime:#c8d200;--lime-l:#e8ed4a;--white:#fff;--off:#f5f6f8;--gray:#e2e5ea;--tx:#1a1f2e;--tm:#4a5568;--tl:#718096;}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--tx);background:var(--bg);line-height:1.6}
+body{font-family:'Outfit',sans-serif;color:var(--tx);background:var(--white);line-height:1.6}
 a{text-decoration:none;color:inherit}
-.mx{max-width:1100px;margin:0 auto;padding:0 24px}
-
-.nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(14px);border-bottom:1px solid var(--bd);padding:0 24px}
-.nav-in{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px}
-.logo{display:flex;align-items:center;gap:9px}
-.logo-box{width:32px;height:32px;border-radius:7px;background:linear-gradient(135deg,var(--nv),var(--bl));display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;color:#fff}
-.logo-txt{font-weight:800;font-size:14px;color:var(--nv);line-height:1.1}
-.logo-sub{font-size:7px;font-weight:600;color:var(--bl);letter-spacing:2px;text-transform:uppercase}
-.nav-links{display:flex;align-items:center;gap:18px;font-size:12px;color:var(--tm)}
-.nav-links a:hover{color:var(--nv)}
-.nav-cta{font-weight:700!important;color:#fff!important;background:var(--ac);padding:7px 16px;border-radius:6px;font-size:11px!important}
-
-.hero{background:linear-gradient(165deg,#fff 0%,var(--rdl) 55%,#fecdd3 100%);padding:90px 24px 60px}
-.hero-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:44px;align-items:center}
-.breadcrumb{font-size:11px;color:var(--tl);margin-bottom:14px}
-.breadcrumb .active{color:var(--rd);font-weight:600}
-.hero-badge{display:inline-flex;align-items:center;gap:7px;background:var(--rdl);border:1px solid var(--rdb);border-radius:18px;padding:4px 13px;margin-bottom:16px;font-size:9.5px;font-weight:700;color:var(--rd);letter-spacing:1.2px}
-.hero h1{font-size:clamp(26px,3.5vw,42px);font-weight:800;line-height:1.08;letter-spacing:-1.5px;color:var(--nv);margin-bottom:14px}
-.hero h1 span{color:var(--rd)}
-
-.section{padding:68px 24px}
-.s-white{background:#fff}
-.s-gray{background:var(--bg)}
-.s-dark{background:linear-gradient(135deg,var(--nv),#1d3a5c);color:#fff}
-.label{display:inline-flex;align-items:center;gap:8px;margin-bottom:8px}
-.label-line{width:22px;height:2px;border-radius:1px}
-.label-txt{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase}
-.s-title{font-size:clamp(23px,3vw,32px);font-weight:800;color:var(--nv);letter-spacing:-0.5px;margin:4px 0 10px}
-
-.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:32px 0}
-.stat{background:#fff;border:1px solid var(--bd);border-radius:11px;padding:20px;text-align:center}
-.stat-num{font-size:28px;font-weight:800;color:var(--rd)}
-.stat-label{font-size:11.5px;font-weight:700;color:var(--nv);margin-top:2px}
-.stat-sub{font-size:10px;color:var(--tl);margin-top:1px}
-
-.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;margin-top:24px}
-.cat-card{background:#fff;border:1px solid var(--bd);border-radius:10px;padding:18px;transition:all 0.2s}
-.cat-card:hover{border-color:rgba(225,29,72,0.3);transform:translateY(-2px)}
-.cat-icon{font-size:22px;margin-bottom:8px}
-.cat-card h4{font-size:13.5px;font-weight:700;color:var(--nv);margin-bottom:5px}
-.cat-card p{font-size:11.5px;color:var(--tm);line-height:1.5}
-
-.cta-big{display:block;background:var(--rd);color:#fff;text-align:center;padding:18px 32px;border-radius:12px;font-size:16px;font-weight:800;letter-spacing:-0.3px;transition:all 0.2s;box-shadow:0 4px 16px rgba(225,29,72,0.2)}
-.cta-big:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(225,29,72,0.3)}
-.cta-big span{display:block;font-size:11px;font-weight:500;opacity:0.8;margin-top:4px;letter-spacing:0}
-
-.footer{background:var(--nv);padding:28px 24px;text-align:center;font-size:9px;color:rgba(255,255,255,0.25)}
+img{max-width:100%}
+.mx{max-width:1100px;margin:0 auto;padding:0 32px}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:#fff;padding:0 32px;border-bottom:1px solid var(--gray);box-shadow:0 1px 3px rgba(0,0,0,0.04)}
+.nav-in{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:70px}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-links a{font-size:13px;font-weight:600;color:var(--blue-d)}
+.nav-links a:hover{color:var(--blue)}
+.nav-cta{font-size:12px!important;font-weight:700!important;color:var(--blue-dd)!important;background:var(--lime);padding:9px 20px;border-radius:5px}
+.nav-cta:hover{background:var(--lime-l)}
+.hero-banner{background:var(--blue-d);height:250px;display:flex;align-items:center;justify-content:center;padding:90px 32px 20px;text-align:center}
+.hero-banner h1{font-size:clamp(24px,3.2vw,38px);font-weight:900;color:#fff;letter-spacing:-1px;line-height:1.15;max-width:900px}
+.hero-banner h1 span{color:var(--lime)}
+.section{padding:56px 24px}
+.section-w{background:#fff}
+.section-g{background:var(--off)}
+.s-title{font-size:clamp(22px,2.8vw,30px);font-weight:900;color:var(--blue-d);letter-spacing:-0.5px;margin:4px 0 10px;text-align:center}
+.s-desc{font-size:14px;color:var(--tm);max-width:680px;line-height:1.7;text-align:center;margin:0 auto 28px}
+.center{text-align:center}
+.content h2{font-size:22px;font-weight:800;color:var(--blue-d);margin:22px 0 10px}
+.content h3{font-size:17px;font-weight:700;color:var(--blue-d);margin:18px 0 8px}
+.content h4{font-size:15px;font-weight:700;color:var(--blue-d);margin:14px 0 6px}
+.content p{font-size:14px;color:var(--tm);margin-bottom:12px;line-height:1.7}
+.content ul{margin:8px 0 14px 22px}
+.content li{font-size:13.5px;color:var(--tm);margin-bottom:5px;line-height:1.6}
+.content strong{color:var(--blue-d)}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.card{background:#fff;border:1px solid var(--gray);border-radius:10px;padding:20px;text-align:center}
+.card:hover{border-color:var(--blue)}
+.card h3,.card h4{font-size:14px;font-weight:700;color:var(--blue-d);margin-bottom:6px}
+.card p,.card div{font-size:12px;color:var(--tm);line-height:1.55}
+.stat-num{font-size:28px;font-weight:900;color:var(--blue);margin-bottom:4px}
+.btn-p{display:inline-block;font-size:13px;font-weight:700;color:var(--blue-dd);background:var(--lime);padding:11px 24px;border-radius:6px}
+.btn-p:hover{background:var(--lime-l)}
+.lime-bar{height:4px;background:linear-gradient(90deg,var(--lime),var(--blue));width:100%}
+.footer{background:#0056b8;padding:44px 24px 22px;color:rgba(255,255,255,0.6)}
+.footer-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:24px;margin-bottom:24px}
+.footer h4{font-size:10px;font-weight:700;color:#c8d200;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px}
+.footer p,.footer div{font-size:10.5px;line-height:1.65}
+.footer a{color:rgba(255,255,255,0.6)}
+.footer a:hover{color:#c8d200}
+.footer-bottom{max-width:1100px;margin:0 auto;border-top:1px solid rgba(255,255,255,0.1);padding-top:14px;font-size:9px;color:rgba(255,255,255,0.25);text-align:center}
+@media(max-width:900px){.grid-3,.grid-4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}.nav-links{display:none}}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav class="nav"><div class="nav-in">
-  <a href="#" class="logo"><img src="wsm-logo.png" alt="WSM Specialty Gas" style="height:38px;width:auto"></a>
+  <a href="index.html" class="logo"><img src="wsm-logo.png" alt="WSM Specialty Gas" style="height:48px;width:auto"></a>
   <div class="nav-links">
-    <a href="#">Home</a><a href="#">Specialty Gas Lab</a><a href="#">Liquid Helium MRI</a><a href="#">Helium Gas</a><a href="#">UHP Gases</a><a href="#" style="color:var(--rd);font-weight:700">Calibration Gas</a>
-    <a href="#quote" class="nav-cta">Get a Quote</a>
+    <a href="specialty-gas-mixtures.html">Specialty Mixtures</a>
+    <a href="liquid-helium-mri.html">Liquid Helium MRI</a>
+    <a href="helium-gas.html">Helium Gas</a>
+    <a href="uhp-gases.html">UHP Gases</a>
+    <a href="calibration-gas.html">Calibration Gas</a>
+    <a href="bulk-gas-latin-america.html">Latin America</a>
+    <a href="index.html#quote" class="nav-cta">Get a Quote</a>
   </div>
 </div></nav>
 
-<!-- HERO -->
-<!-- H1: "calibration gas cylinders" = 100-1K | body: "calibration gas for gas detector" (+900%), "bump test gas", "epa protocol gas" -->
-<section class="hero"><div class="mx"><div class="hero-grid">
-  <div>
-    <div class="breadcrumb"><a href="#">Home</a> › <a href="#">Products</a> › <span class="active">Calibration Gas</span></div>
-    <div class="hero-badge">🎯 28,000+ SKUs · MANUFACTURED AT OUR ISO LAB · SHIPS 24-48H</div>
+<section class="hero-banner"><h1>Calibration Gas <span>Cylinders</span></h1></section>
 
-    <h1>Calibration Gas<br><span>Cylinders</span></h1>
+<section class="section section-w"><div class="mx content">
+  <p>WSM manufactures <strong>calibration gas cylinders</strong> at our ISO 17025 & 17034 accredited laboratory. <strong>Calibration gas for gas detectors</strong>: 4-gas mix, H₂S, CO, LEL, O₂, <strong>bump test gas</strong>, span gas, and <strong>EPA protocol gas</strong>. 28,000+ part numbers with 184+ competitor cross-references. Certified. Ships 24-48 hours from stock.</p>
 
-    <p style="font-size:14px;color:var(--tm);line-height:1.72;max-width:450px;margin-bottom:24px">
-      WSM manufactures <strong>calibration gas cylinders</strong> at our ISO 17025 & 17034 accredited 
-      laboratory. <strong>Calibration gas for gas detectors</strong>: 4-gas mix, H₂S, CO, LEL, O₂, 
-      <strong>bump test gas</strong>, span gas, and <strong>EPA protocol gas</strong>. 
-      28,000+ part numbers with 184+ competitor cross-references. 
-      Certified. Ships 24-48 hours from stock.
-    </p>
+  <h2>Quick Specifications</h2>
+  <ul>
+    <li><strong>SKUs:</strong> 28,000+</li>
+    <li><strong>Cross-Reference:</strong> 184+ Competitors</li>
+    <li><strong>Ships:</strong> 24-48h Stock</li>
+    <li><strong>Certs:</strong> ISO 17025 · 17034 · PGVP</li>
+    <li><strong>Private Label:</strong> Available</li>
+    <li><strong>Catalog:</strong> <a href="https://wsmcalibrationgas.com" target="_blank" style="color:var(--blue);font-weight:700">wsmcalibrationgas.com</a></li>
+  </ul>
+</div></section>
 
-    <div style="display:flex;gap:10px;flex-wrap:wrap">
-      <a href="https://wsmcalibrationgas.com" target="_blank" rel="noopener noreferrer" style="font-size:13px;font-weight:700;color:#fff;background:var(--rd);padding:11px 24px;border-radius:7px;display:inline-block;box-shadow:0 3px 12px rgba(225,29,72,0.2)">Visit WSM Calibration Gas →</a>
-      <a href="#quote" style="font-size:13px;font-weight:700;color:var(--nv);background:#fff;padding:11px 24px;border-radius:7px;display:inline-block;border:1.5px solid var(--bd)">Request a Quote</a>
-    </div>
-  </div>
-
-  <div>
-    <div style="border-radius:14px;overflow:hidden;box-shadow:0 12px 40px rgba(11,29,58,0.1);border:1px solid var(--bd);margin-bottom:16px">
-      <img src="calibration-lab-photo.png" alt="WSM calibration gas laboratory technician operating cylinder filling station" style="width:100%;height:auto;display:block">
-    </div>
-    <div style="background:#fff;border-radius:10px;padding:16px;border:1px solid var(--bd)">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;font-size:11px">
-        <div style="display:flex;justify-content:space-between;padding:4px 0"><span style="color:var(--tl);font-weight:600">SKUs</span><span style="color:var(--nv);font-weight:700">28,000+</span></div>
-        <div style="display:flex;justify-content:space-between;padding:4px 0"><span style="color:var(--tl);font-weight:600">Cross-Ref</span><span style="color:var(--nv);font-weight:700">184+ Competitors</span></div>
-        <div style="display:flex;justify-content:space-between;padding:4px 0"><span style="color:var(--tl);font-weight:600">Ships</span><span style="color:var(--nv);font-weight:700">24-48h Stock</span></div>
-        <div style="display:flex;justify-content:space-between;padding:4px 0"><span style="color:var(--tl);font-weight:600">Certs</span><span style="color:var(--nv);font-weight:700">ISO 17025 · 17034 · PGVP</span></div>
-        <div style="display:flex;justify-content:space-between;padding:4px 0"><span style="color:var(--tl);font-weight:600">Private Label</span><span style="color:var(--nv);font-weight:700">Available</span></div>
-        <div style="display:flex;justify-content:space-between;padding:4px 0"><span style="color:var(--tl);font-weight:600">Catalog</span><span style="color:var(--rd);font-weight:700"><a href="https://wsmcalibrationgas.com" target="_blank" style="color:var(--rd)">wsmcalibrationgas.com →</a></span></div>
-      </div>
-    </div>
-  </div>
-</div></div></section>
-
-<!-- STATS -->
-<section style="background:#fff;padding:32px 24px;border-bottom:1px solid var(--bd)"><div class="mx">
-  <div class="stat-grid">
-    <div class="stat"><div class="stat-num">28,000+</div><div class="stat-label">Calibration Gas SKUs</div><div class="stat-sub">Manufactured at Our Lab</div></div>
-    <div class="stat"><div class="stat-num">184+</div><div class="stat-label">Cross-References</div><div class="stat-sub">Match Any Competitor Part #</div></div>
-    <div class="stat"><div class="stat-num">24-48h</div><div class="stat-label">Ships from Stock</div><div class="stat-sub">Standard Mixtures</div></div>
-    <div class="stat"><div class="stat-num">3</div><div class="stat-label">Accreditations</div><div class="stat-sub">ISO 17025 · 17034 · EPA PGVP</div></div>
+<section class="section section-g"><div class="mx content">
+  <div class="grid-4">
+    <div class="card"><div class="stat-num">28,000+</div><h4>Calibration Gas SKUs</h4><p>Manufactured at Our Lab</p></div>
+    <div class="card"><div class="stat-num">184+</div><h4>Cross-References</h4><p>Match Any Competitor Part #</p></div>
+    <div class="card"><div class="stat-num">24-48h</div><h4>Ships from Stock</h4><p>Standard Mixtures</p></div>
+    <div class="card"><div class="stat-num">3</div><h4>Accreditations</h4><p>ISO 17025 · 17034 · EPA PGVP</p></div>
   </div>
 </div></section>
 
-<!-- WHAT WE MAKE -->
-<section class="section s-gray"><div class="mx">
-  <div class="label"><div class="label-line" style="background:var(--rd)"></div><span class="label-txt" style="color:var(--rd)">What We Manufacture</span></div>
+<section class="section section-w"><div class="mx content">
   <h2 class="s-title">Calibration Gas for Gas Detectors & More</h2>
-  <p style="font-size:14px;color:var(--tm);max-width:520px;line-height:1.7">Every calibration gas mixture manufactured, analyzed, and certified at our ISO-accredited laboratory in Miami. Full COA with every cylinder.</p>
+  <p class="s-desc">Every calibration gas mixture manufactured, analyzed, and certified at our ISO-accredited laboratory in Miami. Full COA with every cylinder.</p>
 
-  <div class="cat-grid">
-    <div class="cat-card"><div class="cat-icon">🎯</div><h4>4-Gas & Multi-Gas Mix</h4><p>CO / H₂S / LEL / O₂ — the industry standard for portable gas detector calibration. Also 3-gas, 5-gas, and custom multi-gas blends.</p></div>
-    <div class="cat-card"><div class="cat-icon">⚡</div><h4>Bump Test & Span Gas</h4><p>Quick-response bump test gas for daily detector verification. Span calibration gas for full detector calibration per manufacturer specs.</p></div>
-    <div class="cat-card"><div class="cat-icon">🔬</div><h4>EPA Protocol Gas (PGVP)</h4><p>EPA Protocol gases certified under the Protocol Gas Verification Program. NIST-traceable for CEMS and emissions compliance (40 CFR Part 72).</p></div>
-    <div class="cat-card"><div class="cat-icon">⚠️</div><h4>Single Gas Standards</h4><p>H₂S, CO, SO₂, NO, NO₂, HCl, Cl₂, NH₃, LEL (CH₄, C₃H₈, C₄H₁₀), O₂ depletion — any single gas at any concentration.</p></div>
-    <div class="cat-card"><div class="cat-icon">🛢️</div><h4>Hydrocarbon & LEL Blends</h4><p>LEL calibration blends: methane, propane, pentane, isobutane. FID fuel gas (H₂/He, H₂/N₂). Natural gas simulation blends for utilities.</p></div>
-    <div class="cat-card"><div class="cat-icon">🏷️</div><h4>Private Label Program</h4><p>Your brand, our certified gas. Full private label program for distributors — same accredited quality, your branding. Contact us for details.</p></div>
+  <div class="grid-3">
+    <div class="card" style="text-align:left"><h4>4-Gas & Multi-Gas Mix</h4><p>CO / H₂S / LEL / O₂ — the industry standard for portable gas detector calibration. Also 3-gas, 5-gas, and custom multi-gas blends.</p></div>
+    <div class="card" style="text-align:left"><h4>Bump Test & Span Gas</h4><p>Quick-response bump test gas for daily detector verification. Span calibration gas for full detector calibration per manufacturer specs.</p></div>
+    <div class="card" style="text-align:left"><h4>EPA Protocol Gas (PGVP)</h4><p>EPA Protocol gases certified under the Protocol Gas Verification Program. NIST-traceable for CEMS and emissions compliance (40 CFR Part 72).</p></div>
+    <div class="card" style="text-align:left"><h4>Single Gas Standards</h4><p>H₂S, CO, SO₂, NO, NO₂, HCl, Cl₂, NH₃, LEL (CH₄, C₃H₈, C₄H₁₀), O₂ depletion — any single gas at any concentration.</p></div>
+    <div class="card" style="text-align:left"><h4>Hydrocarbon & LEL Blends</h4><p>LEL calibration blends: methane, propane, pentane, isobutane. FID fuel gas (H₂/He, H₂/N₂). Natural gas simulation blends for utilities.</p></div>
+    <div class="card" style="text-align:left"><h4>Private Label Program</h4><p>Your brand, our certified gas. Full private label program for distributors — same accredited quality, your branding. Contact us for details.</p></div>
   </div>
 </div></section>
 
-<!-- BIG CTA TO WSMCALIBRATIONGAS.COM -->
-<section class="section s-white"><div class="mx" style="max-width:700px">
-  <div style="text-align:center;margin-bottom:28px">
-    <div class="label" style="justify-content:center"><div class="label-line" style="background:var(--rd)"></div><span class="label-txt" style="color:var(--rd)">Full Catalog</span></div>
-    <h2 class="s-title">Explore 28,000+ Calibration Gas Products</h2>
-    <p style="font-size:14px;color:var(--tm);max-width:480px;margin:0 auto 28px;line-height:1.7">Visit our dedicated calibration gas website for the complete product catalog, competitor cross-reference tool, instant quoting, and distributor resources.</p>
-  </div>
-  <a href="https://wsmcalibrationgas.com" target="_blank" rel="noopener noreferrer" class="cta-big">
-    Visit wsmcalibrationgas.com →
-    <span>Full catalog · Cross-reference tool · Instant quoting · Distributor portal</span>
-  </a>
+<section class="section section-g"><div class="mx content">
+  <h2 class="s-title">Explore 28,000+ Calibration Gas Products</h2>
+  <p class="s-desc">Visit our dedicated calibration gas website for the complete product catalog, competitor cross-reference tool, instant quoting, and distributor resources.</p>
+  <p class="center"><a href="https://wsmcalibrationgas.com" target="_blank" rel="noopener noreferrer" class="btn-p">Visit wsmcalibrationgas.com</a></p>
+  <p class="center" style="margin-top:10px;font-size:12px">Full catalog · Cross-reference tool · Instant quoting · Distributor portal</p>
 </div></section>
 
-<!-- CTA -->
-<section class="section s-dark" id="quote"><div class="mx">
-  <div style="text-align:center;max-width:560px;margin:0 auto">
-    <h2 style="font-size:clamp(22px,3vw,30px);font-weight:800;color:#fff;margin-bottom:10px">Need Calibration Gas?</h2>
-    <p style="font-size:14px;color:rgba(255,255,255,0.6);max-width:460px;margin:0 auto 24px">For custom quotes, bulk orders, or private label inquiries — contact our team directly.</p>
-    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-      <a href="/cdn-cgi/l/email-protection#bbc8dad7dec8fbccc8d6c8cecbcbd7d2dec995d8d4d6" style="font-size:14px;font-weight:700;color:var(--nv);background:#fff;padding:13px 28px;border-radius:8px">✉️ Request a Quote</a>
-      <a href="tel:+13054551220" style="font-size:14px;font-weight:700;color:#fff;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);padding:13px 28px;border-radius:8px">📞 (305) 455-1220</a>
-    </div>
-    <p style="font-size:11px;color:rgba(255,255,255,0.35);margin-top:20px">WSM Specialty Gases · 3535 NW 60th St, Miami FL 33142 · ISO 17025 & 17034 · EPA PGVP</p>
-  </div>
+<section class="section section-w"><div class="mx content">
+  <h2 class="s-title">Need Calibration Gas?</h2>
+  <p class="s-desc">For custom quotes, bulk orders, or private label inquiries — contact our team directly.</p>
+  <p class="center"><a href="index.html#quote" class="btn-p">Request a Quote</a></p>
+  <p class="center" style="margin-top:14px;font-size:13px">(305) 455-1220 · sales@wsmsupplier.com</p>
+  <p class="center" style="font-size:11px">WSM Specialty Gases · 3535 NW 60th St, Miami FL 33142 · ISO 17025 & 17034 · EPA PGVP</p>
 </div></section>
 
-<footer class="footer">© 2026 WSM Specialty Gases LLC. All rights reserved. · ISO 17025 & 1703
+<div class="lime-bar"></div>
+<footer class="footer">
+  <div class="footer-grid">
+    <div><img src="wsm-logo.png" alt="WSM Specialty Gas" style="height:44px;width:auto;margin-bottom:12px;filter:brightness(0) invert(1)"><p>ISO 17025 & 17034 Certified Laboratory<br>PJLA #125017 · ILAC-MRA<br>3535 NW 60th St, Miami, FL 33142</p></div>
+    <div><h4>Laboratory</h4><div><a href="specialty-gas-mixtures.html">Certified Gas Mixtures</a></div><div>EPA Protocol / PGVP</div><div><a href="uhp-gases.html">UHP & Research Grade</a></div><div>Reactive & Corrosive</div><div>Hydrocarbon Blends</div><div>Medical & Laser</div></div>
+    <div><h4>Products</h4><div><a href="liquid-helium-mri.html">Liquid Helium / MRI</a></div><div><a href="helium-gas.html">Helium Gas Cylinders</a></div><div><a href="calibration-gas.html">Calibration Gas</a></div><div><a href="bulk-gas-latin-america.html">Bulk Cryogenic</a></div><div>Specialty Mixtures</div></div>
+    <div><h4>Contact</h4><p>(305) 455-1220<br>sales@wsmsupplier.com<br>wsmspecialtygases.com</p><div style="margin-top:10px;display:inline-block;font-size:9px;font-weight:700;color:#001f45;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:12px;background:#c8d200">WhatsApp for LATAM</div></div>
+  </div>
+  <div class="footer-bottom">© 2026 WSM Supplier LLC · All Rights Reserved · Miami, FL · USA</div>
+</footer>
+</body>
+</html>
