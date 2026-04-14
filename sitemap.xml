@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- HOMEPAGE -->
+  <url>
+    <loc>https://www.wsmspecialtygases.com/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.wsmspecialtygases.com/images/calibration-lab-photo.png</image:loc>
+      <image:title>WSM Specialty Gases Laboratory Miami</image:title>
+    </image:image>
+  </url>
+
+  <!-- SPECIALTY GAS LAB / MIXTURES -->
+  <url>
+    <loc>https://www.wsmspecialtygases.com/specialty-gas-mixtures</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- HELISTREAM / LIQUID HELIUM MRI -->
+  <url>
+    <loc>https://www.wsmspecialtygases.com/liquid-helium-mri</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- HELIUM GAS -->
+  <url>
+    <loc>https://www.wsmspecialtygases.com/helium-gas</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- UHP GASES -->
+  <url>
+    <loc>https://www.wsmspecialtygases.com/uhp-gases</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- BULK LATAM -->
+  <url>
+    <loc>https://www.wsmspecialtygases.com/bulk-gas-latin-america</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- CALIBRATION GAS -->
+  <url>
+    <loc>https://www.wsmspecialtygases.com/calibration-gas</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- INDUSTRIES (pending build) -->
+  <url>
+    <loc>https://www.wsmspecialtygases.com/industries</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ABOUT (pending build) -->
+  <url>
+    <loc>https://www.wsmspecialtygases.com/about</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- CERTIFICATES -->
+  <url>
+    <loc>https://www.wsmspecialtygases.com/WSM-ISO-17025-L25-1002.pdf</loc>
+    <lastmod>2025-12-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.wsmspecialtygases.com/WSM-ISO-17034-L25-1003.pdf</loc>
+    <lastmod>2025-12-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>

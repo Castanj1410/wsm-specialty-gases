@@ -1,0 +1,21 @@
+# robots.txt — WSM Specialty Gases
+# https://www.wsmspecialtygases.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.wsmspecialtygases.com/sitemap.xml
+
+# Allow all crawlers to index all pages
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Block internal/admin paths (update when deployed)
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /node_modules/

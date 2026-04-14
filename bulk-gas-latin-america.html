@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Bulk gas supplier for Latin America — LOX, LIN, LAR, CO₂ & helium in ISO tanks from Miami. Cryogenic repair, ISO tank certification 2.5 & 5 year. WSM Specialty Gases.">
+<title>Bulk Gas Supplier — Liquid Nitrogen, Oxygen, Argon for Latin America | WSM Specialty Gases</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--nv:#0b1d3a;--bl:#0369a1;--ac:#0ea5e9;--gd:#b8860b;--gdb:#f59e0b;--gdl:#fef3c7;--gn:#059669;--gnl:#d1fae5;--gnb:#34d399;--tx:#1e293b;--tm:#475569;--tl:#64748b;--bd:#e2e8f0;--bl-l:#e0f2fe;--bl-m:#bae6fd;--bg:#f7f9fb}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--tx);background:var(--bg);line-height:1.6}
+a{text-decoration:none;color:inherit}
+.mx{max-width:1100px;margin:0 auto;padding:0 24px}
+
+.nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(14px);border-bottom:1px solid var(--bd);padding:0 24px}
+.nav-in{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{display:flex;align-items:center;gap:9px}
+.logo-box{width:32px;height:32px;border-radius:7px;background:linear-gradient(135deg,var(--nv),var(--bl));display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;color:#fff}
+.logo-txt{font-weight:800;font-size:14px;color:var(--nv);line-height:1.1}
+.logo-sub{font-size:7px;font-weight:600;color:var(--bl);letter-spacing:2px;text-transform:uppercase}
+.nav-links{display:flex;align-items:center;gap:18px;font-size:12px;color:var(--tm)}
+.nav-links a:hover{color:var(--nv)}
+.nav-cta{font-weight:700!important;color:#fff!important;background:var(--ac);padding:7px 16px;border-radius:6px;font-size:11px!important}
+
+.hero{background:linear-gradient(165deg,#fff 0%,var(--gdl) 55%,#fde68a 100%);padding:90px 24px 60px}
+.hero-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:44px;align-items:center}
+.breadcrumb{font-size:11px;color:var(--tl);margin-bottom:14px}
+.breadcrumb .active{color:var(--gd);font-weight:600}
+.hero-badge{display:inline-flex;align-items:center;gap:7px;background:var(--gdl);border:1px solid var(--gdb);border-radius:18px;padding:4px 13px;margin-bottom:16px;font-size:9.5px;font-weight:700;color:var(--gd);letter-spacing:1.2px}
+.hero h1{font-size:clamp(26px,3.5vw,42px);font-weight:800;line-height:1.08;letter-spacing:-1.5px;color:var(--nv);margin-bottom:14px}
+.hero h1 span{color:var(--gd)}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn-p{font-size:13px;font-weight:700;color:#fff;background:var(--gd);padding:11px 24px;border-radius:7px;display:inline-block;box-shadow:0 3px 12px rgba(184,134,11,0.2)}
+.btn-s{font-size:13px;font-weight:700;color:var(--nv);background:#fff;padding:11px 24px;border-radius:7px;display:inline-block;border:1.5px solid var(--bd)}
+
+.spec-box{background:#fff;border-radius:14px;padding:24px;border:1px solid var(--bd);box-shadow:0 8px 30px rgba(11,29,58,0.05)}
+.spec-title{font-size:11px;font-weight:700;color:var(--tl);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px}
+.spec-row{display:flex;justify-content:space-between;align-items:start;padding:8px 0;border-bottom:1px solid var(--bg)}
+.spec-row:last-child{border:none}
+.spec-label{font-size:11.5px;font-weight:600;color:var(--tl);width:120px;flex-shrink:0}
+.spec-val{font-size:12px;font-weight:600;color:var(--nv);text-align:right}
+
+.section{padding:68px 24px}
+.s-white{background:#fff}
+.s-gray{background:var(--bg)}
+.s-dark{background:linear-gradient(135deg,var(--nv),#1d3a5c);color:#fff}
+.label{display:inline-flex;align-items:center;gap:8px;margin-bottom:8px}
+.label-line{width:22px;height:2px;border-radius:1px}
+.label-txt{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase}
+.s-title{font-size:clamp(23px,3vw,32px);font-weight:800;color:var(--nv);letter-spacing:-0.5px;margin:4px 0 10px}
+
+/* PRODUCT CARDS */
+.prod-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin-top:24px}
+.prod-card{background:#fff;border:1px solid var(--bd);border-radius:11px;padding:20px;text-align:center;transition:all 0.2s}
+.prod-card:hover{border-color:rgba(184,134,11,0.3);transform:translateY(-2px)}
+.prod-formula{font-size:28px;font-weight:800;color:var(--gd);margin-bottom:4px}
+.prod-name{font-size:13px;font-weight:700;color:var(--nv)}
+.prod-desc{font-size:10.5px;color:var(--tl);margin-top:4px;line-height:1.4}
+
+/* COVERAGE */
+.cov-row{display:flex;align-items:center;gap:12px;padding:10px 14px;border-radius:7px;margin-bottom:5px;border:1px solid var(--bd);transition:background 0.2s}
+.cov-row:hover{background:var(--gdl);border-color:var(--gdb)}
+.cov-flag{font-size:20px}
+.cov-name{font-size:13px;font-weight:700;color:var(--nv)}
+.cov-detail{font-size:10.5px;color:var(--tl)}
+
+/* SERVICE CARDS */
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px;margin-top:24px}
+.svc-card{background:#fff;border:1px solid var(--bd);border-radius:11px;padding:22px;transition:all 0.2s;position:relative;overflow:hidden}
+.svc-card:hover{border-color:rgba(184,134,11,0.3);transform:translateY(-2px)}
+.svc-bar{position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gd),var(--gdb))}
+.svc-icon{font-size:24px;margin-bottom:8px}
+.svc-card h4{font-size:14px;font-weight:700;color:var(--nv);margin-bottom:6px}
+.svc-card p{font-size:12px;color:var(--tm);line-height:1.55}
+.svc-item{font-size:11.5px;color:var(--tm);padding:2.5px 0 2.5px 16px;position:relative}
+.svc-item::before{content:"✓";position:absolute;left:0;color:var(--gd);font-weight:700}
+
+/* COMPLIANCE */
+.comp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin-top:20px}
+.comp-card{background:#fff;border:1px solid var(--bd);border-radius:9px;padding:16px;text-align:center}
+.comp-icon{font-size:22px;margin-bottom:6px}
+.comp-card h5{font-size:12px;font-weight:700;color:var(--nv);margin-bottom:3px}
+.comp-card p{font-size:10.5px;color:var(--tl);line-height:1.4}
+
+/* FAQ */
+.faq-item{background:#fff;border:1px solid var(--bd);border-radius:9px;margin-bottom:7px;overflow:hidden}
+.faq-q{padding:14px 18px;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.faq-q h4{font-size:13.5px;font-weight:700;color:var(--nv);margin:0}
+.faq-q span{font-size:18px;color:var(--gd);transition:transform 0.3s}
+.faq-a{padding:0 18px 16px;font-size:12.5px;color:var(--tm);line-height:1.6;display:none}
+.faq-item.open .faq-a{display:block}
+.faq-item.open .faq-q span{transform:rotate(45deg)}
+
+.footer{background:var(--nv);padding:28px 24px;text-align:center;font-size:9px;color:rgba(255,255,255,0.25)}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav"><div class="nav-in">
+  <a href="#" class="logo"><img src="wsm-logo.png" alt="WSM Specialty Gas" style="height:38px;width:auto"></a>
+  <div class="nav-links">
+    <a href="#">Home</a><a href="#">Specialty Gas Lab</a><a href="#">Liquid Helium MRI</a><a href="#">Helium Gas</a><a href="#">UHP Gases</a><a href="#" style="color:var(--gd);font-weight:700">Bulk LATAM</a>
+    <a href="#quote" class="nav-cta">Get a Quote</a>
+  </div>
+</div></nav>
+
+<!-- HERO -->
+<!-- H1: "bulk gas supplier" + "bulk liquid nitrogen" = 100-1K, LOW -->
+<section class="hero"><div class="mx"><div class="hero-grid">
+  <div>
+    <div class="breadcrumb"><a href="#">Home</a> › <a href="#">Products</a> › <span class="active">Bulk Cryogenic</span></div>
+    <div class="hero-badge">🚛 BULK CRYOGENIC · ISO TANK DELIVERY · LATIN AMERICA</div>
+
+    <h1>Bulk Gas Supplier<br><span>for Latin America</span></h1>
+
+    <!-- Body: "bulk liquid nitrogen" (100-1K), "bulk liquid oxygen", "bulk liquid argon" (+∞), "bulk gas delivery" -->
+    <p style="font-size:14px;color:var(--tm);line-height:1.72;max-width:450px;margin-bottom:24px">
+      WSM delivers <strong>bulk liquid nitrogen</strong>, <strong>bulk liquid oxygen</strong>, 
+      <strong>bulk liquid argon</strong>, liquid CO₂, and helium to Latin America and the Caribbean 
+      via ISO tank containers. <strong>We handle the entire logistics chain</strong> — loading, ocean freight, 
+      customs clearance, inland transport, and last-mile delivery. Our team specializes in 
+      <strong>maximum volume efficiency loading</strong> to optimize every shipment. 
+      ISO tanks available for rent. Plus cryogenic repair and tank certification services.
+    </p>
+
+    <div class="btns">
+      <a href="#quote" class="btn-p">Get a Bulk Quote</a>
+      <a href="#products" class="btn-s">View Products</a>
+    </div>
+  </div>
+
+  <div class="spec-box">
+    <div class="spec-title">Quick Specifications</div>
+    <div class="spec-row"><span class="spec-label">Products</span><span class="spec-val">LOX · LIN · LAR · CO₂ · Helium</span></div>
+    <div class="spec-row"><span class="spec-label">Delivery Mode</span><span class="spec-val">ISO Tank Containers</span></div>
+    <div class="spec-row"><span class="spec-label">ISO Tank Rental</span><span class="spec-val">Available — Contact Us</span></div>
+    <div class="spec-row"><span class="spec-label">Loading</span><span class="spec-val">Max Volume Efficiency Loading</span></div>
+    <div class="spec-row"><span class="spec-label">Market</span><span class="spec-val">Latin America & Caribbean</span></div>
+    <div class="spec-row"><span class="spec-label">Logistics</span><span class="spec-val">Ocean Freight · Customs · Last-Mile</span></div>
+    <div class="spec-row"><span class="spec-label">Compliance</span><span class="spec-val">49 CFR · IMDG · IATA</span></div>
+    <div class="spec-row"><span class="spec-label">Services</span><span class="spec-val">Cryogenic & ISO Tank Repair</span></div>
+    <div class="spec-row"><span class="spec-label">Certifications</span><span class="spec-val">ISO Tank 2.5 Year & 5 Year</span></div>
+    <div class="spec-row"><span class="spec-label">Hub</span><span class="spec-val">Miami, FL — Gateway to the Americas</span></div>
+  </div>
+</div></div></section>
+
+<!-- PRODUCTS -->
+<section id="products" class="section s-white"><div class="mx">
+  <div class="label"><div class="label-line" style="background:var(--gd)"></div><span class="label-txt" style="color:var(--gd)">Bulk Products</span></div>
+  <!-- H2: "bulk liquid nitrogen" = 100-1K -->
+  <h2 class="s-title">Bulk Liquid Nitrogen, Oxygen, Argon & More</h2>
+  <p style="font-size:14px;color:var(--tm);max-width:520px;line-height:1.7">Cryogenic liquids and compressed gases delivered in ISO tank containers to Latin America and the Caribbean. Industrial, medical, and scientific grade products available.</p>
+
+  <div class="prod-grid">
+    <div class="prod-card">
+      <div class="prod-formula">LIN</div>
+      <div class="prod-name">Liquid Nitrogen</div>
+      <div class="prod-desc">Industrial processes, cryopreservation, food freezing, pharmaceuticals</div>
+    </div>
+    <div class="prod-card">
+      <div class="prod-formula">LOX</div>
+      <div class="prod-name">Liquid Oxygen</div>
+      <div class="prod-desc">Hospitals, steel-making, combustion processes, wastewater treatment</div>
+    </div>
+    <div class="prod-card">
+      <div class="prod-formula">LAR</div>
+      <div class="prod-name">Liquid Argon</div>
+      <div class="prod-desc">Welding, metallurgy, semiconductor manufacturing, electronics</div>
+    </div>
+    <div class="prod-card">
+      <div class="prod-formula">CO₂</div>
+      <div class="prod-name">Liquid Carbon Dioxide</div>
+      <div class="prod-desc">Food industry, carbonation, refrigeration, water treatment</div>
+    </div>
+    <div class="prod-card">
+      <div class="prod-formula">He</div>
+      <div class="prod-name">Helium</div>
+      <div class="prod-desc">MRI cryogenics, aerospace, electronics, leak detection</div>
+    </div>
+  </div>
+</div></section>
+
+<!-- LATAM COVERAGE -->
+<section class="section s-gray"><div class="mx">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start">
+    <div>
+      <div class="label"><div class="label-line" style="background:var(--gn)"></div><span class="label-txt" style="color:var(--gn)">Coverage</span></div>
+      <h2 class="s-title">Bulk Delivery Across Latin America</h2>
+      <p style="font-size:14px;color:var(--tm);line-height:1.7;margin-bottom:20px">
+        <strong>WSM handles the entire logistics chain</strong> — you focus on your business, we take care 
+        of everything from loading to delivery. Our team specializes in maximizing the volume loaded into 
+        every ISO tank, so you get the most product per shipment. ISO tanks available for rent if you 
+        don't have your own equipment.
+      </p>
+
+      <div style="background:var(--gdl);border:1px solid var(--gdb);border-radius:10px;padding:16px;margin-bottom:16px">
+        <div style="font-size:12px;font-weight:700;color:var(--nv);margin-bottom:7px">We Handle Everything:</div>
+        <div class="svc-item">Maximum volume efficiency loading — optimized per shipment</div>
+        <div class="svc-item">ISO tank containers available for rent</div>
+        <div class="svc-item">Ocean freight booking & vessel tracking</div>
+        <div class="svc-item">Customs clearance & import documentation</div>
+        <div class="svc-item">Inland transport to final destination</div>
+        <div class="svc-item">HAZMAT compliance: 49 CFR, IMDG, IATA</div>
+        <div class="svc-item">Emergency response plans & MSDS</div>
+      </div>
+    </div>
+
+    <div>
+      <div style="font-size:11px;font-weight:700;color:var(--tl);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px">Markets Served</div>
+      <div class="cov-row"><span class="cov-flag">🇻🇪</span><div><div class="cov-name">Venezuela</div><div class="cov-detail">Caracas · Maracaibo — Priority growth market</div></div></div>
+      <div class="cov-row"><span class="cov-flag">🇨🇴</span><div><div class="cov-name">Colombia</div><div class="cov-detail">Bogotá · Medellín · Barranquilla · Cartagena</div></div></div>
+      <div class="cov-row"><span class="cov-flag">🇲🇽</span><div><div class="cov-name">México</div><div class="cov-detail">CDMX · Monterrey · Guadalajara · Cancún</div></div></div>
+      <div class="cov-row"><span class="cov-flag">🇵🇷</span><div><div class="cov-name">Puerto Rico</div><div class="cov-detail">Direct ocean & air freight from Miami</div></div></div>
+      <div class="cov-row"><span class="cov-flag">🇩🇴</span><div><div class="cov-name">Dominican Republic</div><div class="cov-detail">Santo Domingo · Santiago</div></div></div>
+      <div class="cov-row"><span class="cov-flag">🇵🇦</span><div><div class="cov-name">Panama</div><div class="cov-detail">Panama City — Central America hub</div></div></div>
+      <div class="cov-row"><span class="cov-flag">🇨🇷</span><div><div class="cov-name">Costa Rica</div><div class="cov-detail">San José metro area</div></div></div>
+      <div class="cov-row"><span class="cov-flag">🇬🇹</span><div><div class="cov-name">Guatemala</div><div class="cov-detail">Guatemala City</div></div></div>
+      <div class="cov-row"><span class="cov-flag">🌎</span><div><div class="cov-name">South America</div><div class="cov-detail">Argentina · Chile · Ecuador · Peru · Brazil</div></div></div>
+      <div class="cov-row"><span class="cov-flag">🏝️</span><div><div class="cov-name">Caribbean Islands</div><div class="cov-detail">Trinidad & Tobago · Jamaica · Curaçao · Aruba</div></div></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- SERVICES: REPAIR & CERTIFICATION -->
+<section class="section s-white"><div class="mx">
+  <div class="label"><div class="label-line" style="background:var(--gd)"></div><span class="label-txt" style="color:var(--gd)">Services</span></div>
+  <h2 class="s-title">Cryogenic Repair & Tank Certification</h2>
+  <p style="font-size:14px;color:var(--tm);max-width:560px;line-height:1.7">Beyond bulk gas supply, WSM provides complete cryogenic equipment maintenance, repair, and certification services to keep your operations running safely and in compliance.</p>
+
+  <div class="svc-grid">
+    <div class="svc-card"><div class="svc-bar"></div><div class="svc-icon">🔧</div>
+      <h4>Cryogenic Equipment Repair</h4>
+      <p style="margin-bottom:10px">Full repair and maintenance services for cryogenic equipment including vacuum testing, valve replacement, pressure system restoration, and insulation repair.</p>
+      <div class="svc-item">Vacuum jacket testing & restoration</div>
+      <div class="svc-item">Safety valve replacement & calibration</div>
+      <div class="svc-item">Pressure system repair & testing</div>
+      <div class="svc-item">Piping & fitting maintenance</div>
+    </div>
+
+    <div class="svc-card"><div class="svc-bar"></div><div class="svc-icon">🛢️</div>
+      <h4>ISO Tank Repair</h4>
+      <p style="margin-bottom:10px">Complete repair services for ISO tank containers used in cryogenic liquid transport. Structural, mechanical, and safety system repairs to return tanks to full service.</p>
+      <div class="svc-item">Structural frame & shell repair</div>
+      <div class="svc-item">Valve & piping system overhaul</div>
+      <div class="svc-item">Vacuum system repair & re-evacuation</div>
+      <div class="svc-item">Insulation & jacketing restoration</div>
+    </div>
+
+    <div class="svc-card"><div class="svc-bar"></div><div class="svc-icon">🚛</div>
+      <h4>Tank Trailer Repair</h4>
+      <p style="margin-bottom:10px">Maintenance and repair services for cryogenic tank trailers. Keeping your transport fleet operational, safe, and compliant with DOT and international regulations.</p>
+      <div class="svc-item">DOT compliance repairs</div>
+      <div class="svc-item">Road trailer mechanical service</div>
+      <div class="svc-item">Cryogenic system maintenance</div>
+      <div class="svc-item">Emergency roadside support</div>
+    </div>
+
+    <div class="svc-card"><div class="svc-bar"></div><div class="svc-icon">📋</div>
+      <h4>ISO Tank Certification</h4>
+      <p style="margin-bottom:10px">Periodic inspection and re-certification of ISO tank containers to maintain compliance and operational status for international transport.</p>
+      <div class="svc-item">2.5 Year intermediate inspection & certification</div>
+      <div class="svc-item">5 Year periodic inspection & certification</div>
+      <div class="svc-item">DOT / IMO compliance verification</div>
+      <div class="svc-item">Full documentation & certification records</div>
+    </div>
+  </div>
+</div></section>
+
+<!-- COMPLIANCE -->
+<section class="section s-gray"><div class="mx">
+  <div class="label"><div class="label-line" style="background:var(--nv)"></div><span class="label-txt" style="color:var(--nv)">Compliance</span></div>
+  <h2 class="s-title">Regulatory & Safety Compliance</h2>
+  <p style="font-size:14px;color:var(--tm);max-width:520px;line-height:1.7">Every bulk shipment fully compliant with U.S. and international regulations for hazardous materials transport.</p>
+
+  <div class="comp-grid">
+    <div class="comp-card"><div class="comp-icon">📜</div><h5>49 CFR</h5><p>U.S. DOT Hazardous Materials Regulations</p></div>
+    <div class="comp-card"><div class="comp-icon">🚢</div><h5>IMDG Code</h5><p>International Maritime Dangerous Goods</p></div>
+    <div class="comp-card"><div class="comp-icon">✈️</div><h5>IATA DGR</h5><p>Air Transport Dangerous Goods Regulations</p></div>
+    <div class="comp-card"><div class="comp-icon">🛢️</div><h5>DOT / IMO</h5><p>Tank inspection & re-certification</p></div>
+    <div class="comp-card"><div class="comp-icon">📋</div><h5>MSDS / SDS</h5><p>Safety Data Sheets with every shipment</p></div>
+    <div class="comp-card"><div class="comp-icon">🚨</div><h5>Emergency Plans</h5><p>Response plans for transport incidents</p></div>
+  </div>
+</div></section>
+
+<!-- FAQ -->
+<section class="section s-white"><div class="mx" style="max-width:760px">
+  <div style="text-align:center;margin-bottom:28px">
+    <div class="label" style="justify-content:center"><div class="label-line" style="background:var(--gd)"></div><span class="label-txt" style="color:var(--gd)">FAQ</span></div>
+    <h2 class="s-title" style="font-size:clamp(22px,3vw,28px)">Frequently Asked Questions</h2>
+  </div>
+
+  <div class="faq-item open"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><h4>What bulk cryogenic products does WSM supply to Latin America?</h4><span>+</span></div><div class="faq-a">WSM supplies bulk liquid nitrogen (LIN), liquid oxygen (LOX), liquid argon (LAR), liquid carbon dioxide (CO₂), and helium to Latin America and the Caribbean via ISO tank containers. All products are sourced and coordinated from our Miami logistics hub.</div></div>
+
+  <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><h4>Which countries does WSM deliver bulk gas to?</h4><span>+</span></div><div class="faq-a">WSM delivers bulk cryogenic products to Venezuela, Colombia, Mexico, Puerto Rico, Dominican Republic, Panama, Costa Rica, Guatemala, Argentina, Chile, Ecuador, Peru, Brazil, Trinidad & Tobago, Jamaica, Curaçao, Aruba, and other Caribbean and Latin American markets. Contact us for availability in your specific region.</div></div>
+
+  <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><h4>How does WSM handle international bulk gas logistics?</h4><span>+</span></div><div class="faq-a">WSM manages end-to-end logistics: ISO tank container loading, ocean freight booking and vessel tracking, customs clearance and import documentation, inland transport, and last-mile delivery to your facility. All shipments are fully HAZMAT compliant (49 CFR, IMDG, IATA) with emergency response plans and MSDS documentation.</div></div>
+
+  <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><h4>Does WSM offer cryogenic repair services?</h4><span>+</span></div><div class="faq-a">Yes. WSM provides complete cryogenic equipment repair including vacuum testing, valve replacement, pressure system restoration, and insulation repair. We also repair ISO tank containers and tank trailers — structural, mechanical, and safety system repairs to return equipment to full service.</div></div>
+
+  <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><h4>What ISO tank certification services does WSM provide?</h4><span>+</span></div><div class="faq-a">WSM performs ISO tank periodic inspections and re-certifications: the 2.5 year intermediate inspection and the 5 year periodic inspection. Both include DOT/IMO compliance verification and full documentation. Keeping your ISO tanks certified is essential for continued international transport operations.</div></div>
+
+  <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><h4>Why is Miami the ideal hub for bulk gas export to Latin America?</h4><span>+</span></div><div class="faq-a">Miami provides the shortest and most frequent ocean freight routes to Latin America and the Caribbean. Direct shipping lines connect to all major ports in the region. Combined with Miami's established HAZMAT logistics infrastructure, customs brokerage services, and WSM's local expertise, it's the most efficient gateway for bulk cryogenic delivery to the Americas.</div></div>
+</div></section>
+
+<!-- CTA -->
+<section class="section s-dark" id="quote"><div class="mx">
+  <div style="text-align:center;max-width:560px;margin:0 auto">
+    <h2 style="font-size:clamp(22px,3vw,30px);font-weight:800;color:#fff;margin-bottom:10px">Need Bulk Cryogenic for Latin America?</h2>
+    <p style="font-size:14px;color:rgba(255,255,255,0.6);max-width:460px;margin:0 auto 24px">Tell us the product, volume, and destination. Our logistics team will provide a complete door-to-door quote within 48 hours.</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+      <a href="/cdn-cgi/l/email-protection#0d7e6c61687e4d7a7e607e787d7d6164687f236e6260" style="font-size:14px;font-weight:700;color:var(--nv);background:#fff;padding:13px 28px;border-radius:8px">✉️ Request a Quote</a>
+      <a href="tel:+13054551220" style="font-size:14px;font-weight:700;color:#fff;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);padding:13px 28px;border-radius:8px">📞 (305) 455-1220</a>
+    </div>
+    <p style="font-size:11px;color:rgba(255,255,255,0.35);margin-top:20px">WSM Specialty Gases · Miami, FL · ISO Tank Delivery · 49 CFR · IMDG · IATA Compliant</p>
+  </div>
+</div></section>
+
+<footer class="footer">© 2026 WSM Specialty Gases LLC. All rights reserved. · 3535 NW 60th St, Miami FL 33142 · ISO 17025 & 1703

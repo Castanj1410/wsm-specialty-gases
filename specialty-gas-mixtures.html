@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Specialty gas mixtures — EPA Protocol, NIST-traceable, sulfur, multi-component (2-12+ gases), reactive/corrosive, medical USP, laser gas. ISO 17025 & 17034 certified laboratory. WSM Miami.">
+<title>Specialty Gas Mixtures — EPA Protocol, NIST-Traceable, Custom Blends | WSM Specialty Gases</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--nv:#0b1d3a;--bl:#0369a1;--ac:#0ea5e9;--gn:#059669;--gnl:#d1fae5;--gnb:#34d399;--gd:#b8860b;--gdb:#f59e0b;--gdl:#fef3c7;--tx:#1e293b;--tm:#475569;--tl:#64748b;--bd:#e2e8f0;--bl-l:#e0f2fe;--bl-m:#bae6fd;--bg:#f7f9fb;--or:#ea580c;--orl:#fff7ed;--orb:#fb923c}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--tx);background:var(--bg);line-height:1.6}
+a{text-decoration:none;color:inherit}
+.mx{max-width:1100px;margin:0 auto;padding:0 24px}
+
+.nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(14px);border-bottom:1px solid var(--bd);padding:0 24px}
+.nav-in{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{display:flex;align-items:center;gap:9px}
+.logo-box{width:32px;height:32px;border-radius:7px;background:linear-gradient(135deg,var(--nv),var(--bl));display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;color:#fff}
+.logo-txt{font-weight:800;font-size:14px;color:var(--nv);line-height:1.1}
+.logo-sub{font-size:7px;font-weight:600;color:var(--bl);letter-spacing:2px;text-transform:uppercase}
+.nav-links{display:flex;align-items:center;gap:18px;font-size:12px;color:var(--tm)}
+.nav-links a:hover{color:var(--nv)}
+.nav-cta{font-weight:700!important;color:#fff!important;background:var(--ac);padding:7px 16px;border-radius:6px;font-size:11px!important}
+
+.hero{background:linear-gradient(165deg,#fff 0%,var(--orl) 55%,#fed7aa 100%);padding:90px 24px 60px}
+.hero-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:44px;align-items:center}
+.breadcrumb{font-size:11px;color:var(--tl);margin-bottom:14px}
+.breadcrumb .active{color:var(--or);font-weight:600}
+.hero-badge{display:inline-flex;align-items:center;gap:7px;background:var(--orl);border:1px solid var(--orb);border-radius:18px;padding:4px 13px;margin-bottom:16px;font-size:9.5px;font-weight:700;color:var(--or);letter-spacing:1.2px}
+.hero h1{font-size:clamp(26px,3.5vw,42px);font-weight:800;line-height:1.08;letter-spacing:-1.5px;color:var(--nv);margin-bottom:14px}
+.hero h1 span{color:var(--or)}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn-p{font-size:13px;font-weight:700;color:#fff;background:var(--or);padding:11px 24px;border-radius:7px;display:inline-block;box-shadow:0 3px 12px rgba(234,88,12,0.2)}
+.btn-s{font-size:13px;font-weight:700;color:var(--nv);background:#fff;padding:11px 24px;border-radius:7px;display:inline-block;border:1.5px solid var(--bd)}
+
+.spec-box{background:#fff;border-radius:14px;padding:24px;border:1px solid var(--bd);box-shadow:0 8px 30px rgba(11,29,58,0.05)}
+.spec-title{font-size:11px;font-weight:700;color:var(--tl);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px}
+.spec-row{display:flex;justify-content:space-between;align-items:start;padding:8px 0;border-bottom:1px solid var(--bg)}
+.spec-row:last-child{border:none}
+.spec-label{font-size:11.5px;font-weight:600;color:var(--tl);width:120px;flex-shrink:0}
+.spec-val{font-size:12px;font-weight:600;color:var(--nv);text-align:right}
+
+.section{padding:68px 24px}
+.s-white{background:#fff}
+.s-gray{background:var(--bg)}
+.s-dark{background:linear-gradient(135deg,var(--nv),#1d3a5c);color:#fff}
+.label{display:inline-flex;align-items:center;gap:8px;margin-bottom:8px}
+.label-line{width:22px;height:2px;border-radius:1px}
+.label-txt{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase}
+.s-title{font-size:clamp(23px,3vw,32px);font-weight:800;color:var(--nv);letter-spacing:-0.5px;margin:4px 0 10px}
+
+/* MIXTURE CARDS - detailed */
+.mix-card{background:#fff;border:1px solid var(--bd);border-radius:12px;padding:26px;margin-bottom:14px;position:relative;overflow:hidden;transition:all 0.2s}
+.mix-card:hover{border-color:rgba(234,88,12,0.3);transform:translateY(-2px)}
+.mix-bar{position:absolute;top:0;left:0;right:0;height:3px}
+.mix-header{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.mix-icon{font-size:26px}
+.mix-header h3{font-size:17px;font-weight:800;color:var(--nv)}
+.mix-tag{display:inline-block;font-size:9px;font-weight:700;padding:3px 8px;border-radius:4px;letter-spacing:0.5px;text-transform:uppercase;margin-left:8px}
+.mix-desc{font-size:13px;color:var(--tm);line-height:1.65;margin-bottom:14px}
+.mix-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.mix-item{font-size:11.5px;color:var(--tm);padding:3px 0 3px 16px;position:relative;line-height:1.45}
+.mix-item::before{content:"✓";position:absolute;left:0;color:var(--or);font-weight:700}
+.mix-gases{display:flex;flex-wrap:wrap;gap:5px;margin-top:12px;padding-top:12px;border-top:1px solid var(--bg)}
+.mix-gas{font-size:10px;font-weight:600;padding:4px 10px;border-radius:6px;background:var(--bg);border:1px solid var(--bd);color:var(--tm)}
+
+/* CERTS */
+.cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:20px}
+.cert-card{background:linear-gradient(135deg,var(--nv),#1d3a5c);border-radius:11px;padding:18px;text-align:center}
+.cert-title{font-size:15px;font-weight:800;color:#fff}
+.cert-num{font-size:9.5px;font-weight:700;letter-spacing:1.5px;margin-top:3px}
+.cert-sub{font-size:10px;color:rgba(255,255,255,0.45);margin-top:3px}
+
+/* PROCESS */
+.proc-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;margin-top:20px}
+.proc-card{background:#fff;border:1px solid var(--bd);border-radius:8px;padding:14px;text-align:center}
+.proc-num{font-size:26px;font-weight:800;color:var(--or);opacity:0.18}
+.proc-title{font-size:11.5px;font-weight:700;color:var(--nv);margin:2px 0 4px}
+.proc-desc{font-size:10px;color:var(--tm);line-height:1.4}
+
+/* TECH */
+.tech-box{background:linear-gradient(135deg,rgba(234,88,12,0.03),rgba(14,165,233,0.03));border:1px solid rgba(234,88,12,0.15);border-radius:12px;padding:22px;margin-top:24px}
+.tech-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+.tech-item{font-size:11px;color:var(--tm);padding:3px 0 3px 16px;position:relative}
+.tech-item::before{content:"›";position:absolute;left:0;color:var(--or);font-weight:700}
+
+/* FAQ */
+.faq-item{background:#fff;border:1px solid var(--bd);border-radius:9px;margin-bottom:7px;overflow:hidden}
+.faq-q{padding:14px 18px;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.faq-q h4{font-size:13.5px;font-weight:700;color:var(--nv);margin:0}
+.faq-q span{font-size:18px;color:var(--or);transition:transform 0.3s}
+.faq-a{padding:0 18px 16px;font-size:12.5px;color:var(--tm);line-height:1.6;display:none}
+.faq-item.open .faq-a{display:block}
+.faq-item.open .faq-q span{transform:rotate(45deg)}
+
+.footer{background:var(--nv);padding:28px 24px;text-align:center;font-size:9px;color:rgba(255,255,255,0.25)}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav"><div class="nav-in">
+  <a href="#" class="logo"><img src="wsm-logo.png" alt="WSM Specialty Gas" style="height:38px;width:auto"></a>
+  <div class="nav-links">
+    <a href="#">Home</a><a href="#">Specialty Gas Lab</a><a href="#">Liquid Helium MRI</a><a href="#">Helium Gas</a><a href="#">UHP Gases</a><a href="#" style="color:var(--or);font-weight:700">Mixtures</a>
+    <a href="#quote" class="nav-cta">Get a Quote</a>
+  </div>
+</div></nav>
+
+<!-- HERO -->
+<!-- H1: "specialty gas mixtures" = 10-100, trending +∞ -->
+<section class="hero"><div class="mx"><div class="hero-grid">
+  <div>
+    <div class="breadcrumb"><a href="#">Home</a> › <a href="#">Products</a> › <span class="active">Specialty Gas Mixtures</span></div>
+    <div class="hero-badge">⚗️ MANUFACTURED & CERTIFIED AT OUR ISO-ACCREDITED LABORATORY</div>
+
+    <h1>Specialty Gas<br><span>Mixtures</span></h1>
+
+    <!-- Body: "certified gas mixtures", "EPA protocol gas", "calibration gas mixtures", "NIST traceable gas standards", "laser gas mixture", "medical gas mixtures" -->
+    <p style="font-size:14px;color:var(--tm);line-height:1.72;max-width:450px;margin-bottom:24px">
+      WSM manufactures <strong>certified gas mixtures</strong> at our ISO 17025 & 17034 accredited laboratory. 
+      <strong>EPA protocol gas</strong>, NIST-traceable primary standards, sulfur and reactive blends, 
+      multi-component mixtures (2 to 12+ gases), <strong>medical gas mixtures</strong>, 
+      <strong>laser gas mixtures</strong>, and <strong>calibration gas mixtures</strong> — 
+      all produced, analyzed, and certified in-house. From ppm to ppb concentrations. 
+      Custom blends in 3-7 business days.
+    </p>
+
+    <div class="btns">
+      <a href="#quote" class="btn-p">Request a Custom Mixture</a>
+      <a href="#mixtures" class="btn-s">View All Mixture Types</a>
+    </div>
+  </div>
+
+  <div class="spec-box">
+    <div class="spec-title">Quick Specifications</div>
+    <div class="spec-row"><span class="spec-label">Mixtures</span><span class="spec-val">400+ Standard · Unlimited Custom</span></div>
+    <div class="spec-row"><span class="spec-label">Components</span><span class="spec-val">Binary to 12+ Gas Blends</span></div>
+    <div class="spec-row"><span class="spec-label">Concentrations</span><span class="spec-val">% · ppm · ppb Levels</span></div>
+    <div class="spec-row"><span class="spec-label">Balance Gases</span><span class="spec-val">N₂ · Air · Ar · He · H₂ · CO₂ & More</span></div>
+    <div class="spec-row"><span class="spec-label">Traceability</span><span class="spec-val">NIST SRM · Uncertainty k=2</span></div>
+    <div class="spec-row"><span class="spec-label">EPA</span><span class="spec-val">PGVP Certified · 40 CFR Part 72</span></div>
+    <div class="spec-row"><span class="spec-label">Turnaround</span><span class="spec-val">Stock 24-48h · Custom 3-7 Days</span></div>
+    <div class="spec-row"><span class="spec-label">COA</span><span class="spec-val">Full Impurity or Component of Interest</span></div>
+    <div class="spec-row"><span class="spec-label">Lab</span><span class="spec-val">ISO 17025 & 17034 · PJLA #125017</span></div>
+  </div>
+</div></div></section>
+
+<!-- CERTIFICATIONS — From actual PJLA certificates -->
+<section style="background:#fff;padding:44px 24px;border-bottom:1px solid var(--bd)"><div class="mx">
+  <div style="text-align:center;margin-bottom:20px">
+    <div class="label" style="justify-content:center"><div class="label-line" style="background:var(--gn)"></div><span class="label-txt" style="color:var(--gn)">Accreditations</span></div>
+    <h2 class="s-title">Triple-Certified Laboratory</h2>
+    <p style="font-size:13px;color:var(--tm);max-width:520px;margin:0 auto">The only laboratory in South Florida with ISO/IEC 17025, ISO 17034, and EPA PGVP certifications simultaneously. Verified at <a href="https://www.pjlabs.com" target="_blank" rel="noopener noreferrer" style="color:var(--ac);font-weight:600">pjlabs.com</a></p>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
+
+    <!-- ISO 17025 -->
+    <div style="background:linear-gradient(135deg,var(--nv),#1d3a5c);border-radius:12px;padding:22px;border-top:3px solid var(--ac)">
+      <div style="font-size:17px;font-weight:800;color:#fff">ISO/IEC 17025:2017</div>
+      <div style="font-size:10px;font-weight:700;color:var(--ac);letter-spacing:1.5px;margin-top:3px">CERTIFICATE L25-1002</div>
+      <div style="font-size:11px;color:rgba(255,255,255,0.5);margin-top:4px">Chemical Testing Laboratory</div>
+      <div style="margin-top:12px;border-top:1px solid rgba(255,255,255,0.08);padding-top:10px">
+        <div style="font-size:10px;color:rgba(255,255,255,0.35);margin-bottom:8px">ACCREDITED SCOPE:</div>
+        <div style="font-size:10px;color:rgba(255,255,255,0.55);line-height:1.6">
+          ✓ GC-TCD — Gas Mixture Concentration<br>
+          ✓ NDIR — CO, CO₂, CH₄, SO₂, NOx<br>
+          ✓ GC-FID — Hydrocarbon Concentration<br>
+          ✓ FID — Total Hydrocarbons<br>
+          ✓ Paramagnetic — O₂ Analysis<br>
+          ✓ Electrochemical — O₂ Analysis<br>
+          ✓ Plasma Emission — N₂ in Ar/He<br>
+          ✓ Electrolytic — Moisture in Gas
+        </div>
+      </div>
+      <div style="margin-top:12px;display:flex;justify-content:space-between;align-items:center">
+        <div><div style="font-size:9px;color:rgba(255,255,255,0.3)">Accreditation No. 125017</div><div style="font-size:9px;color:rgba(255,255,255,0.3)">Issued: Dec 29, 2025 · Expires: Mar 31, 2028</div></div>
+        <a href="WSM-ISO-17025-L25-1002.pdf" target="_blank" style="font-size:9px;font-weight:700;color:var(--ac);background:rgba(14,165,233,0.1);border:1px solid rgba(14,165,233,0.2);padding:4px 10px;border-radius:5px">View PDF ↓</a>
+      </div>
+    </div>
+
+    <!-- ISO 17034 -->
+    <div style="background:linear-gradient(135deg,var(--nv),#1d3a5c);border-radius:12px;padding:22px;border-top:3px solid var(--gn)">
+      <div style="font-size:17px;font-weight:800;color:#fff">ISO 17034:2016</div>
+      <div style="font-size:10px;font-weight:700;color:var(--gn);letter-spacing:1.5px;margin-top:3px">CERTIFICATE L25-1003</div>
+      <div style="font-size:11px;color:rgba(255,255,255,0.5);margin-top:4px">Reference Material Producer</div>
+      <div style="margin-top:12px;border-top:1px solid rgba(255,255,255,0.08);padding-top:10px">
+        <div style="font-size:10px;color:rgba(255,255,255,0.35);margin-bottom:8px">ACCREDITED SCOPE:</div>
+        <div style="font-size:10px;color:rgba(255,255,255,0.55);line-height:1.6">
+          ✓ RM/CRM Gas Mixtures<br>
+          ✓ Characterization via single reference<br>&nbsp;&nbsp;&nbsp;measurement procedure (NDIR, FID,<br>&nbsp;&nbsp;&nbsp;Electrolytic, Paramagnetic, Plasma<br>&nbsp;&nbsp;&nbsp;Emission, GC-FID, GC-TCD,<br>&nbsp;&nbsp;&nbsp;Coulometric-Electrochemical)<br>
+          ✓ Gravimetry — mass/volume preparation<br>
+          ✓ Flex F1 (new products) & F2 (new ranges)
+        </div>
+      </div>
+      <div style="margin-top:12px;display:flex;justify-content:space-between;align-items:center">
+        <div><div style="font-size:9px;color:rgba(255,255,255,0.3)">Accreditation No. 125017</div><div style="font-size:9px;color:rgba(255,255,255,0.3)">Issued: Dec 29, 2025 · Expires: Mar 31, 2028</div></div>
+        <a href="WSM-ISO-17034-L25-1003.pdf" target="_blank" style="font-size:9px;font-weight:700;color:var(--gn);background:rgba(5,150,105,0.1);border:1px solid rgba(5,150,105,0.2);padding:4px 10px;border-radius:5px">View PDF ↓</a>
+      </div>
+    </div>
+
+    <!-- EPA PGVP -->
+    <div style="background:linear-gradient(135deg,var(--nv),#1d3a5c);border-radius:12px;padding:22px;border-top:3px solid var(--gdb)">
+      <div style="font-size:17px;font-weight:800;color:#fff">EPA PGVP</div>
+      <div style="font-size:10px;font-weight:700;color:var(--gdb);letter-spacing:1.5px;margin-top:3px">VENDOR Y12026</div>
+      <div style="font-size:11px;color:rgba(255,255,255,0.5);margin-top:4px">Part 75 Protocol Gas Verification Program</div>
+      <div style="margin-top:12px;border-top:1px solid rgba(255,255,255,0.08);padding-top:10px">
+        <div style="font-size:10px;color:rgba(255,255,255,0.35);margin-bottom:8px">PROGRAM SCOPE:</div>
+        <div style="font-size:10px;color:rgba(255,255,255,0.55);line-height:1.6">
+          ✓ Based on EPA/600/R-12/531 (May 2012)<br>
+          ✓ "Traceability Protocol for Assay and<br>&nbsp;&nbsp;&nbsp;Certification of Gaseous Calibration<br>&nbsp;&nbsp;&nbsp;Standards"<br>
+          ✓ CEMS calibration & audit gases<br>
+          ✓ SO₂, NO, NO₂, CO, CO₂, O₂ standards<br>
+          ✓ NIST SRM traceable (k=2)
+        </div>
+      </div>
+      <div style="margin-top:12px;display:flex;justify-content:space-between;align-items:center">
+        <div><div style="font-size:9px;color:rgba(255,255,255,0.3)">40 CFR Parts 60, 72, 75</div><div style="font-size:9px;color:rgba(255,255,255,0.3)">Participant #30 · Vendor Y12026 · January 2026</div></div>
+        <a href="https://www.epa.gov/air-research/epa-traceability-protocol-assay-and-certification-gaseous-calibration-standards" target="_blank" rel="noopener noreferrer" style="font-size:9px;font-weight:700;color:var(--gdb);background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.2);padding:4px 10px;border-radius:5px">Verify at EPA.gov →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="margin-top:16px;background:var(--bg);border:1px solid var(--bd);border-radius:10px;padding:14px;display:flex;align-items:center;gap:12px">
+    <span style="font-size:18px">🌐</span>
+    <p style="font-size:11.5px;color:var(--tm);margin:0;line-height:1.5"><strong>PJLA #125017 · ILAC-MRA Recognized</strong> — Our accreditation is internationally recognized through the ILAC Mutual Recognition Arrangement, accepted in 100+ countries. Verify our accreditation at <a href="https://www.pjlabs.com" target="_blank" rel="noopener noreferrer" style="color:var(--ac);font-weight:600">pjlabs.com</a></p>
+  </div>
+</div></section>
+
+<!-- ★ ALL MIXTURE TYPES — COMPREHENSIVE ★ -->
+<section id="mixtures" class="section s-gray"><div class="mx">
+  <div class="label"><div class="label-line" style="background:var(--or)"></div><span class="label-txt" style="color:var(--or)">Our Mixtures</span></div>
+  <h2 class="s-title">Every Type of Certified Gas Mixture</h2>
+  <p style="font-size:14px;color:var(--tm);max-width:600px;line-height:1.7;margin-bottom:24px">Each mixture manufactured using gravimetric and volumetric precision methods, analyzed with multiple NIST-traceable analytical technologies, and delivered with a full Certificate of Analysis. From % down to ppm and ppb concentrations — binary through 12+ component blends.</p>
+
+  <!-- EPA PROTOCOL -->
+  <div class="mix-card">
+    <div class="mix-bar" style="background:linear-gradient(90deg,#dc2626,#f87171)"></div>
+    <div class="mix-header"><span class="mix-icon">📜</span><h3>EPA Protocol Gas Mixtures</h3><span class="mix-tag" style="background:#fee2e2;color:#dc2626">PGVP Program</span></div>
+    <div class="mix-desc">Manufactured based on the EPA "Traceability Protocol for Assay and Certification of Gaseous Calibration Standards" (Document EPA/600/R-12/531, May 2012). Used for calibrating and auditing Continuous Emissions Monitoring Systems (CEMS) under 40 CFR Parts 60, 72, and 75. WSM is a participant in the EPA Protocol Gas Verification Program (PGVP). Every protocol gas cylinder is NIST-traceable with expanded uncertainty stated at k=2 (95% confidence level).</div>
+    <div class="mix-grid">
+      <div class="mix-item">PGVP Program Participant</div>
+      <div class="mix-item">Based on EPA/600/R-12/531 (May 2012)</div>
+      <div class="mix-item">NIST SRM / NTRM traceability chain</div>
+      <div class="mix-item">Expanded uncertainty k=2 (±1% relative)</div>
+      <div class="mix-item">40 CFR Parts 60, 72, 75 compliance</div>
+      <div class="mix-item">CEMS calibration, audit & daily standards</div>
+    </div>
+    <div style="margin-top:14px;font-size:11px;font-weight:700;color:var(--nv);margin-bottom:8px">Typical EPA Protocol Mixtures & Concentration Ranges:</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px">
+      <div style="font-size:11px;color:var(--tm);padding:4px 8px;background:var(--bg);border-radius:4px"><strong>SO₂</strong> in N₂ — 25 ppm to 2,500 ppm</div>
+      <div style="font-size:11px;color:var(--tm);padding:4px 8px;background:var(--bg);border-radius:4px"><strong>NO</strong> in N₂ — 25 ppm to 3,000 ppm</div>
+      <div style="font-size:11px;color:var(--tm);padding:4px 8px;background:var(--bg);border-radius:4px"><strong>CO</strong> in N₂ — 20 ppm to 5,000 ppm</div>
+      <div style="font-size:11px;color:var(--tm);padding:4px 8px;background:var(--bg);border-radius:4px"><strong>CO₂</strong> in N₂ — 5% to 20%</div>
+      <div style="font-size:11px;color:var(--tm);padding:4px 8px;background:var(--bg);border-radius:4px"><strong>O₂</strong> in N₂ — 2% to 21%</div>
+      <div style="font-size:11px;color:var(--tm);padding:4px 8px;background:var(--bg);border-radius:4px"><strong>NO₂</strong> in Air — 50 ppm to 500 ppm</div>
+      <div style="font-size:11px;color:var(--tm);padding:4px 8px;background:var(--bg);border-radius:4px"><strong>Multi:</strong> SO₂/NO/CO/CO₂/O₂ in N₂</div>
+      <div style="font-size:11px;color:var(--tm);padding:4px 8px;background:var(--bg);border-radius:4px"><strong>Propane</strong> in Air — 10 ppm to 10,000 ppm</div>
+    </div>
+  </div>
+
+  <!-- NIST-TRACEABLE PRIMARY STANDARDS -->
+  <div class="mix-card">
+    <div class="mix-bar" style="background:linear-gradient(90deg,var(--ac),#7dd3fc)"></div>
+    <div class="mix-header"><span class="mix-icon">🔬</span><h3>NIST-Traceable Primary Standards</h3><span class="mix-tag" style="background:var(--bl-l);color:var(--bl)">CRM Producer</span></div>
+    <div class="mix-desc">As an ISO 17034:2016 accredited Reference Material Producer, WSM manufactures Certified Reference Materials (CRMs) with full metrological traceability to NIST Standard Reference Materials (SRMs). The traceability chain is documented from NIST Primary Standards → SRMs → NTRMs/GMIS → WSM certified standards. Expanded uncertainty stated at k=2 (95% confidence level).</div>
+    <div class="mix-grid">
+      <div class="mix-item">ISO 17034:2016 accredited (L25-1003)</div>
+      <div class="mix-item">Unbroken traceability chain to NIST SRMs</div>
+      <div class="mix-item">Expanded uncertainty k=2 (95% CL)</div>
+      <div class="mix-item">Certified Reference Materials (CRM)</div>
+      <div class="mix-item">Instrument calibration & method validation</div>
+      <div class="mix-item">Audit, proficiency testing & inter-lab standards</div>
+      <div class="mix-item">Analytical tolerance ±1% relative or better</div>
+      <div class="mix-item">Stability verified through re-analysis programs</div>
+    </div>
+    <div style="margin-top:14px;font-size:11px;font-weight:700;color:var(--nv);margin-bottom:8px">Traceability Hierarchy:</div>
+    <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:10.5px;color:var(--tm)">
+      <span style="background:var(--bl-l);padding:4px 10px;border-radius:5px;font-weight:700;color:var(--bl)">NIST Primary Standards</span>
+      <span>→</span>
+      <span style="background:var(--bl-l);padding:4px 10px;border-radius:5px;font-weight:700;color:var(--bl)">SRMs</span>
+      <span>→</span>
+      <span style="background:var(--bl-l);padding:4px 10px;border-radius:5px;font-weight:700;color:var(--bl)">NTRMs / GMIS</span>
+      <span>→</span>
+      <span style="background:var(--orl);padding:4px 10px;border-radius:5px;font-weight:700;color:var(--or)">WSM Certified Standards</span>
+      <span>→</span>
+      <span style="background:var(--bg);padding:4px 10px;border-radius:5px;font-weight:600">End User</span>
+    </div>
+  </div>
+
+  <!-- MULTI-COMPONENT -->
+  <div class="mix-card">
+    <div class="mix-bar" style="background:linear-gradient(90deg,var(--or),var(--orb))"></div>
+    <div class="mix-header"><span class="mix-icon">⚗️</span><h3>Multi-Component Mixtures</h3><span class="mix-tag" style="background:var(--orl);color:var(--or)">2 to 12+ Gases</span></div>
+    <div class="mix-desc">Complex gas mixtures containing 2 to 12 or more components in a single cylinder. Each component independently verified by analytical measurement against NIST-traceable reference standards. Available from % down to ppm and ppb concentrations in any balance gas. Gravimetric preparation ensures accuracy; multi-technology analysis ensures every component meets specification.</div>
+    <div class="mix-grid">
+      <div class="mix-item">Binary (2 gases) through 12+ component blends</div>
+      <div class="mix-item">Any combination of reactive + inert components</div>
+      <div class="mix-item">% · ppm · ppb concentration levels</div>
+      <div class="mix-item">Balance: N₂, Air, Ar, He, H₂, CO₂ & more</div>
+      <div class="mix-item">Gravimetric preparation + analytical verification</div>
+      <div class="mix-item">Each component independently certified</div>
+    </div>
+    <div style="margin-top:14px;font-size:11px;font-weight:700;color:var(--nv);margin-bottom:8px">Typical Multi-Component Examples:</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px">
+      <div style="font-size:11px;color:var(--tm);padding:4px 8px;background:var(--bg);border-radius:4px"><strong>4-Gas Detector:</strong> CO/H₂S/CH₄/O₂ in N₂</div>
+      <div style="font-size:11px;color:var(--tm);padding:4px 8px;background:var(--bg);border-radius:4px"><strong>5-Gas CEMS:</strong> SO₂/NO/CO/CO₂/O₂ in N₂</div>
+      <div style="font-size:11px;color:var(--tm);padding:4px 8px;background:var(--bg);border-radius:4px"><strong>Natural Gas Sim:</strong> C₁-C₆+/CO₂/N₂/H₂S</div>
+      <div style="font-size:11px;color:var(--tm);padding:4px 8px;background:var(--bg);border-radius:4px"><strong>Refinery Gas:</strong> H₂/CH₄/C₂H₄/C₂H₆/C₃H₈/CO₂</div>
+      <div style="font-size:11px;color:var(--tm);padding:4px 8px;background:var(--bg);border-radius:4px"><strong>Ambient Air:</strong> SO₂/NO/NO₂/CO/O₃ at ppb</div>
+      <div style="font-size:11px;color:var(--tm);padding:4px 8px;background:var(--bg);border-radius:4px"><strong>Landfill Gas:</strong> CH₄/CO₂/O₂/H₂S in N₂</div>
+      <div style="font-size:11px;color:var(--tm);padding:4px 8px;background:var(--bg);border-radius:4px"><strong>Greenhouse:</strong> CO₂/CH₄/N₂O in Air</div>
+      <div style="font-size:11px;color:var(--tm);padding:4px 8px;background:var(--bg);border-radius:4px"><strong>Custom:</strong> Any combination to your specs</div>
+    </div>
+  </div>
+
+  <!-- SULFUR MIXTURES -->
+  <div class="mix-card">
+    <div class="mix-bar" style="background:linear-gradient(90deg,#eab308,#facc15)"></div>
+    <div class="mix-header"><span class="mix-icon">🟡</span><h3>Sulfur Compound Mixtures</h3><span class="mix-tag" style="background:var(--gdl);color:var(--gd)">Specialized Treatment</span></div>
+    <div class="mix-desc">Sulfur compounds are among the most challenging gases to manufacture accurately. These reactive molecules adsorb onto untreated cylinder walls, causing concentration drift. WSM uses aluminum cylinders with a proprietary internal treatment to ensure long-term concentration stability. Critical for natural gas odorization quality control, pipeline monitoring, petrochemical analysis, and environmental sulfur compliance.</div>
+    <div class="mix-grid">
+      <div class="mix-item">SO₂ — Sulfur Dioxide (1 ppm to 5,000 ppm)</div>
+      <div class="mix-item">H₂S — Hydrogen Sulfide (1 ppm to 5,000 ppm)</div>
+      <div class="mix-item">COS — Carbonyl Sulfide (0.5 ppm to 1,000 ppm)</div>
+      <div class="mix-item">CH₃SH — Methyl Mercaptan (1 ppm to 500 ppm)</div>
+      <div class="mix-item">C₂H₅SH — Ethyl Mercaptan (1 ppm to 500 ppm)</div>
+      <div class="mix-item">TBM — Tertiary Butyl Mercaptan</div>
+      <div class="mix-item">THT — Tetrahydrothiophene</div>
+      <div class="mix-item">DMS — Dimethyl Sulfide</div>
+      <div class="mix-item">DMDS — Dimethyl Disulfide</div>
+      <div class="mix-item">Multi-sulfur blends (2-6 sulfur components)</div>
+    </div>
+    <div style="margin-top:14px;font-size:11px;font-weight:700;color:var(--nv);margin-bottom:8px">Typical Sulfur Mixtures:</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px">
+      <div style="font-size:11px;color:var(--tm);padding:4px 8px;background:var(--bg);border-radius:4px"><strong>H₂S</strong> in N₂ — 5 ppm to 1% (odorant, safety)</div>
+      <div style="font-size:11px;color:var(--tm);padding:4px 8px;background:var(--bg);border-radius:4px"><strong>SO₂</strong> in N₂ — 25 ppm to 3,000 ppm (CEMS)</div>
+      <div style="font-size:11px;color:var(--tm);padding:4px 8px;background:var(--bg);border-radius:4px"><strong>COS</strong> in N₂ — ppb to 100 ppm (nat gas)</div>
+      <div style="font-size:11px;color:var(--tm);padding:4px 8px;background:var(--bg);border-radius:4px"><strong>Multi-Sulfur:</strong> H₂S/COS/CH₃SH/TBM in N₂</div>
+      <div style="font-size:11px;color:var(--tm);padding:4px 8px;background:var(--bg);border-radius:4px"><strong>Odorant Blend:</strong> TBM/THT/CH₃SH in CH₄</div>
+      <div style="font-size:11px;color:var(--tm);padding:4px 8px;background:var(--bg);border-radius:4px"><strong>Total Sulfur:</strong> Multi-species for GC-SCD</div>
+    </div>
+  </div>
+
+  <!-- REACTIVE & CORROSIVE -->
+  <div class="mix-card">
+    <div class="mix-bar" style="background:linear-gradient(90deg,#dc2626,#ef4444)"></div>
+    <div class="mix-header"><span class="mix-icon">⚠️</span><h3>Reactive & Corrosive Gas Mixtures</h3><span class="mix-tag" style="background:#fee2e2;color:#dc2626">Aluminum Cylinders</span></div>
+    <div class="mix-desc">Reactive and corrosive gas mixtures require expert handling — specialized cylinder materials (aluminum with proprietary internal treatment), dedicated fill manifolds, and analytical techniques designed for reactive species. WSM's laboratory has the expertise, equipment, and safety protocols to manufacture these challenging blends accurately with documented stability.</div>
+    <div class="mix-grid">
+      <div class="mix-item">H₂S — Hydrogen Sulfide (1 ppm to 2%)</div>
+      <div class="mix-item">HCl — Hydrogen Chloride (1 ppm to 3,000 ppm)</div>
+      <div class="mix-item">HCN — Hydrogen Cyanide (2 ppm to 100 ppm)</div>
+      <div class="mix-item">Cl₂ — Chlorine (1 ppm to 500 ppm)</div>
+      <div class="mix-item">NH₃ — Ammonia (5 ppm to 5,000 ppm)</div>
+      <div class="mix-item">NO — Nitric Oxide (1 ppm to 5,000 ppm)</div>
+      <div class="mix-item">NO₂ — Nitrogen Dioxide (5 ppm to 1,000 ppm)</div>
+      <div class="mix-item">SO₂ — Sulfur Dioxide (1 ppm to 5,000 ppm)</div>
+      <div class="mix-item">PH₃ — Phosphine (0.1 ppm to 1,000 ppm)</div>
+      <div class="mix-item">HBr — Hydrogen Bromide (5 ppm to 500 ppm)</div>
+    </div>
+    <div style="margin-top:12px;background:var(--bg);border-radius:8px;padding:12px;display:flex;gap:16px;flex-wrap:wrap">
+      <div style="font-size:10.5px;color:var(--tm)"><strong style="color:var(--nv)">Cylinder Material:</strong> Aluminum (treated interior)</div>
+      <div style="font-size:10.5px;color:var(--tm)"><strong style="color:var(--nv)">Balance Gases:</strong> N₂, Air, Ar, He</div>
+      <div style="font-size:10.5px;color:var(--tm)"><strong style="color:var(--nv)">Documentation:</strong> COA + SDS + HAZMAT shipping docs</div>
+    </div>
+  </div>
+
+  <!-- ENVIRONMENTAL / EMISSIONS -->
+  <div class="mix-card">
+    <div class="mix-bar" style="background:linear-gradient(90deg,var(--gn),var(--gnb))"></div>
+    <div class="mix-header"><span class="mix-icon">🌿</span><h3>Environmental & Emissions Monitoring</h3><span class="mix-tag" style="background:var(--gnl);color:var(--gn)">CEMS & Ambient Air</span></div>
+    <div class="mix-desc">Calibration and audit gas standards for environmental compliance. From stack-level CEMS applications to ppb-level ambient air quality monitoring. Used by power utilities, refineries, cement plants, waste incinerators, and environmental consultants for EPA regulatory compliance reporting.</div>
+    <div class="mix-grid">
+      <div class="mix-item">CEMS calibration & audit gases (daily & quarterly)</div>
+      <div class="mix-item">Ambient air quality standards (ppb levels)</div>
+      <div class="mix-item">Stack emissions test gases (EPA Methods)</div>
+      <div class="mix-item">VOC monitoring blends (TO-14A, TO-15)</div>
+      <div class="mix-item">Greenhouse gas standards (CO₂, CH₄, N₂O)</div>
+      <div class="mix-item">EPA Method 19, 25A, 7E, 6C compliance</div>
+    </div>
+    <div style="margin-top:14px;font-size:11px;font-weight:700;color:var(--nv);margin-bottom:8px">Common Environmental Mixtures:</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px">
+      <div style="font-size:11px;color:var(--tm);padding:4px 8px;background:var(--bg);border-radius:4px"><strong>CEMS Daily:</strong> SO₂/NO/CO/CO₂/O₂ in N₂</div>
+      <div style="font-size:11px;color:var(--tm);padding:4px 8px;background:var(--bg);border-radius:4px"><strong>CEMS Audit:</strong> Single or multi at audit concentration</div>
+      <div style="font-size:11px;color:var(--tm);padding:4px 8px;background:var(--bg);border-radius:4px"><strong>Ambient NO₂:</strong> 50-500 ppb in Zero Air</div>
+      <div style="font-size:11px;color:var(--tm);padding:4px 8px;background:var(--bg);border-radius:4px"><strong>Ambient SO₂:</strong> 50-500 ppb in Zero Air</div>
+      <div style="font-size:11px;color:var(--tm);padding:4px 8px;background:var(--bg);border-radius:4px"><strong>Greenhouse:</strong> CO₂ 300-500 ppm / CH₄ 1-10 ppm</div>
+      <div style="font-size:11px;color:var(--tm);padding:4px 8px;background:var(--bg);border-radius:4px"><strong>Zero Gas:</strong> Ultra-pure N₂ or Zero Air (<0.1 ppm THC)</div>
+    </div>
+  </div>
+
+  <!-- MEDICAL -->
+  <div class="mix-card">
+    <div class="mix-bar" style="background:linear-gradient(90deg,var(--ac),#7dd3fc)"></div>
+    <div class="mix-header"><span class="mix-icon">🏥</span><h3>Medical Gas Mixtures</h3><span class="mix-tag" style="background:var(--bl-l);color:var(--bl)">USP Compliant</span></div>
+    <div class="mix-desc">Medical gas mixtures manufactured to USP and cGMP standards for healthcare and clinical laboratory applications. Full documentation package for regulatory compliance. Used in hospitals, pulmonary function labs, blood gas labs, and clinical research facilities.</div>
+    <div class="mix-grid">
+      <div class="mix-item">Lung diffusion (DLCO) test gas</div>
+      <div class="mix-item">Blood gas calibration mixtures</div>
+      <div class="mix-item">Aerobic culture gas (CO₂/O₂/N₂)</div>
+      <div class="mix-item">Anaerobic culture gas (CO₂/H₂/N₂)</div>
+      <div class="mix-item">Anesthesia verification standards</div>
+      <div class="mix-item">USP & cGMP documentation</div>
+    </div>
+    <div style="margin-top:14px;font-size:11px;font-weight:700;color:var(--nv);margin-bottom:8px">Typical Medical Mixtures:</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px">
+      <div style="font-size:11px;color:var(--tm);padding:4px 8px;background:var(--bg);border-radius:4px"><strong>DLCO:</strong> 0.3% CO / 10% He / 21% O₂ / Bal N₂</div>
+      <div style="font-size:11px;color:var(--tm);padding:4px 8px;background:var(--bg);border-radius:4px"><strong>Blood Gas:</strong> 5% CO₂ / 12% O₂ / Bal N₂</div>
+      <div style="font-size:11px;color:var(--tm);padding:4px 8px;background:var(--bg);border-radius:4px"><strong>Anaerobic:</strong> 5% CO₂ / 10% H₂ / Bal N₂</div>
+      <div style="font-size:11px;color:var(--tm);padding:4px 8px;background:var(--bg);border-radius:4px"><strong>Aerobic:</strong> 5% CO₂ / 20% O₂ / Bal N₂</div>
+    </div>
+  </div>
+
+  <!-- LASER -->
+  <div class="mix-card">
+    <div class="mix-bar" style="background:linear-gradient(90deg,#7c3aed,#a78bfa)"></div>
+    <div class="mix-header"><span class="mix-icon">💎</span><h3>Laser Gas Mixtures</h3><span class="mix-tag" style="background:#ede9fe;color:#7c3aed">High Precision</span></div>
+    <div class="mix-desc">Precision gas mixtures for industrial and scientific laser systems. Composition accuracy is critical — even small variations affect beam quality, output power, and tube longevity. WSM manufactures laser gas mixtures with tight analytical tolerances for CO₂ lasers, excimer lasers, HeNe lasers, and ion lasers.</div>
+    <div class="mix-grid">
+      <div class="mix-item">CO₂ laser gas (CO₂/N₂/He — various ratios)</div>
+      <div class="mix-item">Excimer laser fills (Kr/F₂, Ar/F₂, Xe/Cl₂, Xe/HCl)</div>
+      <div class="mix-item">HeNe laser gas (He/Ne precision blend)</div>
+      <div class="mix-item">Ion laser gas (Ar, Kr, Ar/Kr)</div>
+      <div class="mix-item">Custom ratios for specific laser manufacturers</div>
+      <div class="mix-item">UHP-grade components for maximum laser life</div>
+    </div>
+    <div style="margin-top:14px;font-size:11px;font-weight:700;color:var(--nv);margin-bottom:8px">Typical Laser Mixtures:</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px">
+      <div style="font-size:11px;color:var(--tm);padding:4px 8px;background:var(--bg);border-radius:4px"><strong>CO₂ Laser:</strong> 5-20% CO₂ / 10-30% N₂ / Bal He</div>
+      <div style="font-size:11px;color:var(--tm);padding:4px 8px;background:var(--bg);border-radius:4px"><strong>Excimer KrF:</strong> 0.1% F₂ / 5% Kr / Bal Ne or He</div>
+      <div style="font-size:11px;color:var(--tm);padding:4px 8px;background:var(--bg);border-radius:4px"><strong>Excimer ArF:</strong> 0.1% F₂ / 3% Ar / Bal Ne or He</div>
+      <div style="font-size:11px;color:var(--tm);padding:4px 8px;background:var(--bg);border-radius:4px"><strong>HeNe:</strong> 15% Ne / 85% He (or custom ratio)</div>
+    </div>
+  </div>
+
+  <!-- HYDROCARBON & PETROCHEMICAL -->
+  <div class="mix-card">
+    <div class="mix-bar" style="background:linear-gradient(90deg,var(--gd),var(--gdb))"></div>
+    <div class="mix-header"><span class="mix-icon">🛢️</span><h3>Hydrocarbon & Petrochemical Blends</h3><span class="mix-tag" style="background:var(--gdl);color:var(--gd)">Oil & Gas</span></div>
+    <div class="mix-desc">Calibration standards and process simulation blends for the petrochemical industry. Natural gas composition analysis (C₁ through C₆+), refinery process gas chromatograph calibration, BTU/heating value verification, FID fuel gases, and LEL calibration blends. Used globally by oil & gas producers, LNG operators, pipeline companies, and petrochemical refineries.</div>
+    <div class="mix-grid">
+      <div class="mix-item">Natural gas simulation blends (C₁-C₆+)</div>
+      <div class="mix-item">BTU / heating value verification standards</div>
+      <div class="mix-item">Refinery gas GC calibration standards</div>
+      <div class="mix-item">LEL calibration (CH₄, C₃H₈, C₄H₁₀, n-C₅H₁₂)</div>
+      <div class="mix-item">FID fuel gas (40% H₂ / 60% He or N₂)</div>
+      <div class="mix-item">Extended natural gas analysis (C₁-C₆+/CO₂/N₂/H₂S)</div>
+    </div>
+    <div style="margin-top:14px;font-size:11px;font-weight:700;color:var(--nv);margin-bottom:8px">Typical Petrochemical Mixtures:</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px">
+      <div style="font-size:11px;color:var(--tm);padding:4px 8px;background:var(--bg);border-radius:4px"><strong>Nat Gas 8-comp:</strong> CH₄/C₂H₆/C₃H₈/n-C₄/i-C₄/n-C₅/CO₂/N₂</div>
+      <div style="font-size:11px;color:var(--tm);padding:4px 8px;background:var(--bg);border-radius:4px"><strong>Refinery H₂:</strong> H₂/CH₄/C₂H₄/C₂H₆/C₃+/CO₂/N₂</div>
+      <div style="font-size:11px;color:var(--tm);padding:4px 8px;background:var(--bg);border-radius:4px"><strong>LEL:</strong> 50% LEL CH₄ (2.5%) in Air</div>
+      <div style="font-size:11px;color:var(--tm);padding:4px 8px;background:var(--bg);border-radius:4px"><strong>FID Fuel:</strong> 40% H₂ / 60% He</div>
+      <div style="font-size:11px;color:var(--tm);padding:4px 8px;background:var(--bg);border-radius:4px"><strong>LNG:</strong> CH₄/C₂H₆/C₃H₈/N₂ (purity-critical)</div>
+      <div style="font-size:11px;color:var(--tm);padding:4px 8px;background:var(--bg);border-radius:4px"><strong>Sour Gas:</strong> H₂S/CO₂/CH₄/N₂ (pipeline monitoring)</div>
+    </div>
+  </div>
+
+  <!-- DETECTOR CALIBRATION -->
+  <div class="mix-card">
+    <div class="mix-bar" style="background:linear-gradient(90deg,#e11d48,#fb7185)"></div>
+    <div class="mix-header"><span class="mix-icon">🎯</span><h3>Gas Detector Calibration Mixtures</h3><span class="mix-tag" style="background:#ffe4e6;color:#e11d48">Safety Critical</span></div>
+    <div class="mix-desc">Calibration and bump test gas mixtures for portable and fixed gas detection systems. Designed for industrial safety applications — confined space entry, area monitoring, personal protection, and regulatory compliance. Available for all major detector brands with 184+ competitor cross-references.</div>
+    <div class="mix-grid">
+      <div class="mix-item">4-Gas Mix: CO / H₂S / CH₄ (LEL) / O₂ in N₂</div>
+      <div class="mix-item">3-Gas Mix: H₂S / CO / CH₄ (LEL) in Air</div>
+      <div class="mix-item">Single gas: H₂S, CO, SO₂, NO₂, Cl₂, NH₃, O₂</div>
+      <div class="mix-item">LEL blends: CH₄, C₃H₈, i-C₄H₁₀, C₅H₁₂</div>
+      <div class="mix-item">Bump test gas for daily verification</div>
+      <div class="mix-item">Span calibration per manufacturer specs</div>
+      <div class="mix-item">184+ competitor part number cross-references</div>
+      <div class="mix-item">Ships 24-48h from stock</div>
+    </div>
+    <div style="margin-top:14px;font-size:11px;font-weight:700;color:var(--nv);margin-bottom:8px">Standard Detector Cal Mixtures:</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px">
+      <div style="font-size:11px;color:var(--tm);padding:4px 8px;background:var(--bg);border-radius:4px"><strong>4-Gas:</strong> 25 ppm H₂S / 50 ppm CO / 2.5% CH₄ / 18% O₂</div>
+      <div style="font-size:11px;color:var(--tm);padding:4px 8px;background:var(--bg);border-radius:4px"><strong>H₂S single:</strong> 10, 25, 50, 100 ppm in N₂</div>
+      <div style="font-size:11px;color:var(--tm);padding:4px 8px;background:var(--bg);border-radius:4px"><strong>CO single:</strong> 35, 50, 100, 200 ppm in N₂ or Air</div>
+      <div style="font-size:11px;color:var(--tm);padding:4px 8px;background:var(--bg);border-radius:4px"><strong>O₂ depletion:</strong> 18% O₂ / Bal N₂</div>
+    </div>
+    <div style="margin-top:10px"><a href="https://wsmcalibrationgas.com" target="_blank" rel="noopener noreferrer" style="font-size:12px;font-weight:700;color:#e11d48">Full catalog at wsmcalibrationgas.com →</a></div>
+  </div>
+
+</div></section>
+
+<!-- ANALYTICAL TECHNOLOGIES -->
+<section class="section s-white"><div class="mx">
+  <div class="label"><div class="label-line" style="background:var(--or)"></div><span class="label-txt" style="color:var(--or)">Our Analytical Capabilities</span></div>
+  <h2 class="s-title">How We Analyze & Certify Every Mixture</h2>
+  <p style="font-size:14px;color:var(--tm);max-width:560px;line-height:1.7">Every mixture is analyzed using multiple NIST-traceable calibrated instruments. Our ISO 17025 accredited methods ensure accuracy and reproducibility across all concentration ranges.</p>
+
+  <div class="tech-box">
+    <div class="tech-grid">
+      <div class="tech-item">GC-TCD — Gas Chromatography Thermal Conductivity</div>
+      <div class="tech-item">NDIR — Non-Dispersive Infrared (CO, CO₂, CH₄, SO₂, NOx)</div>
+      <div class="tech-item">GC-FID — Flame Ionization Detection (Hydrocarbons)</div>
+      <div class="tech-item">Paramagnetic & Electrochemical — O₂ Analysis</div>
+      <div class="tech-item">Plasma Emission — N₂ in Argon/Helium</div>
+      <div class="tech-item">Electrolytic — Moisture in Gas Products</div>
+      <div class="tech-item">Coulometric-Electrochemical Analysis</div>
+      <div class="tech-item">Gravimetry — Mass/Volume Preparation</div>
+    </div>
+  </div>
+
+  <!-- Process -->
+  <h3 style="font-size:16px;font-weight:800;color:var(--nv);margin-top:32px;margin-bottom:6px">⚙️ From Your Specs to Certified Cylinder</h3>
+  <p style="font-size:12.5px;color:var(--tm);margin-bottom:16px">Every custom mixture follows our 5-step certified manufacturing process:</p>
+  <div class="proc-grid">
+    <div class="proc-card"><div class="proc-num">01</div><div class="proc-title">Raw Material QA</div><div class="proc-desc">Supplier certs verified, source gas purity confirmed</div></div>
+    <div class="proc-card"><div class="proc-num">02</div><div class="proc-title">Cylinder Prep</div><div class="proc-desc">Cleaning, evacuation, proprietary treatment for reactive gases</div></div>
+    <div class="proc-card"><div class="proc-num">03</div><div class="proc-title">Precision Blending</div><div class="proc-desc">Gravimetric prep, NIST-traceable weights</div></div>
+    <div class="proc-card"><div class="proc-num">04</div><div class="proc-title">Analysis & COA</div><div class="proc-desc">Multi-technology verification, COA issued</div></div>
+    <div class="proc-card"><div class="proc-num">05</div><div class="proc-title">Ship 3-7 Days</div><div class="proc-desc">DOT labeled, SDS included, HAZMAT compliant</div></div>
+  </div>
+</div></section>
+
+<!-- FAQ -->
+<section class="section s-gray"><div class="mx" style="max-width:760px">
+  <div style="text-align:center;margin-bottom:28px">
+    <div class="label" style="justify-content:center"><div class="label-line" style="background:var(--or)"></div><span class="label-txt" style="color:var(--or)">FAQ</span></div>
+    <h2 class="s-title" style="font-size:clamp(22px,3vw,28px)">Frequently Asked Questions</h2>
+  </div>
+
+  <div class="faq-item open"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><h4>How many components can WSM put in a single mixture?</h4><span>+</span></div><div class="faq-a">WSM manufactures gas mixtures from 2 components (binary) up to 12 or more components in a single cylinder. Each component is independently verified by analytical measurement. Contact us with your full specification and we'll confirm feasibility and lead time.</div></div>
+
+  <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><h4>What is an EPA Protocol Gas?</h4><span>+</span></div><div class="faq-a">EPA Protocol gases are calibration gas standards manufactured based on the EPA "Traceability Protocol for Assay and Certification of Gaseous Calibration Standards" (Document EPA/600/R-12/531, May 2012). This protocol establishes the analytical and statistical procedures for certifying gases used to calibrate Continuous Emissions Monitoring Systems (CEMS) under 40 CFR Part 72 and the Clean Air Act. WSM is a participant in the EPA Protocol Gas Verification Program (PGVP) — our protocol gases are NIST-traceable with expanded uncertainty stated at k=2.</div></div>
+
+  <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><h4>What makes sulfur gas mixtures different?</h4><span>+</span></div><div class="faq-a">Sulfur compounds (H₂S, SO₂, COS, mercaptans) are reactive and can adsorb onto cylinder walls, causing concentration loss over time. WSM uses aluminum cylinders with a proprietary treatment to create a stable internal surface. This ensures the labeled concentration remains accurate throughout the full shelf life of the cylinder.</div></div>
+
+  <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><h4>What is the turnaround time for custom mixtures?</h4><span>+</span></div><div class="faq-a">Turnaround depends on the complexity of your mixture, but we have mixtures that can ship as fast as 3-7 business days. Contact us for more information based on your specific requirements.</div></div>
+
+  <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><h4>Does WSM provide medical gas mixtures?</h4><span>+</span></div><div class="faq-a">Yes. WSM manufactures medical gas mixtures to USP and cGMP standards including lung diffusion (DLCO) test gas, blood gas calibration mixtures, aerobic and anaerobic culture gas, and anesthesia verification standards. Full documentation for regulatory compliance and FDA certification available.</div></div>
+
+  <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><h4>What does NIST-traceable mean?</h4><span>+</span></div><div class="faq-a">NIST-traceable means the calibration of our analytical instruments and reference standards can be traced through an unbroken chain of comparisons back to a NIST Standard Reference Material (SRM). As an ISO 17034 accredited Reference Material Producer, WSM documents this full traceability chain and reports the expanded measurement uncertainty at k=2 (95% confidence level).</div></div>
+
+  <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><h4>Can WSM match a competitor's mixture specification?</h4><span>+</span></div><div class="faq-a">Yes. Send us the competitor's part number, COA, or specification sheet and we'll manufacture an equivalent or identical mixture at our lab. With 184+ competitor cross-references already in our system and the ability to manufacture custom blends, we can match virtually any specification. Contact us with your requirements.</div></div>
+</div></section>
+
+<!-- CTA -->
+<section class="section s-dark" id="quote"><div class="mx">
+  <div style="text-align:center;max-width:560px;margin:0 auto">
+    <h2 style="font-size:clamp(22px,3vw,30px);font-weight:800;color:#fff;margin-bottom:10px">Need a Custom Gas Mixture?</h2>
+    <p style="font-size:14px;color:rgba(255,255,255,0.6);max-width:460px;margin:0 auto 24px">Send us your specification — components, concentrations, balance gas, and cylinder size. Our lab team will provide a quote and lead time within 24 hours.</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+      <a href="/cdn-cgi/l/email-protection#6a190b060f192a1d1907191f1a1a06030f1844090507" style="font-size:14px;font-weight:700;color:var(--nv);background:#fff;padding:13px 28px;border-radius:8px">✉️ Request a Quote</a>
+      <a href="tel:+13054551220" style="font-size:14px;font-weight:700;color:#fff;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);padding:13px 28px;border-radius:8px">📞 (305) 455-1220</a>
+    </div>
+    <p style="font-size:11px;color:rgba(255,255,255,0.35);margin-top:20px">WSM Specialty Gases · 3535 NW 60th St, Miami FL 33142 · ISO 17025 & 17034 · EPA PGVP · PJLA #125017</p>
+  </div>
+</div></section>
+
+<footer class="footer">© 2026 WSM Specialty Gases LLC. All rights reserved. · ISO 17025 & 17034 · EPA PGV
