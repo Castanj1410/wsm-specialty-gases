@@ -5,372 +5,432 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="WSM Specialty Gases — ISO 17025 & 17034 certified specialty gas laboratory in Miami. Certified gas mixtures, helium for MRI machines, ultra high purity gases, calibration gas cylinders. USA & Latin America.">
 <title>Industrial Gas Supplier & Specialty Gas Laboratory | WSM Specialty Gases</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-:root{
-  --blue:#0056b8;--blue-d:#003a7a;--blue-dd:#001f45;
-  --lime:#c8d200;--lime-l:#e8ed4a;--lime-bg:rgba(200,210,0,0.08);
-  --white:#ffffff;--off:#f5f6f8;--gray:#e2e5ea;
-  --tx:#1a1f2e;--tm:#4a5568;--tl:#718096;
-  --nav-bg:#0056b8;--footer-bg:#0056b8;
-}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Outfit',sans-serif;color:var(--tx);background:var(--white);line-height:1.6}
-a{text-decoration:none}
-.mx{max-width:1140px;margin:0 auto;padding:0 32px}
-img{max-width:100%}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',system-ui,sans-serif;color:#0f172a;background:#fff;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+button{font-family:inherit;cursor:pointer;border:none}
+input{font-family:inherit}
 
 /* NAV */
-.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--nav-bg);padding:0 32px;border-bottom:1px solid rgba(255,255,255,0.08)}
-.nav-in{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:70px}
-.nav-links{display:flex;align-items:center;gap:28px}
-.nav-links a{font-size:13px;font-weight:500;color:rgba(255,255,255,0.75);transition:color 0.2s}
-.nav-links a:hover{color:var(--lime)}
-.nav-cta{font-size:12px!important;font-weight:700!important;color:var(--blue-dd)!important;background:var(--lime);padding:9px 20px;border-radius:5px;transition:background 0.2s}
-.nav-cta:hover{background:var(--lime-l)}
+.nav{position:fixed;top:0;left:0;right:0;height:65px;background:#fff;border-bottom:1px solid #e0e0e0;z-index:100}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 32px;height:100%;display:flex;align-items:center;justify-content:space-between}
+.nav-logo img{height:45px;width:auto}
+.nav-menu{display:flex;align-items:center;gap:32px}
+.nav-menu a{font-size:14px;font-weight:600;color:#003a7a;transition:opacity .2s}
+.nav-menu a:hover{opacity:0.65}
+.nav-cta{background:#c8d200;color:#003a7a!important;padding:9px 20px;border-radius:6px;font-weight:800!important;font-size:13px!important;transition:background .2s}
+.nav-cta:hover{background:#d8e216;opacity:1!important}
 
-/* HERO — FULL SCREEN */
-.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:var(--blue-d);padding:70px 32px 0}
-.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(160deg,rgba(0,60,140,0.6) 0%,rgba(0,40,100,0.95) 100%);z-index:1}
-.hero-inner{position:relative;z-index:2;max-width:1200px;width:100%;margin:0 auto}
-.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-.hero-badge{display:inline-flex;align-items:center;gap:7px;background:rgba(200,210,0,0.12);border:1px solid rgba(200,210,0,0.3);border-radius:18px;padding:4px 14px;margin-bottom:14px;font-size:9px;font-weight:700;color:var(--lime);letter-spacing:1.5px}
-.hero h1{font-size:clamp(26px,3.5vw,42px);font-weight:900;line-height:1.1;letter-spacing:-1.5px;color:#fff;margin-bottom:14px}
-.hero h1 span{color:var(--lime)}
-.hero p{font-size:14px;color:rgba(255,255,255,0.65);line-height:1.7;max-width:460px;margin-bottom:20px}
-.hero p strong{color:#fff}
-.hero-btns{display:flex;gap:10px;flex-wrap:wrap}
-.btn-p{font-size:13px;font-weight:700;color:var(--blue-dd);background:var(--lime);padding:11px 24px;border-radius:6px;transition:background 0.2s}
-.btn-p:hover{background:var(--lime-l)}
-.btn-s{font-size:13px;font-weight:700;color:#fff;background:transparent;padding:11px 24px;border-radius:6px;border:1.5px solid rgba(255,255,255,0.25);transition:border-color 0.2s}
-.btn-s:hover{border-color:var(--lime)}
-.hero-trust{display:flex;gap:18px;margin-top:20px;padding-top:14px;border-top:1px solid rgba(255,255,255,0.08)}
-.hero-trust div{font-size:10.5px;font-weight:600;color:rgba(255,255,255,0.4)}
-.video-wrap{border-radius:10px;overflow:hidden;box-shadow:0 16px 50px rgba(0,0,0,0.4);border:1px solid rgba(255,255,255,0.1);aspect-ratio:16/9}
-.video-wrap iframe{width:100%;height:100%;display:block}
+/* HERO */
+.hero{min-height:100vh;background:#003a7a;display:flex;flex-direction:column;justify-content:space-between;padding:90px 32px 30px;overflow:hidden}
+.hero-badge{max-width:1100px;width:100%;margin:0 auto;text-align:center}
+.hero-badge span{display:inline-block;font-size:11px;font-weight:700;letter-spacing:2.2px;text-transform:uppercase;color:#c8d200;padding:6px 14px;border:1px solid rgba(200,210,0,0.35);border-radius:20px;background:rgba(200,210,0,0.06)}
+.hero-inner{max-width:1100px;width:100%;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.hero-text h1{font-size:42px;font-weight:900;color:#fff;line-height:1.08;letter-spacing:-1.2px;margin-bottom:20px}
+.hero-stats{max-width:1100px;width:100%;margin:0 auto;padding-top:28px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center;border-top:1px solid rgba(255,255,255,0.12)}
+.hero-stat-num{font-size:32px;font-weight:900;color:#fff;letter-spacing:-1px;line-height:1}
+.hero-stat-label{font-size:11px;font-weight:800;color:#c8d200;margin-top:6px;letter-spacing:1px;text-transform:uppercase}
+.hero-stat-sub{font-size:10.5px;color:rgba(255,255,255,0.55);margin-top:3px}
+.hero-text h1 .accent{color:#c8d200;display:block}
+.hero-text p{font-size:15px;color:rgba(255,255,255,0.7);line-height:1.65;margin-bottom:28px;max-width:500px}
+.hero-text p strong{color:#fff;font-weight:600}
+.hero-buttons{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.btn-primary{display:inline-block;background:#c8d200;color:#003a7a;padding:14px 28px;border-radius:7px;font-weight:800;font-size:14px;transition:background .2s,transform .15s}
+.btn-primary:hover{background:#d8e216;transform:translateY(-1px)}
+.btn-secondary{display:inline-block;background:transparent;color:#fff;padding:14px 24px;border-radius:7px;font-weight:600;font-size:14px;border:1.5px solid rgba(255,255,255,0.3);transition:border-color .2s}
+.btn-secondary:hover{border-color:#c8d200}
+.hero-video{width:100%;aspect-ratio:4/3;border-radius:10px;overflow:hidden;background:#000;box-shadow:0 24px 60px rgba(0,0,0,0.45);border:1px solid rgba(255,255,255,0.08)}
+.hero-video iframe{width:100%;height:100%;border:0;display:block}
 
 /* STATS */
-.stats{background:var(--blue);padding:28px 24px;border-bottom:3px solid var(--lime)}
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
-.stat-num{font-size:28px;font-weight:900;color:#fff}
-.stat-label{font-size:11px;font-weight:700;color:rgba(255,255,255,0.85);margin-top:2px}
-.stat-sub{font-size:9.5px;color:rgba(255,255,255,0.4);margin-top:1px}
+.stats{background:#0056b8;padding:30px 32px;border-bottom:3px solid #c8d200}
+.stats-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+.stat-num{font-size:36px;font-weight:900;color:#fff;letter-spacing:-1px;line-height:1}
+.stat-label{font-size:12px;font-weight:800;color:#c8d200;margin-top:8px;letter-spacing:1px;text-transform:uppercase}
+.stat-sub{font-size:11px;color:rgba(255,255,255,0.65);margin-top:4px}
 
 /* SECTIONS */
-.section{padding:64px 24px}
-.section-w{background:var(--white)}
-.section-g{background:var(--off)}
-.section-d{background:var(--nav-bg);color:#fff}
-.label{display:flex;align-items:center;gap:8px;margin-bottom:6px;justify-content:center}
-.label-line{width:32px;height:3px;border-radius:2px;background:var(--lime)}
-.label-text{font-size:10.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--blue)}
-.s-title{font-size:clamp(24px,3vw,34px);font-weight:900;color:var(--blue-d);letter-spacing:-1px;margin:4px 0 10px;text-align:center}
-.s-desc{font-size:14px;color:var(--tm);max-width:620px;line-height:1.7;text-align:center;margin:0 auto 28px}
-.center{text-align:center}
+.section{padding:60px 32px}
+.bg-white{background:#fff}
+.bg-off{background:#f5f6f8}
+.container{max-width:1100px;margin:0 auto}
+.section-head{text-align:center;max-width:700px;margin:0 auto 40px}
+.eyebrow{display:inline-block;font-size:11px;font-weight:800;color:#0056b8;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;padding:5px 14px;border:1px solid rgba(0,86,184,0.2);border-radius:20px;background:rgba(0,86,184,0.04)}
+.h2{font-size:28px;font-weight:900;color:#003a7a;letter-spacing:-0.6px;line-height:1.2;margin-bottom:12px;text-align:center}
+.lead{font-size:14.5px;color:#475569;line-height:1.65;max-width:620px;margin:0 auto;text-align:center}
+.lead strong{color:#003a7a;font-weight:600}
 
 /* CERTS */
-.certs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:28px 0 36px}
-.cert-card{background:var(--blue-d);border-radius:11px;padding:20px;text-align:center;border-top:3px solid var(--lime)}
-.cert-title{font-size:15px;font-weight:800;color:#fff}
-.cert-num{font-size:9.5px;font-weight:700;color:var(--lime);letter-spacing:1.5px;margin-top:4px}
-.cert-sub{font-size:10px;color:rgba(255,255,255,0.4);margin-top:3px}
-.cert-valid{font-size:8px;color:rgba(255,255,255,0.2);margin-top:4px}
+.certs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:48px}
+.cert{background:#003a7a;border-radius:10px;padding:26px 22px;text-align:center;border-top:3px solid #c8d200}
+.cert-title{font-size:17px;font-weight:900;color:#fff;margin-bottom:6px}
+.cert-num{font-size:10.5px;font-weight:700;color:#c8d200;letter-spacing:1.6px;margin-bottom:6px}
+.cert-sub{font-size:12.5px;color:rgba(255,255,255,0.8);margin-bottom:10px}
+.cert-valid{font-size:10.5px;color:rgba(255,255,255,0.45);line-height:1.5;padding-top:10px;border-top:1px solid rgba(255,255,255,0.1)}
+
+/* SUBHEAD */
+.subhead{text-align:center;max-width:620px;margin:0 auto 28px}
+.subhead h3{font-size:22px;font-weight:900;color:#003a7a;margin-bottom:8px;letter-spacing:-0.4px}
+.subhead p{font-size:14px;color:#475569;line-height:1.6}
 
 /* CAPS */
-.cap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:32px}
-.cap-card{background:var(--white);border:1px solid var(--gray);border-radius:10px;padding:18px;transition:border-color 0.2s}
-.cap-card:hover{border-color:var(--blue)}
-.cap-header{display:flex;align-items:center;gap:8px;margin-bottom:9px}
-.cap-header span{font-size:18px}
-.cap-header h4{font-size:13.5px;font-weight:700;color:var(--blue-d)}
-.cap-item{font-size:11px;color:var(--tm);padding:2.5px 0 2.5px 15px;position:relative;line-height:1.45}
-.cap-item::before{content:"✓";position:absolute;left:0;color:var(--blue);font-weight:700}
+.caps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:48px}
+.cap{background:#fff;border:1px solid #e5e8ee;border-radius:10px;padding:22px;transition:all .2s}
+.cap:hover{border-color:#0056b8;transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,86,184,0.06)}
+.cap h4{font-size:15px;font-weight:800;color:#003a7a;margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid #c8d200}
+.cap-item{font-size:12.5px;color:#475569;padding:4px 0 4px 14px;position:relative;line-height:1.5}
+.cap-item::before{content:"";position:absolute;left:0;top:11px;width:8px;height:2px;background:#c8d200;border-radius:1px}
 
 /* TECH */
-.tech-box{background:var(--lime-bg);border:1px solid rgba(200,210,0,0.2);border-radius:12px;padding:22px;margin-bottom:36px}
-.tech-box h3{font-size:16px;font-weight:800;color:var(--blue-d);margin-bottom:3px}
-.tech-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px}
-.tech-item{font-size:11px;color:var(--tm);padding:3px 0 3px 16px;position:relative}
-.tech-item::before{content:"›";position:absolute;left:0;color:var(--blue);font-weight:700}
+.tech{background:#003a7a;border-radius:12px;padding:36px;margin-bottom:48px;color:#fff}
+.tech h3{font-size:22px;font-weight:900;text-align:center;margin-bottom:8px;color:#fff}
+.tech-lead{font-size:13.5px;color:rgba(255,255,255,0.7);text-align:center;margin-bottom:22px;max-width:520px;margin-left:auto;margin-right:auto}
+.tech-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 32px}
+.tech-item{font-size:13px;color:rgba(255,255,255,0.9);padding:5px 0 5px 16px;position:relative}
+.tech-item::before{content:"";position:absolute;left:0;top:12px;width:8px;height:2px;background:#c8d200;border-radius:1px}
 
 /* PROCESS */
-.proc-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}
-.proc-card{background:var(--white);border:1px solid var(--gray);border-radius:8px;padding:14px;text-align:center}
-.proc-num{font-size:26px;font-weight:900;color:var(--blue);opacity:0.15}
-.proc-title{font-size:11.5px;font-weight:700;color:var(--blue-d);margin:2px 0 4px}
-.proc-desc{font-size:10px;color:var(--tm);line-height:1.4}
+.process-title{text-align:center;font-size:22px;font-weight:900;color:#003a7a;margin-bottom:24px;letter-spacing:-0.4px}
+.process{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.step{background:#fff;border:1px solid #e5e8ee;border-radius:10px;padding:22px 16px;text-align:center;transition:all .2s}
+.step:hover{border-color:#c8d200;transform:translateY(-2px)}
+.step-num{font-size:32px;font-weight:900;color:#0056b8;opacity:0.18;line-height:1;margin-bottom:6px}
+.step-title{font-size:12.5px;font-weight:800;color:#003a7a;margin-bottom:4px}
+.step-desc{font-size:11px;color:#475569;line-height:1.5}
 
-/* HELISTREAM */
-.heli-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
-.heli-box{background:rgba(0,86,184,0.04);border:1px solid rgba(0,86,184,0.12);border-radius:9px;padding:16px;margin-bottom:18px}
-.heli-box .hb-title{font-size:12px;font-weight:700;color:var(--blue-d);margin-bottom:6px}
-.heli-item{font-size:11.5px;color:var(--tm);padding:2.5px 0 2.5px 16px;position:relative}
-.heli-item::before{content:"✓";position:absolute;left:0;color:var(--blue);font-weight:700}
-.cov-row{display:flex;align-items:center;gap:12px;padding:10px 14px;border-radius:7px;margin-bottom:5px;border:1px solid var(--gray);transition:background 0.2s}
-.cov-row:hover,.cov-hl{background:rgba(0,86,184,0.04)!important;border-color:rgba(0,86,184,0.15)!important}
-.cov-flag{font-size:20px}
-.cov-name{font-size:13px;font-weight:700;color:var(--blue-d)}
-.cov-detail{font-size:10.5px;color:var(--tl)}
+/* HELI */
+.heli{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.heli-logo{height:64px;width:auto;margin-bottom:18px}
+.heli h2{text-align:left;margin-bottom:14px}
+.heli-intro{font-size:14.5px;color:#475569;line-height:1.7;margin-bottom:22px}
+.heli-intro strong{color:#003a7a;font-weight:600}
+.heli-box{background:#fff;border:1px solid #e5e8ee;border-left:4px solid #c8d200;border-radius:10px;padding:22px;margin-bottom:22px}
+.heli-box-title{font-size:13px;font-weight:800;color:#003a7a;margin-bottom:12px;letter-spacing:0.8px;text-transform:uppercase}
+.heli-item{font-size:13px;color:#475569;padding:5px 0 5px 16px;position:relative;line-height:1.55}
+.heli-item::before{content:"";position:absolute;left:0;top:12px;width:8px;height:2px;background:#c8d200;border-radius:1px}
+.cov-title{font-size:12px;font-weight:800;color:#003a7a;margin-bottom:14px;text-transform:uppercase;letter-spacing:1.5px}
+.cov{padding:12px 16px;border-radius:8px;margin-bottom:7px;border:1px solid #e5e8ee;background:#fff;transition:all .2s}
+.cov:hover,.cov-hl{border-color:#0056b8;background:rgba(0,86,184,0.03)}
+.cov-name{font-size:13.5px;font-weight:800;color:#003a7a;margin-bottom:2px}
+.cov-detail{font-size:11.5px;color:#94a3b8}
 
 /* PRODUCTS */
-.prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.prod-card{background:var(--white);border:1px solid var(--gray);border-radius:12px;padding:22px;position:relative;overflow:hidden;transition:all 0.25s}
-.prod-card:hover{transform:translateY(-2px);border-color:var(--blue)}
-.prod-bar{position:absolute;top:0;left:0;right:0;height:3px}
-.prod-icon{font-size:20px;margin-bottom:7px}
-.prod-title{font-size:15px;font-weight:700;color:var(--blue-d);margin-bottom:2px}
-.prod-tag{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;color:var(--blue)}
-.prod-desc{font-size:11.5px;color:var(--tm);line-height:1.6;margin-bottom:10px}
-.prod-features{display:flex;flex-wrap:wrap;gap:4px}
-.prod-feat{font-size:9px;font-weight:600;color:var(--tm);background:var(--off);padding:3px 8px;border-radius:10px;border:1px solid var(--gray)}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.product{background:#fff;border:1px solid #e5e8ee;border-radius:12px;padding:24px 22px;transition:all .25s;position:relative;overflow:hidden}
+.product::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:#c8d200;transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.product:hover{border-color:#0056b8;transform:translateY(-3px);box-shadow:0 14px 32px rgba(0,86,184,0.08)}
+.product:hover::before{transform:scaleX(1)}
+.product-title{font-size:16.5px;font-weight:900;color:#003a7a;margin-bottom:5px;line-height:1.25}
+.product-tag{font-size:10.5px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:#0056b8;margin-bottom:12px}
+.product-desc{font-size:13px;color:#475569;line-height:1.6;margin-bottom:14px}
+.product-feats{display:flex;flex-wrap:wrap;gap:5px}
+.product-feat{font-size:10.5px;font-weight:700;color:#003a7a;background:#f5f6f8;padding:4px 10px;border-radius:12px;border:1px solid #e5e8ee}
 
 /* INDUSTRIES */
-.ind-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-.ind-card{background:var(--white);border:1px solid var(--gray);border-radius:8px;padding:12px 14px;display:flex;gap:10px;align-items:center;transition:border-color 0.2s}
-.ind-card:hover{border-color:var(--blue)}
-.ind-icon{font-size:17px;width:34px;height:34px;border-radius:7px;background:rgba(0,86,184,0.06);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.ind-name{font-size:12px;font-weight:700;color:var(--blue-d)}
-.ind-desc{font-size:10px;color:var(--tl);line-height:1.4}
+.industries{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.industry{background:#fff;border:1px solid #e5e8ee;border-radius:10px;padding:20px;transition:all .2s}
+.industry:hover{border-color:#c8d200;transform:translateY(-2px)}
+.industry-name{font-size:14px;font-weight:900;color:#003a7a;margin-bottom:6px}
+.industry-desc{font-size:11.5px;color:#475569;line-height:1.5}
 
 /* WHY */
-.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.why-card{background:var(--white);border:1px solid var(--gray);border-radius:10px;padding:18px;transition:border-color 0.2s}
-.why-card:hover{border-color:var(--lime)}
-.why-check{width:26px;height:26px;border-radius:6px;background:var(--lime-bg);border:1px solid rgba(200,210,0,0.25);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:var(--blue);margin-bottom:8px}
-.why-title{font-size:13px;font-weight:700;color:var(--blue-d);margin-bottom:4px}
-.why-desc{font-size:11px;color:var(--tm);line-height:1.55}
+.whys{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.why{background:#fff;border:1px solid #e5e8ee;border-radius:12px;padding:26px 22px;transition:all .2s}
+.why:hover{border-color:#c8d200;transform:translateY(-3px);box-shadow:0 12px 28px rgba(0,58,122,0.07)}
+.why-bar{width:40px;height:4px;border-radius:2px;background:#c8d200;margin-bottom:16px}
+.why-title{font-size:15.5px;font-weight:900;color:#003a7a;margin-bottom:10px;line-height:1.25}
+.why-desc{font-size:13px;color:#475569;line-height:1.6}
 
 /* QUOTE */
-.quote-box{background:var(--white);border:1px solid var(--gray);border-radius:12px;padding:26px;max-width:560px;margin:0 auto}
-.quote-label{font-size:9.5px;font-weight:700;color:var(--tl);letter-spacing:1px;text-transform:uppercase;display:block;margin-bottom:3px}
-.quote-input{width:100%;padding:10px 12px;border-radius:6px;background:var(--off);border:1px solid var(--gray);font-family:inherit;font-size:12px;color:var(--tx);outline:none;margin-bottom:12px;transition:border-color 0.2s}
-.quote-input:focus{border-color:var(--blue)}
-.quote-btn{width:100%;padding:12px;border-radius:6px;border:none;background:var(--blue);color:#fff;font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;margin-top:4px;transition:background 0.2s}
-.quote-btn:hover{background:var(--blue-d)}
+.quote-box{max-width:540px;margin:0 auto;background:#fff;border-radius:12px;padding:32px;box-shadow:0 10px 32px rgba(0,58,122,0.08);border:1px solid #e5e8ee}
+.quote-label{display:block;font-size:10.5px;font-weight:800;color:#003a7a;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:6px;margin-top:14px}
+.quote-label:first-of-type{margin-top:0}
+.quote-input{width:100%;padding:12px 14px;border-radius:8px;background:#f5f6f8;border:1px solid #e5e8ee;font-size:13.5px;color:#0f172a;outline:none;transition:all .2s}
+.quote-input:focus{border-color:#0056b8;background:#fff}
+.quote-btn{width:100%;padding:14px;border-radius:8px;background:#c8d200;color:#003a7a;font-size:14px;font-weight:800;margin-top:20px;transition:background .2s;letter-spacing:0.3px}
+.quote-btn:hover{background:#d8e216}
 
 /* FOOTER */
-.footer{background:var(--footer-bg);padding:44px 24px 22px;color:rgba(255,255,255,0.6)}
-.footer-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:24px;margin-bottom:24px}
-.footer h4{font-size:10px;font-weight:700;color:var(--lime);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px}
-.footer p,.footer div{font-size:10.5px;line-height:1.65}
-.footer a{color:rgba(255,255,255,0.6)}
-.footer a:hover{color:var(--lime)}
-.footer-bottom{max-width:1100px;margin:0 auto;border-top:1px solid rgba(255,255,255,0.1);padding-top:14px;font-size:9px;color:rgba(255,255,255,0.25);text-align:center}
+.footer{background:#0056b8;padding:40px 32px;color:#fff}
+.footer-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px;margin-bottom:32px}
+.footer-logo{background:#fff;padding:8px 12px;border-radius:6px;display:inline-block;margin-bottom:14px}
+.footer-logo img{height:40px;width:auto}
+.footer-intro{font-size:12.5px;line-height:1.7;color:rgba(255,255,255,0.85)}
+.footer h4{font-size:11px;font-weight:900;color:#c8d200;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:12px}
+.footer-link{display:block;font-size:13px;line-height:1.9;color:#fff;transition:color .2s}
+.footer-link:hover{color:#c8d200}
+.footer-contact{font-size:13px;line-height:1.8;color:#fff}
+.footer-contact a{color:#fff;transition:color .2s}
+.footer-contact a:hover{color:#c8d200}
+.footer-wa{display:inline-block;margin-top:10px;font-size:10.5px;font-weight:900;color:#003a7a;letter-spacing:1.4px;text-transform:uppercase;padding:6px 14px;border-radius:14px;background:#c8d200}
+.footer-bottom{max-width:1100px;margin:0 auto;border-top:1px solid rgba(255,255,255,0.18);padding-top:18px;font-size:11.5px;color:rgba(255,255,255,0.6);text-align:center}
 
-/* ACCENT LINE DIVIDER */
-.lime-bar{height:4px;background:linear-gradient(90deg,var(--lime),var(--blue));width:100%}
-
-@media(max-width:900px){
-  .cap-grid,.prod-grid,.why-grid{grid-template-columns:repeat(2,1fr)}
-  .ind-grid{grid-template-columns:repeat(2,1fr)}
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .hero-inner,.heli{grid-template-columns:1fr;gap:32px}
+  .hero{height:auto;min-height:calc(100vh - 65px);padding:40px 24px}
+  .certs,.caps,.products,.whys{grid-template-columns:repeat(2,1fr)}
+  .industries{grid-template-columns:repeat(3,1fr)}
+  .process{grid-template-columns:repeat(3,1fr)}
 }
 @media(max-width:768px){
-  .hero-grid,.heli-grid{grid-template-columns:1fr}
-  .stats-grid{grid-template-columns:repeat(2,1fr)}
-  .certs-grid,.proc-grid{grid-template-columns:1fr}
-  .cap-grid,.prod-grid,.why-grid,.ind-grid{grid-template-columns:1fr}
+  .nav-menu a:not(.nav-cta){display:none}
+  .stats-inner{grid-template-columns:repeat(2,1fr);gap:24px}
+  .certs,.caps,.products,.whys,.industries{grid-template-columns:1fr}
+  .process{grid-template-columns:repeat(2,1fr)}
   .tech-grid{grid-template-columns:1fr}
+  .tech{padding:26px 22px}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:28px}
+  .hero-text h1{font-size:30px}
+}
+@media(max-width:480px){
   .footer-grid{grid-template-columns:1fr}
-  .nav-links{display:none}
+  .process{grid-template-columns:1fr}
 }
 </style>
 </head>
 <body>
 
 <!-- NAV -->
-<nav class="nav"><div class="nav-in">
-  <a href="#" class="logo"><img src="wsm-logo.png" alt="WSM Specialty Gas" style="height:56px;width:auto"></a>
-  <div class="nav-links">
-    <a href="#laboratory">Specialty Gas Lab</a><a href="#liquidhelium">Liquid Helium MRI</a><a href="#products">Products</a><a href="#industries">Industries</a><a href="#about">About</a>
-    <a href="#quote" class="nav-cta">Get a Quote</a>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo"><img src="wsm-logo.png" alt="WSM Specialty Gas"></a>
+    <div class="nav-menu">
+      <a href="#laboratory">Laboratory</a>
+      <a href="#liquidhelium">Liquid Helium</a>
+      <a href="#products">Products</a>
+      <a href="#industries">Industries</a>
+      <a href="#quote" class="nav-cta">Get a Quote</a>
+    </div>
   </div>
-</div></nav>
+</nav>
 
 <!-- HERO -->
-<section class="hero"><div class="hero-inner"><div class="hero-grid">
-  <div>
-    <div class="hero-badge">ISO 17025 & 17034 CERTIFIED SPECIALTY GAS LABORATORY</div>
-    <h1>Industrial Gas Supplier<br><span>& Specialty Gas</span><br><span>Laboratory in Miami</span></h1>
-    <p>WSM is an ISO-accredited <strong>specialty gas laboratory</strong> in Miami, Florida. We manufacture <strong>certified gas mixtures</strong>, EPA Protocol gases, NIST-traceable standards, <strong>ultra high purity gases</strong>, and supply <strong>helium for MRI machines</strong> nationwide. Every <strong>calibration gas cylinder</strong> is produced, analyzed, and certified in-house.</p>
-    <div class="hero-btns"><a href="#quote" class="btn-p">Request a Quote</a><a href="#laboratory" class="btn-s">Tour Our Lab</a></div>
-    <div class="hero-trust"><div>In-House Manufacturing</div><div>All 50 States + LATAM</div><div>Ships 24–48h</div></div>
-  </div>
-  <div class="video-wrap"><iframe src="https://www.youtube.com/embed/DKnnz8Pc3qQ" title="WSM Specialty Gases" frameborder="0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe></div>
-</div></div></section>
-
-<!-- STATS -->
-<section class="stats"><div class="mx"><div class="stats-grid">
-  <div><div class="stat-num">53</div><div class="stat-label">Pure Gases Produced</div><div class="stat-sub">UHP · Research · Electronic · Medical</div></div>
-  <div><div class="stat-num">400+</div><div class="stat-label">Certified Mixtures</div><div class="stat-sub">Binary to 12+ Components</div></div>
-  <div><div class="stat-num">28,000+</div><div class="stat-label">Calibration Gas SKUs</div><div class="stat-sub">Manufactured at Our Lab</div></div>
-  <div><div class="stat-num">5,000+</div><div class="stat-label">Certified Mixes / Year</div><div class="stat-sub">Analyzed & Shipped from Miami</div></div>
-</div></div></section>
-
-<!-- LIME BAR -->
-<div class="lime-bar"></div>
-
-<!-- ★ LABORATORY ★ -->
-<section id="laboratory" class="section section-w"><div class="mx">
-  <div class="center">
-    <div class="label"><div class="label-line"></div><span class="label-text">Our Laboratory</span></div>
-    <h2 class="s-title">ISO-Accredited Specialty Gas Laboratory</h2>
-    <p class="s-desc">The <strong>only laboratory in South Florida</strong> with ISO/IEC 17025, ISO 17034, and EPA PGVP certifications simultaneously. We manufacture <strong>certified gas mixtures</strong>, <strong>EPA protocol gases</strong>, and <strong>NIST-traceable gas standards</strong> — all in-house.</p>
-  </div>
-
-  <div class="certs-grid">
-    <div class="cert-card"><div class="cert-title">ISO/IEC 17025:2017</div><div class="cert-num">CERT. L25-1002</div><div class="cert-sub">Chemical Testing Laboratory</div><div class="cert-valid">PJLA #125017 · ILAC-MRA · Valid thru Mar 2028</div></div>
-    <div class="cert-card"><div class="cert-title">ISO 17034:2016</div><div class="cert-num">CERT. L25-1003</div><div class="cert-sub">Reference Material Producer (CRM)</div><div class="cert-valid">PJLA #125017 · ILAC-MRA · Valid thru Mar 2028</div></div>
-    <div class="cert-card"><div class="cert-title">EPA PGVP</div><div class="cert-num">VENDOR Y12026</div><div class="cert-sub">Protocol Gas Verification Program</div><div class="cert-valid">Part 75 · 40 CFR Part 72 · NIST Traceable</div></div>
-  </div>
-
-  <h3 style="font-size:17px;font-weight:800;color:var(--blue-d);margin-bottom:4px;text-align:center">What We Manufacture</h3>
-  <p style="font-size:12.5px;color:var(--tm);margin-bottom:20px;max-width:520px;text-align:center;margin-left:auto;margin-right:auto">From EPA Protocol standards to corrosive reactive blends — produced and certified under the highest international accreditations.</p>
-
-  <div class="cap-grid">
-    <div class="cap-card"><div class="cap-header"><h4>Certified Gas Mixtures</h4></div><div class="cap-item">EPA Protocol Gases (PGVP, 40 CFR Part 72)</div><div class="cap-item">NIST-Traceable Primary Standards (Uncertainty k=2)</div><div class="cap-item">Multi-Component Blends (2 to 12+ gases)</div><div class="cap-item">Binary, Ternary & Quad Gas Mixtures</div><div class="cap-item">ppm & ppb Level Concentrations</div></div>
-    <div class="cap-card"><div class="cap-header"><h4>Pure & UHP Gases</h4></div><div class="cap-item">Ultra High Purity (UHP) — 99.999%+</div><div class="cap-item">Research Grade — 99.9995%+</div><div class="cap-item">Electronic Grade — 99.999%</div><div class="cap-item">Instrument & Certified Grade</div><div class="cap-item">Medical Grade (USP Compliant)</div></div>
-    <div class="cap-card"><div class="cap-header"><h4>Reactive & Corrosive Gases</h4></div><div class="cap-item">H₂S, SO₂, HCl, HCN, Cl₂, NH₃, PH₃</div><div class="cap-item">Sulfur: COS, Mercaptans, Odorant Cal</div><div class="cap-item">Proprietary Cylinder Treatment Process</div><div class="cap-item">Aluminum Cylinders for Maximum Stability</div><div class="cap-item">Full SDS & HAZMAT Documentation</div></div>
-    <div class="cap-card"><div class="cap-header"><h4>Hydrocarbon & Process Gases</h4></div><div class="cap-item">CH₄, C₂H₄, C₂H₆, C₃H₈, C₄H₁₀</div><div class="cap-item">LEL Calibration Blends</div><div class="cap-item">FID Fuel Gas (H₂/He, H₂/N₂)</div><div class="cap-item">Natural Gas Simulations</div><div class="cap-item">Petrochemical Analysis Standards</div></div>
-    <div class="cap-card"><div class="cap-header"><h4>Medical & Laser Gases</h4></div><div class="cap-item">Aerobic & Anaerobic Mixtures</div><div class="cap-item">Lung Diffusion & Blood Gas Blends</div><div class="cap-item">CO₂ Laser Gas Mixtures</div><div class="cap-item">USP & cGMP Compliant Documentation</div><div class="cap-item">FDA Certification Available</div></div>
-    <div class="cap-card"><div class="cap-header"><h4>Calibration Gas for Detectors</h4></div><div class="cap-item">4-Gas Mix: CO / H₂S / LEL / O₂</div><div class="cap-item">Bump Test & Span Gases</div><div class="cap-item">Portable & Fixed Detector Calibration</div><div class="cap-item">184+ Competitor Cross-References</div><div class="cap-item">Ships 24-48h from Stock</div></div>
-  </div>
-
-  <div class="tech-box">
-    <h3 style="text-align:center">Accredited Analytical Technologies</h3>
-    <p style="font-size:11.5px;color:var(--tm);margin-bottom:14px;text-align:center">Every mixture analyzed with NIST-traceable calibrated instruments:</p>
-    <div class="tech-grid">
-      <div class="tech-item">GC-TCD — Gas Chromatography Thermal Conductivity</div>
-      <div class="tech-item">NDIR — Non-Dispersive Infrared (CO, CO₂, CH₄, SO₂, NOx)</div>
-      <div class="tech-item">GC-FID — Flame Ionization Detection (Hydrocarbons)</div>
-      <div class="tech-item">Paramagnetic & Electrochemical — O₂ Analysis</div>
-      <div class="tech-item">Plasma Emission — N₂ in Argon/Helium</div>
-      <div class="tech-item">Electrolytic — Moisture in Gas Products</div>
-      <div class="tech-item">Coulometric-Electrochemical Analysis</div>
-      <div class="tech-item">Gravimetry — Mass/Volume Preparation</div>
+<section class="hero">
+  <div class="hero-badge"><span>ISO 17025 &middot; ISO 17034 &middot; EPA PGVP</span></div>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <h1>Industrial Gas Supplier<span class="accent">&amp; Specialty Gas Lab in Miami.</span></h1>
+      <p>WSM is an ISO-accredited <strong>specialty gas laboratory</strong> in Miami. We manufacture <strong>certified gas mixtures</strong>, EPA Protocol gases, NIST-traceable standards, <strong>ultra high purity gases</strong>, and supply <strong>helium for MRI machines</strong> nationwide.</p>
+      <div class="hero-buttons">
+        <a href="#quote" class="btn-primary">Request a Quote</a>
+        <a href="#laboratory" class="btn-secondary">Tour the Lab</a>
+      </div>
+    </div>
+    <div class="hero-video">
+      <iframe src="https://www.youtube.com/embed/DKnnz8Pc3qQ" title="WSM Specialty Gases" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
-
-  <h3 style="font-size:16px;font-weight:800;color:var(--blue-d);margin-bottom:14px;text-align:center">From Raw Material to Certified Cylinder</h3>
-  <div class="proc-grid">
-    <div class="proc-card"><div class="proc-num">01</div><div class="proc-title">Source Gas</div><div class="proc-desc">Verified raw materials</div></div>
-    <div class="proc-card"><div class="proc-num">02</div><div class="proc-title">Cylinder Prep</div><div class="proc-desc">Cleaning, evacuation, proprietary treatment</div></div>
-    <div class="proc-card"><div class="proc-num">03</div><div class="proc-title">Gravimetric Fill</div><div class="proc-desc">Precision mass-based blending</div></div>
-    <div class="proc-card"><div class="proc-num">04</div><div class="proc-title">Analysis</div><div class="proc-desc">Multi-technology verification</div></div>
-    <div class="proc-card"><div class="proc-num">05</div><div class="proc-title">Certification</div><div class="proc-desc">COA · traceability · k=2</div></div>
+  <div class="hero-stats">
+    <div><div class="hero-stat-num">53</div><div class="hero-stat-label">Pure Gases</div><div class="hero-stat-sub">UHP · Research · Medical</div></div>
+    <div><div class="hero-stat-num">400+</div><div class="hero-stat-label">Certified Mixtures</div><div class="hero-stat-sub">Binary to 12+ Components</div></div>
+    <div><div class="hero-stat-num">28,000+</div><div class="hero-stat-label">Calibration SKUs</div><div class="hero-stat-sub">Manufactured at Our Lab</div></div>
+    <div><div class="hero-stat-num">5,000+</div><div class="hero-stat-label">Certified / Year</div><div class="hero-stat-sub">Analyzed & Shipped from Miami</div></div>
   </div>
-</div></section>
+</section>
+
+<!-- LABORATORY -->
+<section id="laboratory" class="section bg-white">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Our Laboratory</div>
+      <h2 class="h2">ISO-Accredited Specialty Gas Laboratory</h2>
+      <p class="lead">The <strong>only laboratory in South Florida</strong> with ISO/IEC 17025, ISO 17034, and EPA PGVP certifications simultaneously. We manufacture <strong>certified gas mixtures</strong>, <strong>EPA protocol gases</strong>, and <strong>NIST-traceable gas standards</strong> — all in-house.</p>
+    </div>
+
+    <div class="certs">
+      <div class="cert"><div class="cert-title">ISO/IEC 17025:2017</div><div class="cert-num">CERT. L25-1002</div><div class="cert-sub">Chemical Testing Laboratory</div><div class="cert-valid">PJLA #125017 · ILAC-MRA<br>Valid thru Mar 2028</div></div>
+      <div class="cert"><div class="cert-title">ISO 17034:2016</div><div class="cert-num">CERT. L25-1003</div><div class="cert-sub">Reference Material Producer (CRM)</div><div class="cert-valid">PJLA #125017 · ILAC-MRA<br>Valid thru Mar 2028</div></div>
+      <div class="cert"><div class="cert-title">EPA PGVP</div><div class="cert-num">VENDOR Y12026</div><div class="cert-sub">Protocol Gas Verification Program</div><div class="cert-valid">Part 75 · 40 CFR Part 72<br>NIST Traceable</div></div>
+    </div>
+
+    <div class="subhead">
+      <h3>What We Manufacture</h3>
+      <p>From EPA Protocol standards to corrosive reactive blends — produced and certified under the highest international accreditations.</p>
+    </div>
+
+    <div class="caps">
+      <div class="cap"><h4>Certified Gas Mixtures</h4><div class="cap-item">EPA Protocol Gases (PGVP, 40 CFR Part 72)</div><div class="cap-item">NIST-Traceable Primary Standards (k=2)</div><div class="cap-item">Multi-Component Blends (2 to 12+ gases)</div><div class="cap-item">Binary, Ternary & Quad Gas Mixtures</div><div class="cap-item">ppm & ppb Level Concentrations</div></div>
+      <div class="cap"><h4>Pure & UHP Gases</h4><div class="cap-item">Ultra High Purity (UHP) — 99.999%+</div><div class="cap-item">Research Grade — 99.9995%+</div><div class="cap-item">Electronic Grade — 99.999%</div><div class="cap-item">Instrument & Certified Grade</div><div class="cap-item">Medical Grade (USP Compliant)</div></div>
+      <div class="cap"><h4>Reactive & Corrosive Gases</h4><div class="cap-item">H₂S, SO₂, HCl, HCN, Cl₂, NH₃, PH₃</div><div class="cap-item">Sulfur: COS, Mercaptans, Odorant Cal</div><div class="cap-item">Proprietary Cylinder Treatment Process</div><div class="cap-item">Aluminum Cylinders for Maximum Stability</div><div class="cap-item">Full SDS & HAZMAT Documentation</div></div>
+      <div class="cap"><h4>Hydrocarbon & Process Gases</h4><div class="cap-item">CH₄, C₂H₄, C₂H₆, C₃H₈, C₄H₁₀</div><div class="cap-item">LEL Calibration Blends</div><div class="cap-item">FID Fuel Gas (H₂/He, H₂/N₂)</div><div class="cap-item">Natural Gas Simulations</div><div class="cap-item">Petrochemical Analysis Standards</div></div>
+      <div class="cap"><h4>Medical & Laser Gases</h4><div class="cap-item">Aerobic & Anaerobic Mixtures</div><div class="cap-item">Lung Diffusion & Blood Gas Blends</div><div class="cap-item">CO₂ Laser Gas Mixtures</div><div class="cap-item">USP & cGMP Compliant Documentation</div><div class="cap-item">FDA Certification Available</div></div>
+      <div class="cap"><h4>Calibration Gas for Detectors</h4><div class="cap-item">4-Gas Mix: CO / H₂S / LEL / O₂</div><div class="cap-item">Bump Test & Span Gases</div><div class="cap-item">Portable & Fixed Detector Calibration</div><div class="cap-item">184+ Competitor Cross-References</div><div class="cap-item">Ships 24-48h from Stock</div></div>
+    </div>
+
+    <div class="tech">
+      <h3>Accredited Analytical Technologies</h3>
+      <p class="tech-lead">Every mixture analyzed with NIST-traceable calibrated instruments.</p>
+      <div class="tech-grid">
+        <div class="tech-item">GC-TCD — Gas Chromatography Thermal Conductivity</div>
+        <div class="tech-item">NDIR — Non-Dispersive Infrared (CO, CO₂, CH₄, SO₂, NOx)</div>
+        <div class="tech-item">GC-FID — Flame Ionization Detection (Hydrocarbons)</div>
+        <div class="tech-item">Paramagnetic & Electrochemical — O₂ Analysis</div>
+        <div class="tech-item">Plasma Emission — N₂ in Argon/Helium</div>
+        <div class="tech-item">Electrolytic — Moisture in Gas Products</div>
+        <div class="tech-item">Coulometric-Electrochemical Analysis</div>
+        <div class="tech-item">Gravimetry — Mass/Volume Preparation</div>
+      </div>
+    </div>
+
+    <h3 class="process-title">From Raw Material to Certified Cylinder</h3>
+    <div class="process">
+      <div class="step"><div class="step-num">01</div><div class="step-title">Source Gas</div><div class="step-desc">Verified raw materials</div></div>
+      <div class="step"><div class="step-num">02</div><div class="step-title">Cylinder Prep</div><div class="step-desc">Cleaning, evacuation, proprietary treatment</div></div>
+      <div class="step"><div class="step-num">03</div><div class="step-title">Gravimetric Fill</div><div class="step-desc">Precision mass-based blending</div></div>
+      <div class="step"><div class="step-num">04</div><div class="step-title">Analysis</div><div class="step-desc">Multi-technology verification</div></div>
+      <div class="step"><div class="step-num">05</div><div class="step-title">Certification</div><div class="step-desc">COA · traceability · k=2</div></div>
+    </div>
+  </div>
+</section>
 
 <!-- HELISTREAM -->
-<section id="liquidhelium" class="section section-g"><div class="mx">
-  <div class="heli-grid">
-    <div>
-      <div class="label"><div class="label-line"></div><span class="label-text">Liquid Helium / MRI</span></div>
-      <div style="margin-bottom:12px"><img src="helistream-logo.png" alt="HeliStream — Liquid Helium Solutions for MRI" style="height:90px;width:auto"></div>
-      <h2 class="s-title">Helium for MRI Machines</h2>
-      <p style="font-size:14px;color:var(--tm);line-height:1.7;margin-bottom:20px">WSM is a trusted <strong>liquid helium supplier</strong> for MRI facilities nationwide. We deliver <strong>liquid helium for MRI</strong> systems in pre-chilled <strong>liquid helium dewars</strong> (250L & 500L) with full on-site transfer service by trained cryogenic technicians. Scheduled and emergency fills across all 50 U.S. states and Latin America.</p>
-      <div class="heli-box">
-        <div class="hb-title">Our Liquid Helium MRI Service Includes:</div>
-        <div class="heli-item">Liquid helium supply — delivered in pre-chilled dewars</div>
-        <div class="heli-item">On-site MRI magnet transfer by trained cryogenic technicians</div>
-        <div class="heli-item">Pre-purged transfer lines — zero warm-up cycle at MRI site</div>
-        <div class="heli-item">Scheduled refill programs tailored to your magnet's consumption</div>
-        <div class="heli-item">Emergency fills available — all continental U.S.</div>
+<section id="liquidhelium" class="section bg-off">
+  <div class="container">
+    <div class="heli">
+      <div>
+        <div class="eyebrow">Liquid Helium / MRI</div>
+        <img src="helistream-logo.png" alt="HeliStream — Liquid Helium Solutions for MRI" class="heli-logo">
+        <h2 class="h2" style="text-align:left">Helium for MRI Machines</h2>
+        <p class="heli-intro">WSM is a trusted <strong>liquid helium supplier</strong> for MRI facilities nationwide. We deliver <strong>liquid helium for MRI</strong> systems in pre-chilled <strong>liquid helium dewars</strong> (250L & 500L) with full on-site transfer service by trained cryogenic technicians. Scheduled and emergency fills across all 50 U.S. states and Latin America.</p>
+        <div class="heli-box">
+          <div class="heli-box-title">Our Liquid Helium MRI Service Includes</div>
+          <div class="heli-item">Liquid helium supply — delivered in pre-chilled dewars</div>
+          <div class="heli-item">On-site MRI magnet transfer by trained cryogenic technicians</div>
+          <div class="heli-item">Pre-purged transfer lines — zero warm-up cycle at MRI site</div>
+          <div class="heli-item">Scheduled refill programs tailored to your magnet's consumption</div>
+          <div class="heli-item">Emergency fills available — all continental U.S.</div>
+        </div>
+        <a href="#quote" class="btn-primary">Get HeliStream® Quote</a>
       </div>
-      <a href="#quote" class="btn-p">Get HeliStream® Quote</a>
-    </div>
-    <div>
-      <h3 style="font-size:14px;font-weight:800;color:var(--blue-d);margin-bottom:14px">Nationwide Coverage</h3>
-      <div class="cov-row cov-hl"><div><div class="cov-name">All 50 U.S. States</div><div class="cov-detail">Ground freight from strategic hubs · 24-48h for emergencies</div></div></div>
-      <div class="cov-row"><div><div class="cov-name">Venezuela</div><div class="cov-detail">ISO tank & dewar via Miami</div></div></div>
-      <div class="cov-row"><div><div class="cov-name">Colombia</div><div class="cov-detail">ISO tank & dewar via Miami</div></div></div>
-      <div class="cov-row"><div><div class="cov-name">Mexico</div><div class="cov-detail">ISO tank & dewar via Miami</div></div></div>
-      <div class="cov-row"><div><div class="cov-name">Puerto Rico</div><div class="cov-detail">Ocean freight from Miami</div></div></div>
-      <div class="cov-row"><div><div class="cov-name">Dominican Republic</div><div class="cov-detail">Ocean freight from Miami</div></div></div>
-      <div class="cov-row"><div><div class="cov-name">Central & South America</div><div class="cov-detail">PA, CR, GT + more</div></div></div>
+      <div>
+        <div class="cov-title">Nationwide Coverage</div>
+        <div class="cov cov-hl"><div class="cov-name">All 50 U.S. States</div><div class="cov-detail">Ground freight from strategic hubs · 24-48h for emergencies</div></div>
+        <div class="cov"><div class="cov-name">Venezuela</div><div class="cov-detail">ISO tank & dewar via Miami</div></div>
+        <div class="cov"><div class="cov-name">Colombia</div><div class="cov-detail">ISO tank & dewar via Miami</div></div>
+        <div class="cov"><div class="cov-name">Mexico</div><div class="cov-detail">ISO tank & dewar via Miami</div></div>
+        <div class="cov"><div class="cov-name">Puerto Rico</div><div class="cov-detail">Ocean freight from Miami</div></div>
+        <div class="cov"><div class="cov-name">Dominican Republic</div><div class="cov-detail">Ocean freight from Miami</div></div>
+        <div class="cov"><div class="cov-name">Central & South America</div><div class="cov-detail">PA, CR, GT + more</div></div>
+      </div>
     </div>
   </div>
-</div></section>
+</section>
 
 <!-- PRODUCTS -->
-<section id="products" class="section section-w"><div class="mx">
-  <div style="margin-bottom:28px">
-    <div class="label"><div class="label-line"></div><span class="label-text">Products</span></div>
-    <h2 class="s-title">Complete Gas Supply Solution</h2>
-    <p class="s-desc">Five product lines from a single ISO-accredited source — specialty lab, helium, UHP gases, calibration, and bulk supply.</p>
+<section id="products" class="section bg-white">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Products</div>
+      <h2 class="h2">Complete Gas Supply Solution</h2>
+      <p class="lead">Five product lines from a single ISO-accredited source — specialty lab, helium, UHP gases, calibration, and bulk supply.</p>
+    </div>
+    <div class="products">
+      <div class="product"><h3 class="product-title">Liquid Helium for MRI</h3><div class="product-tag">HeliStream® — WSM's Helium Service</div><p class="product-desc">Liquid helium for MRI magnet cooling (4.2K). Pre-chilled dewars, on-site transfer service, nationwide delivery. Also serves NMR, aerospace, and semiconductor cooling applications.</p><div class="product-feats"><span class="product-feat">250L & 500L Dewars</span><span class="product-feat">On-Site Transfer</span><span class="product-feat">All 50 States</span><span class="product-feat">LATAM Export</span></div></div>
+      <div class="product"><h3 class="product-title">Helium Gas Cylinders</h3><div class="product-tag">Balloon to Research Grade</div><p class="product-desc">Gaseous helium in cylinders from 200-300 SCF. Standard pressure (2,200 PSI, CGA 580) and ultra high pressure (3.5K-6K PSI, CGA 677). Leak detection, welding, GC carrier gas.</p><div class="product-feats"><span class="product-feat">4.5 to 6.0 Grade</span><span class="product-feat">Standard & UHP</span><span class="product-feat">Leak Detection</span><span class="product-feat">GC Carrier</span></div></div>
+      <div class="product"><h3 class="product-title">Ultra High Purity Gases</h3><div class="product-tag">53 Pure Gases — 99.99% to 99.99999%</div><p class="product-desc">Full catalog of atmospheric, noble, reactive, hydrocarbon, and electronic specialty gases. Available in standard and ultra high pressure configurations.</p><div class="product-feats"><span class="product-feat">53 Pure Gases</span><span class="product-feat">Grade 4.0–6.0</span><span class="product-feat">Semiconductor</span><span class="product-feat">Lab & Research</span></div></div>
+      <div class="product"><h3 class="product-title">Calibration Gas</h3><div class="product-tag">28,000+ SKUs — Ships 24-48h</div><p class="product-desc">Calibration gas for gas detectors: 4-gas mix, bump test gas, EPA protocol gas, single gas standards. 184+ competitor cross-references. Full catalog at wsmcalibrationgas.com.</p><div class="product-feats"><span class="product-feat">28,000+ SKUs</span><span class="product-feat">184+ Cross-Ref</span><span class="product-feat">4-Gas Mix</span><span class="product-feat">Private Label</span></div></div>
+      <div class="product"><h3 class="product-title">Bulk Gas Supplier</h3><div class="product-tag">Bulk Liquid — LATAM & Caribbean</div><p class="product-desc">Bulk liquid nitrogen, oxygen, argon, and CO₂. Bulk gas delivery via ISO tanks to Latin America from Miami. Cryogenic repair, ISO tank certification, HAZMAT compliant.</p><div class="product-feats"><span class="product-feat">ISO Tank & Microbulk</span><span class="product-feat">LOX, LIN, LAR, CO₂</span><span class="product-feat">HAZMAT</span><span class="product-feat">LATAM Export</span></div></div>
+      <div class="product"><h3 class="product-title">Specialty Gas Mixtures</h3><div class="product-tag">NIST-Traceable · Custom Blends</div><p class="product-desc">EPA Protocol, sulfur (SO₂, H₂S, COS, Mercaptans), multi-component (2–12+ gases at ppm/ppb). Laser gas mixtures, medical gas mixtures (USP), gas chromatography carrier gas.</p><div class="product-feats"><span class="product-feat">EPA & Sulfur</span><span class="product-feat">Multi 2–12+</span><span class="product-feat">Laser & Medical</span><span class="product-feat">NIST Traceable</span></div></div>
+    </div>
   </div>
-  <div class="prod-grid">
-    <div class="prod-card"><div class="prod-bar" style="background:linear-gradient(90deg,var(--blue),var(--blue) 60%,transparent)"></div><h3 class="prod-title">Liquid Helium for MRI</h3><div class="prod-tag">HeliStream® — WSM's Helium Service</div><p class="prod-desc">Liquid helium for MRI magnet cooling (4.2K). Pre-chilled dewars, on-site transfer service, nationwide delivery. Also serves NMR, aerospace, and semiconductor cooling applications.</p><div class="prod-features"><span class="prod-feat">250L & 500L Dewars</span><span class="prod-feat">On-Site Transfer</span><span class="prod-feat">All 50 States</span><span class="prod-feat">LATAM Export</span></div></div>
-
-    <div class="prod-card"><div class="prod-bar" style="background:linear-gradient(90deg,var(--lime),var(--lime) 60%,transparent)"></div><h3 class="prod-title">Helium Gas Cylinders</h3><div class="prod-tag">Gaseous Helium — Balloon to Research Grade</div><p class="prod-desc">Gaseous helium in cylinders from 200-300 SCF. Standard pressure (2,200 PSI, CGA 580) and ultra high pressure (3.5K-6K PSI, CGA 677). Leak detection, welding, GC carrier gas.</p><div class="prod-features"><span class="prod-feat">4.5 to 6.0 Grade</span><span class="prod-feat">Standard & UHP</span><span class="prod-feat">Leak Detection</span><span class="prod-feat">GC Carrier</span></div></div>
-
-    <div class="prod-card"><div class="prod-bar" style="background:linear-gradient(90deg,var(--blue),var(--blue) 60%,transparent)"></div><h3 class="prod-title">Ultra High Purity Gases</h3><div class="prod-tag">53 Pure Gases — 99.99% to 99.99999%</div><p class="prod-desc">Full catalog of atmospheric, noble, reactive, hydrocarbon, and electronic specialty gases. Available in standard and ultra high pressure configurations.</p><div class="prod-features"><span class="prod-feat">53 Pure Gases</span><span class="prod-feat">Grade 4.0–6.0</span><span class="prod-feat">Semiconductor</span><span class="prod-feat">Lab & Research</span></div></div>
-
-    <div class="prod-card"><div class="prod-bar" style="background:linear-gradient(90deg,var(--lime),var(--lime) 60%,transparent)"></div><h3 class="prod-title">Calibration Gas</h3><div class="prod-tag">28,000+ SKUs — Ships 24-48h</div><p class="prod-desc">Calibration gas for gas detectors: 4-gas mix, bump test gas, EPA protocol gas, single gas standards. 184+ competitor cross-references. Full catalog at wsmcalibrationgas.com.</p><div class="prod-features"><span class="prod-feat">28,000+ SKUs</span><span class="prod-feat">184+ Cross-Ref</span><span class="prod-feat">4-Gas Mix</span><span class="prod-feat">Private Label</span></div></div>
-
-    <div class="prod-card"><div class="prod-bar" style="background:linear-gradient(90deg,var(--blue),var(--blue) 60%,transparent)"></div><h3 class="prod-title">Bulk Gas Supplier</h3><div class="prod-tag">Bulk Liquid — LATAM & Caribbean</div><p class="prod-desc">Bulk liquid nitrogen, oxygen, argon, and CO₂. Bulk gas delivery via ISO tanks to Latin America from Miami. Cryogenic repair, ISO tank certification, HAZMAT compliant.</p><div class="prod-features"><span class="prod-feat">ISO Tank & Microbulk</span><span class="prod-feat">LOX, LIN, LAR, CO₂</span><span class="prod-feat">HAZMAT</span><span class="prod-feat">LATAM Export</span></div></div>
-
-    <div class="prod-card"><div class="prod-bar" style="background:linear-gradient(90deg,var(--lime),var(--lime) 60%,transparent)"></div><h3 class="prod-title">Specialty Gas Mixtures</h3><div class="prod-tag">NIST-Traceable · Custom Blends</div><p class="prod-desc">EPA Protocol, sulfur (SO₂, H₂S, COS, Mercaptans), multi-component (2–12+ gases at ppm/ppb). Laser gas mixtures, medical gas mixtures (USP), gas chromatography carrier gas.</p><div class="prod-features"><span class="prod-feat">EPA & Sulfur</span><span class="prod-feat">Multi 2–12+</span><span class="prod-feat">Laser & Medical</span><span class="prod-feat">NIST Traceable</span></div></div>
-  </div>
-</div></section>
+</section>
 
 <!-- INDUSTRIES -->
-<section id="industries" class="section section-g"><div class="mx">
-  <div style="margin-bottom:28px">
-    <div class="label"><div class="label-line"></div><span class="label-text">Industries</span></div>
-    <h2 class="s-title">Trusted Across Critical Sectors</h2>
+<section id="industries" class="section bg-off">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Industries</div>
+      <h2 class="h2">Trusted Across Critical Sectors</h2>
+    </div>
+    <div class="industries">
+      <div class="industry"><div class="industry-name">Healthcare & MRI</div><div class="industry-desc">Helium for MRI machines, medical gases, blood & laser mixtures</div></div>
+      <div class="industry"><div class="industry-name">Laboratories</div><div class="industry-desc">UHP gases, gas chromatography carrier gas, analytical standards</div></div>
+      <div class="industry"><div class="industry-name">Semiconductors</div><div class="industry-desc">UHP argon, electronic-grade helium, process gases</div></div>
+      <div class="industry"><div class="industry-name">Oil & Gas</div><div class="industry-desc">H₂S calibration gas, LEL monitoring, offshore & refinery</div></div>
+      <div class="industry"><div class="industry-name">Environmental</div><div class="industry-desc">EPA protocol gas, stack emissions, CEMS calibration</div></div>
+      <div class="industry"><div class="industry-name">Fire & Safety</div><div class="industry-desc">CO calibration gas, bump test gas, emergency response</div></div>
+      <div class="industry"><div class="industry-name">Chemical Processing</div><div class="industry-desc">Reactor monitoring, toxic gas detection mixtures</div></div>
+      <div class="industry"><div class="industry-name">Utilities & Power</div><div class="industry-desc">Transformer gas analysis, power plant calibration</div></div>
+    </div>
   </div>
-  <div class="ind-grid">
-    <div class="ind-card"><div class="ind-icon"></div><div><div class="ind-name">Healthcare & MRI</div><div class="ind-desc">Helium for MRI machines, medical gases, blood & laser mixtures</div></div></div>
-    <div class="ind-card"><div class="ind-icon"></div><div><div class="ind-name">Laboratories</div><div class="ind-desc">UHP gases, gas chromatography carrier gas, analytical standards</div></div></div>
-    <div class="ind-card"><div class="ind-icon"></div><div><div class="ind-name">Semiconductors</div><div class="ind-desc">UHP argon, electronic-grade helium, process gases</div></div></div>
-    <div class="ind-card"><div class="ind-icon"></div><div><div class="ind-name">Oil & Gas</div><div class="ind-desc">H₂S calibration gas, LEL monitoring, offshore & refinery</div></div></div>
-    <div class="ind-card"><div class="ind-icon"></div><div><div class="ind-name">Environmental</div><div class="ind-desc">EPA protocol gas, stack emissions, CEMS calibration</div></div></div>
-    <div class="ind-card"><div class="ind-icon"></div><div><div class="ind-name">Fire & Safety</div><div class="ind-desc">CO calibration gas, bump test gas, emergency response</div></div></div>
-    <div class="ind-card"><div class="ind-icon"></div><div><div class="ind-name">Chemical Processing</div><div class="ind-desc">Reactor monitoring, toxic gas detection mixtures</div></div></div>
-    <div class="ind-card"><div class="ind-icon"></div><div><div class="ind-name">Utilities & Power</div><div class="ind-desc">Transformer gas analysis, power plant calibration</div></div></div>
-  </div>
-</div></section>
+</section>
 
-<!-- WHY WSM -->
-<section id="about" class="section section-w"><div class="mx">
-  <div style="margin-bottom:28px">
-    <div class="label"><div class="label-line"></div><span class="label-text">Why WSM</span></div>
-    <h2 class="s-title">Where Accuracy Meets Reliability</h2>
+<!-- WHY -->
+<section id="about" class="section bg-white">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Why WSM</div>
+      <h2 class="h2">Where Accuracy Meets Reliability</h2>
+    </div>
+    <div class="whys">
+      <div class="why"><div class="why-bar"></div><div class="why-title">In-House Manufacturing & Certification</div><div class="why-desc">Every cylinder produced, analyzed, and certified at our own lab. No outsourcing, no middlemen, no quality compromises.</div></div>
+      <div class="why"><div class="why-bar"></div><div class="why-title">Triple-Certified — Only in South Florida</div><div class="why-desc">ISO 17025 + ISO 17034 + EPA PGVP. PJLA #125017, ILAC-MRA recognized in 100+ countries.</div></div>
+      <div class="why"><div class="why-bar"></div><div class="why-title">Miami — Gateway to the Americas</div><div class="why-desc">Direct logistics to all 50 US states + Venezuela, Colombia, Mexico, Caribbean, Central & South America.</div></div>
+      <div class="why"><div class="why-bar"></div><div class="why-title">Ships 24-48h · Custom 3-7 Days</div><div class="why-desc">30,000+ cylinders/year. We control the timeline because we manufacture everything ourselves.</div></div>
+      <div class="why"><div class="why-bar"></div><div class="why-title">20+ Years · EN/ES/PT Team</div><div class="why-desc">Industrial, medical, specialty gas specialists. Bilingual support with decades of expertise.</div></div>
+      <div class="why"><div class="why-bar"></div><div class="why-title">Private Label & Digital Platform</div><div class="why-desc">Your brand, our certified gas. 28,000+ SKU platform with instant quoting and 184+ cross-references.</div></div>
+    </div>
   </div>
-  <div class="why-grid">
-    <div class="why-card"><div class="why-check">✓</div><div class="why-title">In-House Manufacturing & Certification</div><div class="why-desc">Every cylinder produced, analyzed, and certified at our own lab. No outsourcing, no middlemen, no quality compromises.</div></div>
-    <div class="why-card"><div class="why-check">✓</div><div class="why-title">Triple-Certified — Only in South Florida</div><div class="why-desc">ISO 17025 + ISO 17034 + EPA PGVP. PJLA #125017, ILAC-MRA recognized in 100+ countries.</div></div>
-    <div class="why-card"><div class="why-check">✓</div><div class="why-title">Miami — Gateway to the Americas</div><div class="why-desc">Direct logistics to all 50 US states + Venezuela, Colombia, Mexico, Caribbean, Central & South America.</div></div>
-    <div class="why-card"><div class="why-check">✓</div><div class="why-title">Ships 24-48h · Custom 3-7 Days</div><div class="why-desc">30,000+ cylinders/year. We control the timeline because we manufacture everything ourselves.</div></div>
-    <div class="why-card"><div class="why-check">✓</div><div class="why-title">20+ Years · EN/ES/PT Team</div><div class="why-desc">Industrial, medical, specialty gas specialists. Bilingual support with decades of expertise.</div></div>
-    <div class="why-card"><div class="why-check">✓</div><div class="why-title">Private Label & Digital Platform</div><div class="why-desc">Your brand, our certified gas. 28,000+ SKU platform with instant quoting and 184+ cross-references.</div></div>
-  </div>
-</div></section>
+</section>
 
 <!-- QUOTE -->
-<section id="quote" class="section section-g"><div class="mx">
-  <div style="margin-bottom:22px">
-    <div class="label"><div class="label-line"></div><span class="label-text">Get Started</span></div>
-    <h2 class="s-title" style="font-size:clamp(22px,3vw,28px)">Request Your Custom Quote</h2>
-    <p style="font-size:12.5px;color:var(--tm);text-align:center">Manufactured at our ISO-accredited lab. Response within 24h.</p>
+<section id="quote" class="section bg-off">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Get Started</div>
+      <h2 class="h2">Request Your Custom Quote</h2>
+      <p class="lead">Manufactured at our ISO-accredited lab. Response within 24h.</p>
+    </div>
+    <div class="quote-box">
+      <label class="quote-label">Company</label><input class="quote-input" placeholder="Your company">
+      <label class="quote-label">Email</label><input class="quote-input" placeholder="email@company.com">
+      <label class="quote-label">Phone / WhatsApp</label><input class="quote-input" placeholder="+1 (305) ...">
+      <label class="quote-label">Product Needed</label><input class="quote-input" placeholder="e.g. EPA Protocol Mix, UHP Argon, Helium for MRI...">
+      <button class="quote-btn">Submit Quote Request</button>
+    </div>
   </div>
-  <div class="quote-box">
-    <label class="quote-label">Company</label><input class="quote-input" placeholder="Your company">
-    <label class="quote-label">Email</label><input class="quote-input" placeholder="email@company.com">
-    <label class="quote-label">Phone / WhatsApp</label><input class="quote-input" placeholder="+1 (305) ...">
-    <label class="quote-label">Product Needed</label><input class="quote-input" placeholder="e.g. EPA Protocol Mix, UHP Argon, Helium for MRI...">
-    <button class="quote-btn">Submit Quote Request</button>
-  </div>
-</div></section>
+</section>
 
 <!-- FOOTER -->
-<div class="lime-bar"></div>
 <footer class="footer">
   <div class="footer-grid">
-    <div><img src="wsm-logo.png" alt="WSM Specialty Gas" style="height:44px;width:auto;margin-bottom:12px;filter:brightness(0) invert(1)"><p>ISO 17025 & 17034 Certified Laboratory<br>PJLA #125017 · ILAC-MRA<br>3535 NW 60th St, Miami, FL 33142</p></div>
-    <div><h4>Laboratory</h4><div>Certified Gas Mixtures</div><div>EPA Protocol / PGVP</div><div>UHP & Research Grade</div><div>Reactive & Corrosive</div><div>Hydrocarbon Blends</div><div>Medical & Laser</div></div>
-    <div><h4>Products</h4><div>Liquid Helium / MRI</div><div>Helium Gas Cylinders</div><div>Calibration Gas</div><div>Bulk Cryogenic</div><div>Specialty Mixtures</div></div>
-    <div><h4>Contact</h4><p>(305) 455-1220<br>sales@wsmsupplier.com<br>wsmspecialtygases.com</p><div style="margin-top:10px;display:inline-block;font-size:9px;font-weight:700;color:var(--blue-dd);letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:12px;background:var(--lime)">WhatsApp for LATAM</div></div>
+    <div>
+      <div class="footer-logo"><img src="wsm-logo.png" alt="WSM Specialty Gas"></div>
+      <p class="footer-intro">ISO 17025 & 17034 Certified Laboratory<br>PJLA #125017 · ILAC-MRA<br>3535 NW 60th St, Miami, FL 33142</p>
+    </div>
+    <div>
+      <h4>Laboratory</h4>
+      <span class="footer-link">Certified Gas Mixtures</span>
+      <span class="footer-link">EPA Protocol / PGVP</span>
+      <span class="footer-link">UHP & Research Grade</span>
+      <span class="footer-link">Reactive & Corrosive</span>
+      <span class="footer-link">Hydrocarbon Blends</span>
+      <span class="footer-link">Medical & Laser</span>
+    </div>
+    <div>
+      <h4>Products</h4>
+      <span class="footer-link">Liquid Helium / MRI</span>
+      <span class="footer-link">Helium Gas Cylinders</span>
+      <span class="footer-link">Calibration Gas</span>
+      <span class="footer-link">Bulk Cryogenic</span>
+      <span class="footer-link">Specialty Mixtures</span>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <div class="footer-contact">
+        <a href="tel:+13054551220">(305) 455-1220</a><br>
+        <a href="mailto:sales@wsmsupplier.com">sales@wsmsupplier.com</a><br>
+        wsmspecialtygases.com
+      </div>
+      <div class="footer-wa">WhatsApp for LATAM</div>
+    </div>
   </div>
   <div class="footer-bottom">© 2026 WSM Supplier LLC · All Rights Reserved · Miami, FL · USA</div>
 </footer>
