@@ -59,7 +59,7 @@ img{max-width:100%}
 .footer a:hover{color:#c8d200}
 .footer-bottom{max-width:1100px;margin:0 auto;border-top:1px solid rgba(255,255,255,0.1);padding-top:14px;font-size:9px;color:rgba(255,255,255,0.25);text-align:center}
 @media(max-width:900px){.grid-3,.grid-4{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:768px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}.nav-links{display:none}}
+@media(max-width:768px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}.nav-links{display:none}.hero-banner>div{grid-template-columns:1fr!important}}
 </style>
 </head>
 <body>
@@ -67,17 +67,38 @@ img{max-width:100%}
 <nav class="nav"><div class="nav-in">
   <a href="index.html" class="logo"><img src="wsm-logo.png" alt="WSM Specialty Gas" style="height:48px;width:auto"></a>
   <div class="nav-links">
+    <a href="index.html">Home</a>
     <a href="specialty-gas-mixtures.html">Specialty Mixtures</a>
     <a href="liquid-helium-mri.html">Liquid Helium MRI</a>
     <a href="helium-gas.html">Helium Gas</a>
     <a href="uhp-gases.html">UHP Gases</a>
     <a href="calibration-gas.html">Calibration Gas</a>
-    <a href="bulk-gas-latin-america.html">Latin America</a>
+    <a href="bulk-gas-latin-america.html">Bulk Supply</a>
     <a href="index.html#quote" class="nav-cta">Get a Quote</a>
   </div>
 </div></nav>
 
-<section class="hero-banner"><h1>Specialty Gas <span>Mixtures</span></h1></section>
+<section class="hero-banner" style="height:auto;padding:110px 32px 48px;background:linear-gradient(135deg,var(--blue-d) 0%,var(--blue-dd) 100%)">
+  <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.1fr 0.9fr;gap:40px;align-items:center">
+    <div style="text-align:left">
+      <div style="display:inline-flex;align-items:center;gap:7px;background:rgba(200,210,0,0.15);border:1px solid rgba(200,210,0,0.35);border-radius:20px;padding:5px 14px;font-size:10px;font-weight:700;color:var(--lime);letter-spacing:0.5px;margin-bottom:18px">MANUFACTURED &amp; CERTIFIED AT OUR ISO-ACCREDITED LABORATORY</div>
+      <h1 style="text-align:left;max-width:none">Specialty Gas <span>Mixtures</span></h1>
+      <p style="font-size:14.5px;color:rgba(255,255,255,0.7);line-height:1.72;max-width:460px;margin-top:16px">Certified gas mixtures from our ISO 17025 &amp; 17034 accredited laboratory in Miami. EPA Protocol, NIST-traceable, sulfur, reactive, medical, laser &amp; hydrocarbon blends — all produced, analyzed, and certified in-house.</p>
+      <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap">
+        <a href="index.html#quote" class="btn-p">Request a Quote →</a>
+        <a href="#mixtures" style="font-size:13px;font-weight:700;color:#fff;padding:11px 24px;border-radius:6px;border:1.5px solid rgba(255,255,255,0.25);display:inline-block">View All Mixtures</a>
+      </div>
+      <div style="margin-top:22px;padding-top:14px;border-top:1px solid rgba(255,255,255,0.1);display:flex;gap:18px;flex-wrap:wrap">
+        <span style="font-size:10.5px;font-weight:600;color:rgba(255,255,255,0.55)">✓ ISO 17025 Accredited</span>
+        <span style="font-size:10.5px;font-weight:600;color:rgba(255,255,255,0.55)">✓ ISO 17034 Producer</span>
+        <span style="font-size:10.5px;font-weight:600;color:rgba(255,255,255,0.55)">✓ EPA PGVP Participant</span>
+      </div>
+    </div>
+    <div style="border-radius:12px;overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.08)">
+      <img src="lab-blending-station.jpg" alt="WSM Specialty Gases laboratory — technicians operating gas blending station with precision instruments and calibration cylinders" style="width:100%;height:100%;object-fit:cover;display:block" width="1200" height="800">
+    </div>
+  </div>
+</section>
 
 <section class="section section-w"><div class="mx content">
   <p>WSM manufactures <strong>certified gas mixtures</strong> at our ISO 17025 & 17034 accredited laboratory. <strong>EPA protocol gas</strong>, NIST-traceable primary standards, sulfur and reactive blends, multi-component mixtures (2 to 12+ gases), <strong>medical gas mixtures</strong>, <strong>laser gas mixtures</strong>, and <strong>calibration gas mixtures</strong> — all produced, analyzed, and certified in-house. From ppm to ppb concentrations. Custom blends in 3-7 business days.</p>
@@ -147,6 +168,22 @@ img{max-width:100%}
     </div>
   </div>
   <p style="margin-top:16px"><strong>PJLA #125017 · ILAC-MRA Recognized</strong> — Our accreditation is internationally recognized through the ILAC Mutual Recognition Arrangement, accepted in 100+ countries. Verify our accreditation at <a href="https://www.pjlabs.com" target="_blank" rel="noopener noreferrer" style="color:var(--blue);font-weight:600">pjlabs.com</a></p>
+
+  <!-- LAB PHOTO GALLERY -->
+  <div style="margin-top:36px">
+    <div class="label"><div class="label-line"></div><span class="label-text">Inside Our Laboratory</span></div>
+    <h3 class="s-title" style="font-size:22px;margin-bottom:18px">Where Precision Meets Expertise</h3>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+      <div style="border-radius:10px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.08);border:1px solid var(--gray);position:relative">
+        <img src="lab-analytical-instruments.jpg" alt="WSM analytical laboratory — technician adjusting flow meters on gas analysis instrumentation panel with digital readouts for calibration gas verification" style="width:100%;height:280px;object-fit:cover;display:block" width="1200" height="800" loading="lazy">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:12px 16px;background:linear-gradient(transparent,rgba(0,31,69,0.82));color:#fff;font-size:11px;font-weight:600">Analytical instrumentation — flow meters &amp; gas analyzers for quality verification</div>
+      </div>
+      <div style="border-radius:10px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.08);border:1px solid var(--gray);position:relative">
+        <img src="lab-quality-control.jpg" alt="WSM quality control — lab technician reviewing analysis data while monitoring gas flow meter instrumentation for ISO 17025 certified gas mixture production" style="width:100%;height:280px;object-fit:cover;display:block" width="1200" height="800" loading="lazy">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:12px 16px;background:linear-gradient(transparent,rgba(0,31,69,0.82));color:#fff;font-size:11px;font-weight:600">Quality control — certified gas analysis &amp; documentation</div>
+      </div>
+    </div>
+  </div>
 </div></section>
 
 <section id="mixtures" class="section section-w"><div class="mx content">
@@ -354,7 +391,12 @@ img{max-width:100%}
 <section class="section section-w"><div class="mx content">
   <h2 class="s-title">How We Analyze & Certify Every Mixture</h2>
   <p class="s-desc">Every mixture is analyzed using multiple NIST-traceable calibrated instruments. Our ISO 17025 accredited methods ensure accuracy and reproducibility across all concentration ranges.</p>
-  <ul>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start;margin-bottom:24px">
+    <div style="border-radius:10px;overflow:hidden;box-shadow:0 6px 24px rgba(0,0,0,0.08);border:1px solid var(--gray)">
+      <img src="lab-blending-station.jpg" alt="WSM lab technicians at gas blending station — precision valve manifold with digital controls for specialty gas mixture manufacturing" style="width:100%;height:320px;object-fit:cover;display:block" width="1200" height="800" loading="lazy">
+    </div>
+    <div>
     <li>GC-TCD — Gas Chromatography Thermal Conductivity</li>
     <li>NDIR — Non-Dispersive Infrared (CO, CO₂, CH₄, SO₂, NOx)</li>
     <li>GC-FID — Flame Ionization Detection (Hydrocarbons)</li>
@@ -364,6 +406,8 @@ img{max-width:100%}
     <li>Coulometric-Electrochemical Analysis</li>
     <li>Gravimetry — Mass/Volume Preparation</li>
   </ul>
+    </div>
+  </div>
 
   <h3>From Your Specs to Certified Cylinder</h3>
   <p>Every custom mixture follows our 5-step certified manufacturing process:</p>
