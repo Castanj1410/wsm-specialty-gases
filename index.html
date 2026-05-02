@@ -192,10 +192,209 @@ img{max-width:100%}
 }
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":["Organization","LocalBusiness"],"name":"WSM Specialty Gases","legalName":"WSM Supplier LLC","url":"https://www.wsmspecialtygases.com","logo":"https://www.wsmspecialtygases.com/wsm-logo.png","description":"ISO/IEC 17025 & ISO 17034 accredited specialty gas laboratory in Miami, FL. Manufacturer of specialty gas mixtures, EPA protocol gases, calibration gases, UHP gases, and liquid helium supplier.","telephone":"(305) 455-1220","email":"sales@wsmsupplier.com","address":{"@type":"PostalAddress","streetAddress":"3535 NW 60th St","addressLocality":"Miami","addressRegion":"FL","postalCode":"33142","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":25.8124,"longitude":-80.2634},"areaServed":[{"@type":"Country","name":"United States"},{"@type":"Country","name":"Colombia"},{"@type":"Country","name":"Venezuela"},{"@type":"Country","name":"Mexico"}],"hasCredential":[{"@type":"EducationalOccupationalCredential","credentialCategory":"ISO/IEC 17025:2017","recognizedBy":{"@type":"Organization","name":"PJLA"}},{"@type":"EducationalOccupationalCredential","credentialCategory":"ISO 17034:2016","recognizedBy":{"@type":"Organization","name":"PJLA"}}],"sameAs":["https://wsmcalibrationgas.com"]}
+{
+  "@context": "https://schema.org",
+  "@type": ["Organization", "LocalBusiness"],
+  "@id": "https://www.wsmspecialtygases.com/#organization",
+  "name": "WSM Specialty Gases",
+  "legalName": "WSM Supplier LLC",
+  "url": "https://www.wsmspecialtygases.com",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://www.wsmspecialtygases.com/wsm-logo.png",
+    "width": 300,
+    "height": 80
+  },
+  "image": "https://www.wsmspecialtygases.com/wsm-facility-hero.png",
+  "description": "ISO/IEC 17025 & ISO 17034 accredited specialty gas laboratory in Miami, FL. Manufacturer of certified specialty gas mixtures, EPA protocol gases, NIST-traceable standards, calibration gases, ultra high purity gases, and liquid helium supplier for MRI machines. EPA PGVP participant. Serving USA and Latin America.",
+  "telephone": "+1-305-455-1220",
+  "email": "sales@wsmsupplier.com",
+  "foundingDate": "2020",
+  "numberOfEmployees": {"@type": "QuantitativeValue", "minValue": 10, "maxValue": 50},
+  "priceRange": "$$",
+  "currenciesAccepted": "USD",
+  "paymentAccepted": "Cash, Credit Card, Wire Transfer, NET 30",
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "17:00"}
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "3535 NW 60th St",
+    "addressLocality": "Miami",
+    "addressRegion": "FL",
+    "postalCode": "33142",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 25.8124,
+    "longitude": -80.2634
+  },
+  "areaServed": [
+    {"@type": "Country", "name": "United States"},
+    {"@type": "Country", "name": "Colombia"},
+    {"@type": "Country", "name": "Venezuela"},
+    {"@type": "Country", "name": "Mexico"},
+    {"@type": "Country", "name": "Puerto Rico"},
+    {"@type": "Country", "name": "Dominican Republic"},
+    {"@type": "Country", "name": "Panama"},
+    {"@type": "Country", "name": "Costa Rica"},
+    {"@type": "Country", "name": "Ecuador"},
+    {"@type": "Country", "name": "Peru"},
+    {"@type": "Country", "name": "Brazil"},
+    {"@type": "Country", "name": "Chile"}
+  ],
+  "hasCredential": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "ISO/IEC 17025:2017",
+      "name": "ISO/IEC 17025:2017 Accreditation — Testing and Calibration Laboratories",
+      "description": "Accreditation for competence of testing and calibration laboratories. Certificate L25-1002, issued December 29, 2025, valid through March 31, 2028.",
+      "recognizedBy": {"@type": "Organization", "name": "PJLA", "url": "https://www.pjlabs.com"},
+      "validFrom": "2025-12-29",
+      "validIn": {"@type": "Country", "name": "United States"}
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "ISO 17034:2016",
+      "name": "ISO 17034:2016 Accreditation — Reference Material Producers",
+      "description": "Accreditation for competence of reference material producers. Certificate L25-1003, issued December 29, 2025, valid through March 31, 2028.",
+      "recognizedBy": {"@type": "Organization", "name": "PJLA", "url": "https://www.pjlabs.com"},
+      "validFrom": "2025-12-29",
+      "validIn": {"@type": "Country", "name": "United States"}
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "EPA PGVP Participant",
+      "name": "EPA Protocol Gas Verification Program — Participant #30",
+      "description": "EPA PGVP Vendor Y12026, Participant #30. Gases manufactured based on EPA/600/R-12/531 (May 2012).",
+      "recognizedBy": {"@type": "GovernmentOrganization", "name": "U.S. Environmental Protection Agency", "url": "https://www.epa.gov"}
+    }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "WSM Specialty Gases — Products and Services",
+    "itemListElement": [
+      {
+        "@type": "OfferCatalog",
+        "name": "Specialty Gas Mixtures",
+        "description": "EPA protocol gases, NIST-traceable primary standards, multi-component mixtures, sulfur compounds, reactive and corrosive gases, environmental and emissions monitoring gases, medical gases, laser gases, hydrocarbon mixtures, and gas detector calibration mixtures.",
+        "url": "https://www.wsmspecialtygases.com/specialty-gas-mixtures.html"
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Liquid Helium for MRI — HeliStream",
+        "description": "Liquid helium supply for MRI magnet cooling, NMR spectroscopy, and semiconductor manufacturing. Pre-chilled dewars (250L and 500L), on-site MRI helium refill service, emergency delivery. Nationwide USA and Latin America.",
+        "url": "https://www.wsmspecialtygases.com/liquid-helium-mri.html"
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Helium Gas Cylinders",
+        "description": "Gaseous helium in high-pressure cylinders from industrial grade to ultra high purity 99.9999%. For leak detection, GC carrier gas, welding shielding, and analytical applications.",
+        "url": "https://www.wsmspecialtygases.com/helium-gas.html"
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Ultra High Purity Gases",
+        "description": "53 pure gases from industrial to research grade (99.999%+). For semiconductor manufacturing, analytical laboratories, research institutions, and pharmaceutical applications.",
+        "url": "https://www.wsmspecialtygases.com/uhp-gases.html"
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Calibration Gas",
+        "description": "28,000+ SKUs of calibration gas mixtures for gas detector calibration, bump testing, and span calibration. 184+ cross-references to GASCO, Calgaz, MSA, BW, Draeger, Industrial Scientific, RAE, RKI, and Portagas part numbers.",
+        "url": "https://www.wsmspecialtygases.com/calibration-gas.html"
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Bulk Cryogenic Gas Supply — Latin America",
+        "description": "Bulk liquid nitrogen, oxygen, argon, and CO2 supplied from Miami via ISO tank containers to Latin America and the Caribbean. Full export logistics, HAZMAT compliance, and customs documentation.",
+        "url": "https://www.wsmspecialtygases.com/bulk-gas-latin-america.html"
+      }
+    ]
+  },
+  "knowsAbout": [
+    "specialty gas manufacturing",
+    "EPA protocol gas",
+    "NIST-traceable gas standards",
+    "calibration gas mixtures",
+    "liquid helium for MRI",
+    "ultra high purity gases",
+    "gas chromatography carrier gases",
+    "environmental monitoring gases",
+    "reactive gas blending",
+    "cryogenic gas supply",
+    "ISO 17025 laboratory operations",
+    "reference material production"
+  ],
+  "sameAs": [
+    "https://wsmcalibrationgas.com"
+  ]
+}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","name":"WSM Specialty Gases","url":"https://www.wsmspecialtygases.com","potentialAction":{"@type":"SearchAction","target":"https://www.wsmspecialtygases.com/?q={search_term_string}","query-input":"required name=search_term_string"}}
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.wsmspecialtygases.com/#website",
+  "name": "WSM Specialty Gases",
+  "url": "https://www.wsmspecialtygases.com",
+  "publisher": {"@id": "https://www.wsmspecialtygases.com/#organization"},
+  "inLanguage": ["en-US", "es"],
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.wsmspecialtygases.com/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What certifications does WSM Specialty Gases hold?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "WSM Specialty Gases holds ISO/IEC 17025:2017 accreditation (Certificate L25-1002) and ISO 17034:2016 accreditation (Certificate L25-1003), both issued by PJLA (Accreditation #125017) with ILAC-MRA recognition. WSM is also an EPA PGVP participant (Vendor Y12026, Participant #30)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What types of specialty gases does WSM manufacture?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "WSM manufactures EPA protocol gases, NIST-traceable primary standards, multi-component mixtures, sulfur compound gases (H2S, SO2, COS), reactive and corrosive gas blends, environmental monitoring gases, medical gases, laser gases, hydrocarbon mixtures, and gas detector calibration mixtures. Over 400 certified mixtures and 28,000+ calibration gas SKUs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does WSM supply liquid helium for MRI machines?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Through our HeliStream brand, WSM supplies liquid helium for MRI magnet cooling, NMR spectroscopy, and semiconductor applications. We provide pre-chilled dewars in 250L and 500L capacities, on-site MRI helium refill service by trained cryogenic technicians, and emergency delivery across all 50 US states and Latin America."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does WSM deliver gases to Latin America?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. WSM ships from our Miami facility to Venezuela, Colombia, Mexico, Puerto Rico, Dominican Republic, and throughout Central and South America. We handle all HAZMAT compliance (49 CFR, IMDG, IATA), customs documentation, and last-mile logistics for international deliveries."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is an EPA protocol gas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An EPA protocol gas is a calibration gas mixture manufactured based on the EPA Method defined in EPA/600/R-12/531 (May 2012). These gases are used for emissions monitoring and environmental compliance. WSM is a participant in the EPA Protocol Gas Verification Program (PGVP), Vendor Y12026, Participant #30."
+      }
+    }
+  ]
+}
 </script>
 </head>
 <body>
