@@ -176,6 +176,35 @@ img{max-width:100%}
 .quote-btn{width:100%;padding:14px;border-radius:8px;border:none;background:var(--lime);color:var(--blue-dd);font-family:inherit;font-size:14px;font-weight:800;cursor:pointer;margin-top:6px;transition:all 0.25s;letter-spacing:0.5px}
 .quote-btn:hover{background:var(--lime-l);box-shadow:0 4px 16px rgba(200,210,0,0.3);transform:translateY(-1px)}
 
+/* INSIGHTS / LATEST NEWS */
+.insights-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:36px;align-items:center;background:var(--white);border:1px solid var(--gray);border-radius:14px;padding:32px;transition:all 0.3s;position:relative;overflow:hidden}
+.insights-grid:hover{border-color:var(--blue);box-shadow:0 16px 48px rgba(0,86,184,0.12);transform:translateY(-3px)}
+.insights-grid::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:linear-gradient(180deg,var(--lime),var(--blue));opacity:0.85}
+.insights-content{padding-left:8px}
+.insights-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(192,57,43,0.08);border:1px solid rgba(192,57,43,0.25);border-radius:20px;padding:5px 14px;margin-bottom:14px;font-size:9.5px;font-weight:700;color:#c0392b;letter-spacing:1.8px;text-transform:uppercase}
+.insights-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:#c0392b;animation:pulseBadge 2s ease-in-out infinite}
+@keyframes pulseBadge{0%,100%{opacity:1}50%{opacity:0.4}}
+.insights-title{font-size:clamp(20px,2.2vw,26px);font-weight:900;color:var(--blue-d);letter-spacing:-0.5px;line-height:1.2;margin-bottom:12px}
+.insights-title span{color:var(--blue)}
+.insights-desc{font-size:14px;color:var(--tm);line-height:1.65;margin-bottom:18px}
+.insights-meta{display:flex;align-items:center;gap:14px;font-size:11px;color:var(--tl);margin-bottom:20px;flex-wrap:wrap}
+.insights-meta-item{display:flex;align-items:center;gap:5px}
+.insights-meta-item::before{content:'';width:3px;height:3px;border-radius:50%;background:var(--tl)}
+.insights-meta-item:first-child::before{display:none}
+.insights-cta{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--blue-dd);background:var(--lime);padding:11px 22px;border-radius:6px;transition:all 0.25s;box-shadow:0 4px 14px rgba(200,210,0,0.25)}
+.insights-cta:hover{background:var(--lime-l);transform:translateX(3px);box-shadow:0 6px 20px rgba(200,210,0,0.35)}
+.insights-cta svg{transition:transform 0.25s}
+.insights-cta:hover svg{transform:translateX(3px)}
+.insights-visual{aspect-ratio:4/3;background:linear-gradient(135deg,var(--blue-dd) 0%,var(--blue-d) 50%,var(--blue) 100%);border-radius:10px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.insights-visual::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 30% 30%, rgba(200,210,0,0.18) 0%, transparent 60%)}
+.insights-visual::after{content:'';position:absolute;bottom:-40%;right:-20%;width:70%;height:140%;background:radial-gradient(ellipse, rgba(255,255,255,0.06) 0%, transparent 70%);transform:rotate(-15deg)}
+.insights-visual-content{position:relative;z-index:2;text-align:center;padding:24px}
+.insights-visual-icon{font-size:56px;margin-bottom:8px;filter:drop-shadow(0 4px 16px rgba(0,0,0,0.3))}
+.insights-visual-stat{font-size:clamp(36px,4.5vw,52px);font-weight:900;color:var(--lime);letter-spacing:-2px;line-height:1;margin-bottom:6px}
+.insights-visual-label{font-size:11px;font-weight:700;color:rgba(255,255,255,0.85);letter-spacing:2px;text-transform:uppercase}
+.insights-visual-sub{font-size:10px;color:rgba(255,255,255,0.55);margin-top:8px;letter-spacing:1px}
+@media (max-width:768px){.insights-grid{grid-template-columns:1fr;gap:24px;padding:24px}.insights-content{padding-left:4px}.insights-visual{order:-1;aspect-ratio:16/10}}
+
 /* FOOTER */
 .footer{background:linear-gradient(180deg,var(--blue-d),var(--blue-dd));padding:48px 24px 24px;color:rgba(255,255,255,0.6);position:relative}
 .footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--lime),transparent)}
@@ -437,6 +466,7 @@ img{max-width:100%}
     <a href="uhp-gases.html">UHP Gases</a>
     <a href="calibration-gas.html">Calibration Gas</a>
     <a href="bulk-gas-latin-america.html">Bulk Supply</a>
+    <a href="insights.html">Insights</a>
     <a href="#quote" class="nav-cta">Get a Quote</a>
   </div>
 </div></nav>
@@ -617,6 +647,42 @@ img{max-width:100%}
     <div class="why-card"><div class="why-check">✓</div><div class="why-title">20+ Years · EN/ES/PT Team</div><div class="why-desc">Industrial, medical, specialty gas specialists. Bilingual support with decades of expertise.</div></div>
     <div class="why-card"><div class="why-check">✓</div><div class="why-title">Private Label & Digital Platform</div><div class="why-desc">Your brand, our certified gas. 28,000+ SKU platform with instant quoting and 184+ cross-references.</div></div>
   </div>
+</div></section>
+
+
+<!-- INSIGHTS / LATEST NEWS -->
+<section id="insights" class="section section-g"><div class="mx">
+  <div class="center">
+    <div class="label"><div class="label-line"></div><span class="label-text">Industry Insights</span></div>
+    <h2 class="s-title">Latest from Our Team</h2>
+    <p class="s-desc">Stay informed on supply chain shifts, regulatory updates, and operational guidance from the WSM specialty gas laboratory.</p>
+  </div>
+
+  <a href="helium-shortage-2026.html" style="display:block;text-decoration:none;color:inherit;max-width:1000px;margin:0 auto">
+    <div class="insights-grid">
+      <div class="insights-content">
+        <div class="insights-badge">Industry Alert · May 2026</div>
+        <h3 class="insights-title">Helium Shortage 2026: <span>What MRI Facilities Need to Know</span></h3>
+        <p class="insights-desc">Global helium supply has been reduced by approximately 30% following the Qatar disruption. Major suppliers are cutting allocations and adding facilities to waitlists. WSM HeliStream is currently accepting new MRI customers nationwide — no waitlist, scheduled and emergency fills.</p>
+        <div class="insights-meta">
+          <span class="insights-meta-item">May 2, 2026</span>
+          <span class="insights-meta-item">8 min read</span>
+          <span class="insights-meta-item">HeliStream</span>
+        </div>
+        <span class="insights-cta">Read Full Article
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </div>
+      <div class="insights-visual">
+        <div class="insights-visual-content">
+          <div class="insights-visual-icon">⚠️</div>
+          <div class="insights-visual-stat">30%</div>
+          <div class="insights-visual-label">Supply Reduction</div>
+          <div class="insights-visual-sub">Global Helium Market · 2026</div>
+        </div>
+      </div>
+    </div>
+  </a>
 </div></section>
 
 
