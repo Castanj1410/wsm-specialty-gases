@@ -1,6 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) - WSM Specialty Gases -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SB05WHFMML"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-SB05WHFMML', {
+    'page_title': document.title,
+    'page_location': window.location.href
+  });
+
+  // ═══ CUSTOM EVENT TRACKING (WSM CONVERSIONS) ═══
+  document.addEventListener('DOMContentLoaded', function() {
+
+    // 1. PHONE CLICK TRACKING (high-value conversion)
+    document.querySelectorAll('a[href^="tel:"]').forEach(function(link) {
+      link.addEventListener('click', function() {
+        gtag('event', 'phone_click', {
+          'event_category': 'Lead',
+          'event_label': link.getAttribute('href').replace('tel:', ''),
+          'value': 30
+        });
+      });
+    });
+
+    // 2. EMAIL CLICK TRACKING
+    document.querySelectorAll('a[href^="mailto:"]').forEach(function(link) {
+      link.addEventListener('click', function() {
+        gtag('event', 'email_click', {
+          'event_category': 'Lead',
+          'event_label': link.getAttribute('href').replace('mailto:', ''),
+          'value': 20
+        });
+      });
+    });
+
+    // 3. FORM SUBMIT TRACKING (highest-value conversion)
+    document.querySelectorAll('form').forEach(function(form) {
+      form.addEventListener('submit', function() {
+        gtag('event', 'form_submit', {
+          'event_category': 'Lead',
+          'event_label': 'Quote Request',
+          'value': 50
+        });
+      });
+    });
+
+    // 4. CTA CLICK TRACKING (Get a Quote, Request Quote, Read More buttons)
+    var ctaSelectors = [
+      'a.nav-cta', 'a.btn-p', 'a.btn-primary', 'a.cta-btn',
+      'button.quote-btn', '.insights-cta', 'a[href*="quote"]'
+    ];
+    document.querySelectorAll(ctaSelectors.join(',')).forEach(function(cta) {
+      cta.addEventListener('click', function() {
+        var label = (cta.textContent || cta.innerText || 'Unknown').trim().substring(0, 50);
+        gtag('event', 'cta_click', {
+          'event_category': 'Engagement',
+          'event_label': label,
+          'value': 5
+        });
+      });
+    });
+
+    // 5. ENGAGED VISIT (>2 minutes on page)
+    setTimeout(function() {
+      gtag('event', 'engaged_visit', {
+        'event_category': 'Engagement',
+        'event_label': document.title,
+        'value': 5
+      });
+    }, 120000); // 2 minutes
+
+    // 6. SCROLL DEPTH TRACKING (25%, 50%, 75%, 100%)
+    var scrollMilestones = {25: false, 50: false, 75: false, 100: false};
+    function checkScrollDepth() {
+      var docHeight = Math.max(
+        document.body.scrollHeight, document.body.offsetHeight,
+        document.documentElement.clientHeight, document.documentElement.scrollHeight,
+        document.documentElement.offsetHeight
+      );
+      var winHeight = window.innerHeight || document.documentElement.clientHeight;
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      var scrollPercent = ((scrollTop + winHeight) / docHeight) * 100;
+
+      Object.keys(scrollMilestones).forEach(function(milestone) {
+        if (!scrollMilestones[milestone] && scrollPercent >= parseInt(milestone)) {
+          scrollMilestones[milestone] = true;
+          gtag('event', 'scroll_depth', {
+            'event_category': 'Engagement',
+            'event_label': milestone + '%',
+            'value': parseInt(milestone) / 25
+          });
+        }
+      });
+    }
+    var scrollTimer;
+    window.addEventListener('scroll', function() {
+      clearTimeout(scrollTimer);
+      scrollTimer = setTimeout(checkScrollDepth, 200);
+    });
+  });
+</script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Calibration gas supplier — 28,000+ SKUs manufactured at our ISO/IEC 17025 & ISO 17034 accredited lab. Calibration gas for gas detectors, 4-gas mix, bump test gas, EPA protocol gas, H₂S, CO, LEL calibration. 184+ cross-references. Ships 24-48h. Gas de calibración — Miami, FL.">
