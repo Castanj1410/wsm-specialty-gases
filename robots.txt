@@ -1,21 +1,20 @@
 # robots.txt — WSM Specialty Gases
 # https://www.wsmspecialtygases.com
 
+# Default rules for all crawlers
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://www.wsmspecialtygases.com/sitemap.xml
+# Block PDF files from being crawled (ISO certificates available for download but not indexed)
+Disallow: /*.pdf$
 
-# Allow all crawlers to index all pages
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-# Block internal/admin paths (update when deployed)
+# Block internal/admin paths (preventive — for future deployments)
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
 Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /.claude/
+
+# Sitemap location
+Sitemap: https://www.wsmspecialtygases.com/sitemap.xml

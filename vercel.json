@@ -1,0 +1,104 @@
+{
+  "cleanUrls": false,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/about",
+      "destination": "/index.html#about",
+      "permanent": true
+    },
+    {
+      "source": "/industries",
+      "destination": "/index.html#industries",
+      "permanent": true
+    },
+    {
+      "source": "/quote",
+      "destination": "/index.html#quote",
+      "permanent": true
+    },
+    {
+      "source": "/laboratory",
+      "destination": "/index.html#laboratory",
+      "permanent": true
+    },
+    {
+      "source": "/liquidhelium",
+      "destination": "/index.html#liquidhelium",
+      "permanent": true
+    },
+    {
+      "source": "/products",
+      "destination": "/index.html#products",
+      "permanent": true
+    },
+    {
+      "source": "/specialty-gas-mixtures",
+      "destination": "/specialty-gas-mixtures.html",
+      "permanent": true
+    },
+    {
+      "source": "/liquid-helium-mri",
+      "destination": "/liquid-helium-mri.html",
+      "permanent": true
+    },
+    {
+      "source": "/helium-gas",
+      "destination": "/helium-gas.html",
+      "permanent": true
+    },
+    {
+      "source": "/uhp-gases",
+      "destination": "/uhp-gases.html",
+      "permanent": true
+    },
+    {
+      "source": "/calibration-gas",
+      "destination": "/calibration-gas.html",
+      "permanent": true
+    },
+    {
+      "source": "/bulk-gas-latin-america",
+      "destination": "/bulk-gas-latin-america.html",
+      "permanent": true
+    },
+    {
+      "source": "/insights",
+      "destination": "/insights.html",
+      "permanent": true
+    },
+    {
+      "source": "/helium-shortage-2026",
+      "destination": "/helium-shortage-2026.html",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)\\.pdf",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    }
+  ]
+}
