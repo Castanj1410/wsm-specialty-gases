@@ -554,6 +554,20 @@ img{max-width:100%}
   ]
 }
 </script>
+
+<style>
+/* Contact links — inherit text styling, no underline by default */
+a.contact-link, a.contact-link:visited {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px dotted currentColor;
+  transition: opacity 0.2s ease;
+}
+a.contact-link:hover {
+  opacity: 0.7;
+  border-bottom-style: solid;
+}
+</style>
 </head>
 <body>
 
@@ -839,7 +853,7 @@ function sendQuote(e){
     <div><img src="wsm-logo.png" alt="WSM Specialty Gas" style="height:44px;width:auto;margin-bottom:12px;filter:brightness(0) invert(1)"><p>ISO/IEC 17025 & ISO 17034 Accredited Laboratory<br>PJLA #125017 · ILAC-MRA<br>3535 NW 60th St, Miami, FL 33142</p></div>
     <div><h4>Laboratory</h4><div>Certified Gas Mixtures</div><div>EPA Protocol / PGVP</div><div>UHP & Research Grade</div><div>Reactive & Corrosive</div><div>Hydrocarbon Blends</div><div>Medical & Laser</div></div>
     <div><h4>Products</h4><div>Liquid Helium / MRI</div><div>Helium Gas Cylinders</div><div>Calibration Gas</div><div>Bulk Cryogenic</div><div>Specialty Mixtures</div></div>
-    <div><h4>Contact</h4><p>(305) 455-1220<br>sales@wsmsupplier.com<br>wsmspecialtygases.com</p><div style="margin-top:10px;display:inline-block;font-size:9px;font-weight:700;color:var(--blue-dd);letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:12px;background:var(--lime)">WhatsApp for LATAM</div></div>
+    <div><h4>Contact</h4><p><a href="tel:+13054551220" class="contact-link">(305) 455-1220</a><br><a href="mailto:sales@wsmsupplier.com" class="contact-link">sales@wsmsupplier.com</a><br>wsmspecialtygases.com</p><div style="margin-top:10px;display:inline-block;font-size:9px;font-weight:700;color:var(--blue-dd);letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:12px;background:var(--lime)">WhatsApp for LATAM</div></div>
   </div>
   <div class="footer-bottom">© 2026 WSM Supplier LLC · All Rights Reserved · Miami, FL · USA</div>
 </footer>
