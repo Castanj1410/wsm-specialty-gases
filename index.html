@@ -37,16 +37,8 @@
       });
     });
 
-    // 3. FORM SUBMIT TRACKING (highest-value conversion)
-    document.querySelectorAll('form').forEach(function(form) {
-      form.addEventListener('submit', function() {
-        gtag('event', 'form_submit', {
-          'event_category': 'Lead',
-          'event_label': 'Quote Request',
-          'value': 50
-        });
-      });
-    });
+    // 3. FORM SUBMIT TRACKING — handled inline in the form's success callback
+    //    (see sendQuote function below — fires only when email is actually sent via Resend API)
 
     // 4. CTA CLICK TRACKING (Get a Quote, Request Quote, Read More buttons)
     var ctaSelectors = [
@@ -829,19 +821,88 @@ a.contact-link:hover {
     <label class="quote-label">Email</label><input class="quote-input" id="qEmail" type="email" placeholder="email@company.com" required>
     <label class="quote-label">Phone / WhatsApp</label><input class="quote-input" id="qPhone" placeholder="+1 (305) ...">
     <label class="quote-label">Product Needed</label><input class="quote-input" id="qProduct" placeholder="e.g. EPA Protocol Mix, UHP Argon, Helium for MRI..." required>
-    <button type="submit" class="quote-btn">Submit Quote Request</button>
+    <button type="submit" class="quote-btn" id="qSubmit">Submit Quote Request</button>
+    <div id="qStatus" style="margin-top:14px;padding:12px;border-radius:8px;font-size:13px;font-weight:600;display:none;text-align:center"></div>
     </form>
   </div>
 <script>
-function sendQuote(e){
+async function sendQuote(e){
   e.preventDefault();
-  var c=document.getElementById('qCompany').value;
-  var em=document.getElementById('qEmail').value;
-  var ph=document.getElementById('qPhone').value;
-  var pr=document.getElementById('qProduct').value;
-  var subject='Quote Request from '+c;
-  var body='Company: '+c+'%0D%0AEmail: '+em+'%0D%0APhone: '+ph+'%0D%0AProduct: '+pr;
-  window.location.href='mailto:sales@wsmsupplier.com?subject='+encodeURIComponent(subject)+'&body='+body;
+
+  var btn = document.getElementById('qSubmit');
+  var status = document.getElementById('qStatus');
+  var originalBtnText = btn.textContent;
+
+  // Disable button and show loading state
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+  btn.style.opacity = '0.6';
+  status.style.display = 'none';
+
+  // Collect form data
+  var data = {
+    company: document.getElementById('qCompany').value.trim(),
+    email: document.getElementById('qEmail').value.trim(),
+    phone: document.getElementById('qPhone').value.trim(),
+    product: document.getElementById('qProduct').value.trim()
+  };
+
+  try {
+    var response = await fetch('/api/quote', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+
+    var result = await response.json();
+
+    if (response.ok && result.success) {
+      // ✓ SUCCESS — email was actually sent
+      status.style.display = 'block';
+      status.style.background = '#e8f5e9';
+      status.style.color = '#1b5e20';
+      status.style.border = '1px solid #66bb6a';
+      status.innerHTML = '✓ Quote request received. Our team will respond within 24 hours.';
+
+      // Reset form
+      document.getElementById('quoteForm').reset();
+
+      // Reset button
+      btn.disabled = false;
+      btn.textContent = originalBtnText;
+      btn.style.opacity = '1';
+
+      // Track conversion in GA4 (only on actual success)
+      if (typeof gtag === 'function') {
+        gtag('event', 'form_submit', {
+          'event_category': 'Lead',
+          'event_label': 'Quote Request',
+          'value': 50
+        });
+      }
+
+      // Scroll status into view
+      status.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+    } else {
+      // ✗ ERROR from API
+      throw new Error(result.error || 'Failed to send quote request');
+    }
+
+  } catch (err) {
+    // ✗ Network error or API error
+    status.style.display = 'block';
+    status.style.background = '#ffebee';
+    status.style.color = '#b71c1c';
+    status.style.border = '1px solid #ef5350';
+    status.innerHTML = '✗ Could not send your request. Please call <a href="tel:+13054551220" style="color:#b71c1c;font-weight:700">(305) 455-1220</a> or email <a href="mailto:sales@wsmsupplier.com" style="color:#b71c1c;font-weight:700">sales@wsmsupplier.com</a> directly.';
+
+    btn.disabled = false;
+    btn.textContent = originalBtnText;
+    btn.style.opacity = '1';
+
+    console.error('Quote form error:', err);
+  }
 }
 </script>
 </div></section>
