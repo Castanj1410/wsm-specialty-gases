@@ -1,108 +1,6 @@
-<!DOCTYPE html><!-- Updated 2026-05-03 --><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<!-- Google tag (gtag.js) - WSM Specialty Gases -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SB05WHFMML"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-SB05WHFMML', {
-    'page_title': document.title,
-    'page_location': window.location.href
-  });
-
-  // ═══ CUSTOM EVENT TRACKING (WSM CONVERSIONS) ═══
-  document.addEventListener('DOMContentLoaded', function() {
-
-    // 1. PHONE CLICK TRACKING (high-value conversion)
-    document.querySelectorAll('a[href^="tel:"]').forEach(function(link) {
-      link.addEventListener('click', function() {
-        gtag('event', 'phone_click', {
-          'event_category': 'Lead',
-          'event_label': link.getAttribute('href').replace('tel:', ''),
-          'value': 30
-        });
-      });
-    });
-
-    // 2. EMAIL CLICK TRACKING
-    document.querySelectorAll('a[href^="mailto:"]').forEach(function(link) {
-      link.addEventListener('click', function() {
-        gtag('event', 'email_click', {
-          'event_category': 'Lead',
-          'event_label': link.getAttribute('href').replace('mailto:', ''),
-          'value': 20
-        });
-      });
-    });
-
-    // 3. FORM SUBMIT TRACKING (highest-value conversion)
-    document.querySelectorAll('form').forEach(function(form) {
-      form.addEventListener('submit', function() {
-        gtag('event', 'form_submit', {
-          'event_category': 'Lead',
-          'event_label': 'Quote Request',
-          'value': 50
-        });
-      });
-    });
-
-    // 4. CTA CLICK TRACKING (Get a Quote, Request Quote, Read More buttons)
-    var ctaSelectors = [
-      'a.nav-cta', 'a.btn-p', 'a.btn-primary', 'a.cta-btn',
-      'button.quote-btn', '.insights-cta', 'a[href*="quote"]'
-    ];
-    document.querySelectorAll(ctaSelectors.join(',')).forEach(function(cta) {
-      cta.addEventListener('click', function() {
-        var label = (cta.textContent || cta.innerText || 'Unknown').trim().substring(0, 50);
-        gtag('event', 'cta_click', {
-          'event_category': 'Engagement',
-          'event_label': label,
-          'value': 5
-        });
-      });
-    });
-
-    // 5. ENGAGED VISIT (>2 minutes on page)
-    setTimeout(function() {
-      gtag('event', 'engaged_visit', {
-        'event_category': 'Engagement',
-        'event_label': document.title,
-        'value': 5
-      });
-    }, 120000); // 2 minutes
-
-    // 6. SCROLL DEPTH TRACKING (25%, 50%, 75%, 100%)
-    var scrollMilestones = {25: false, 50: false, 75: false, 100: false};
-    function checkScrollDepth() {
-      var docHeight = Math.max(
-        document.body.scrollHeight, document.body.offsetHeight,
-        document.documentElement.clientHeight, document.documentElement.scrollHeight,
-        document.documentElement.offsetHeight
-      );
-      var winHeight = window.innerHeight || document.documentElement.clientHeight;
-      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      var scrollPercent = ((scrollTop + winHeight) / docHeight) * 100;
-
-      Object.keys(scrollMilestones).forEach(function(milestone) {
-        if (!scrollMilestones[milestone] && scrollPercent >= parseInt(milestone)) {
-          scrollMilestones[milestone] = true;
-          gtag('event', 'scroll_depth', {
-            'event_category': 'Engagement',
-            'event_label': milestone + '%',
-            'value': parseInt(milestone) / 25
-          });
-        }
-      });
-    }
-    var scrollTimer;
-    window.addEventListener('scroll', function() {
-      clearTimeout(scrollTimer);
-      scrollTimer = setTimeout(checkScrollDepth, 200);
-    });
-  });
-</script>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Helium Shortage 2026: What MRI facilities need to know. Global helium supply reduced 30% after Qatar disruption. WSM HeliStream is accepting new customers for scheduled and emergency MRI helium fills nationwide. No waitlist.">
@@ -217,6 +115,21 @@ img{max-width:100%}
   .hamburger{display:flex;flex-direction:column;gap:5px;cursor:pointer;padding:8px}
   .hamburger span{width:24px;height:2px;background:var(--blue-d);border-radius:2px}
 }
+
+/* QUOTE FORM */
+.quote-section{padding:56px 24px;background:var(--off)}
+.quote-section .label{display:flex;align-items:center;gap:8px;margin-bottom:6px;justify-content:center}
+.quote-section .label-line{width:32px;height:3px;border-radius:2px;background:var(--lime)}
+.quote-section .label-text{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--blue)}
+.quote-section h2{font-size:clamp(22px,3vw,30px);font-weight:900;color:var(--blue-d);letter-spacing:-0.5px;margin:4px 0 8px;text-align:center}
+.quote-section .q-sub{font-size:14px;color:var(--tm);text-align:center;margin-bottom:24px}
+.quote-box{background:var(--white);border:1px solid var(--gray);border-radius:14px;padding:32px;max-width:560px;margin:0 auto;box-shadow:0 8px 32px rgba(0,0,0,0.04)}
+.quote-label{font-size:10px;font-weight:700;color:var(--tl);letter-spacing:1px;text-transform:uppercase;display:block;margin-bottom:4px}
+.quote-input{width:100%;padding:12px 14px;border-radius:8px;background:var(--off);border:1.5px solid var(--gray);font-family:inherit;font-size:13px;color:var(--tx);outline:none;margin-bottom:14px;transition:all 0.25s}
+.quote-input:focus{border-color:var(--blue);background:#fff;box-shadow:0 0 0 3px rgba(0,86,184,0.08)}
+.quote-btn{width:100%;padding:14px;border-radius:8px;border:none;background:var(--lime);color:var(--blue-dd);font-family:inherit;font-size:14px;font-weight:800;cursor:pointer;margin-top:6px;transition:all 0.25s;letter-spacing:0.5px}
+.quote-btn:hover{background:var(--lime-l);box-shadow:0 4px 16px rgba(200,210,0,0.3);transform:translateY(-1px)}
+
 </style>
 <script type="application/ld+json">
 {
@@ -244,20 +157,6 @@ img{max-width:100%}
   ]
 }
 </script>
-
-<style>
-/* Contact links — inherit text styling, no underline by default */
-a.contact-link, a.contact-link:visited {
-  color: inherit;
-  text-decoration: none;
-  border-bottom: 1px dotted currentColor;
-  transition: opacity 0.2s ease;
-}
-a.contact-link:hover {
-  opacity: 0.7;
-  border-bottom-style: solid;
-}
-</style>
 </head>
 <body>
 
@@ -273,8 +172,7 @@ a.contact-link:hover {
     <a href="uhp-gases.html">UHP Gases</a>
     <a href="calibration-gas.html">Calibration Gas</a>
     <a href="bulk-gas-latin-america.html">Bulk Supply</a>
-    <a href="insights.html">Insights</a>
-    <a href="index.html#quote" class="nav-cta">Get a Quote</a>
+    <a href="#quote" class="nav-cta">Get a Quote</a>
   </div>
 </div></nav>
 
@@ -284,7 +182,7 @@ a.contact-link:hover {
   <h1>Helium Shortage 2026:<br><span>What MRI Facilities Need to Know</span></h1>
   <p class="subtitle">Global helium supply reduced by 30%. Major suppliers cutting allocations. WSM HeliStream® is accepting new customers for scheduled and emergency MRI helium fills — no waitlist.</p>
   <div class="cta-row">
-    <a href="index.html#quote" class="btn-p">Request Helium Supply Quote</a>
+    <a href="#quote" class="btn-p">Request Helium Supply Quote</a>
     <a href="tel:+13054551220" class="btn-s">Call 24/7: (305) 455-1220</a>
   </div>
 </section>
@@ -341,8 +239,8 @@ a.contact-link:hover {
   <div class="cta-box">
     <h3>Need Liquid Helium for Your MRI?</h3>
     <p>WSM HeliStream® is accepting new customers — no waitlist, no allocation cuts.</p>
-    <span class="phone"><a href="tel:+13054551220" class="contact-link">(305) 455-1220</a></span>
-    <a href="index.html#quote" class="btn-p">Request a Quote Now</a>
+    <span class="phone">(305) 455-1220</span>
+    <a href="#quote" class="btn-p">Request a Quote Now</a>
   </div>
 
   <h2>Why WSM HeliStream® During the Shortage</h2>
@@ -366,10 +264,10 @@ a.contact-link:hover {
   <p>MRI scanners require liquid helium to cool their superconducting magnets to approximately 4.2 Kelvin. Without regular helium refills, magnets can quench — losing superconductivity — resulting in system downtime, costly recharging, and cancelled patient scans. Each non-functional MRI eliminates approximately 20–30 daily patient examinations.</p>
 
   <h3>Can WSM supply liquid helium during the shortage?</h3>
-  <p>Yes. WSM HeliStream® is actively accepting new customers for both scheduled and emergency MRI helium fills. We supply pre-chilled dewars (250L and 500L) with on-site transfer by certified cryogenic technicians, delivered nationwide across all 50 states and Latin America. Call <a href="tel:+13054551220" class="contact-link">(305) 455-1220</a> for immediate availability.</p>
+  <p>Yes. WSM HeliStream® is actively accepting new customers for both scheduled and emergency MRI helium fills. We supply pre-chilled dewars (250L and 500L) with on-site transfer by certified cryogenic technicians, delivered nationwide across all 50 states and Latin America. Call (305) 455-1220 for immediate availability.</p>
 
   <h3>How quickly can WSM deliver liquid helium?</h3>
-  <p>For scheduled fills, WSM coordinates regular delivery programs tailored to your magnet's consumption rate. For emergency situations, we offer rapid deployment via ground freight nationwide. Contact our 24/7 line at <a href="tel:+13054551220" class="contact-link">(305) 455-1220</a>.</p>
+  <p>For scheduled fills, WSM coordinates regular delivery programs tailored to your magnet's consumption rate. For emergency situations, we offer rapid deployment via ground freight nationwide. Contact our 24/7 line at (305) 455-1220.</p>
 
   <h3>What is the current price of liquid helium per liter?</h3>
   <p>As of 2026, liquid helium prices range from $30 to $55+ per liter depending on supplier, contract terms, and market conditions. Spot market prices have approximately doubled since the Qatar disruption. WSM HeliStream® offers stable pricing through supply agreements, protecting your facility from spot-market volatility.</p>
@@ -392,13 +290,42 @@ a.contact-link:hover {
   </div>
 </section>
 
+
+<!-- QUOTE FORM -->
+<section class="quote-section" id="quote">
+  <div class="label"><span class="label-line"></span><span class="label-text">GET STARTED</span><span class="label-line"></span></div>
+  <h2>Secure Your Helium Supply Now</h2>
+  <p class="q-sub">WSM HeliStream® is accepting new customers. No waitlist. Response within 24h.</p>
+  <div class="quote-box">
+    <form id="quoteForm_helium_shortage_2026" onsubmit="sendQuote_helium_shortage_2026(event)">
+    <label class="quote-label">Company</label><input class="quote-input" id="qC_helium_shortage_2026" placeholder="Your company" required>
+    <label class="quote-label">Email</label><input class="quote-input" id="qE_helium_shortage_2026" type="email" placeholder="email@company.com" required>
+    <label class="quote-label">Phone / WhatsApp</label><input class="quote-input" id="qP_helium_shortage_2026" placeholder="+1 (305) ...">
+    <label class="quote-label">Product Needed</label><input class="quote-input" id="qPr_helium_shortage_2026" value="Liquid Helium — Shortage Emergency" required>
+    <button type="submit" class="quote-btn">Submit Quote Request</button>
+    </form>
+  </div>
+</section>
+<script>
+function sendQuote_helium_shortage_2026(e){
+  e.preventDefault();
+  var c=document.getElementById('qC_helium_shortage_2026').value;
+  var em=document.getElementById('qE_helium_shortage_2026').value;
+  var ph=document.getElementById('qP_helium_shortage_2026').value;
+  var pr=document.getElementById('qPr_helium_shortage_2026').value;
+  var subject='Quote Request: '+pr+' — '+c;
+  var body='Company: '+c+'%0D%0AEmail: '+em+'%0D%0APhone: '+ph+'%0D%0AProduct: '+pr;
+  window.location.href='mailto:sales@wsmsupplier.com?subject='+encodeURIComponent(subject)+'&body='+body;
+}
+</script>
+
 <div class="lime-bar"></div>
 <footer class="footer">
   <div class="footer-grid">
-    <div><img src="wsm-logo.png" alt="WSM Specialty Gas" style="height:44px;width:auto;margin-bottom:12px;filter:brightness(0) invert(1)"><p>ISO/IEC 17025 & ISO 17034 Accredited Laboratory<br>PJLA #125017 · ILAC-MRA<br>3535 NW 60th St, Miami, FL 33142</p></div>
+    <div><div style="display:inline-block;background:#fff;padding:8px 14px;border-radius:8px;margin-bottom:12px"><img src="wsm-logo.png" alt="WSM Specialty Gases" style="height:40px;width:auto;display:block"></div><p>ISO/IEC 17025 & ISO 17034 Accredited Laboratory<br>PJLA #125017 · ILAC-MRA<br>3535 NW 60th St, Miami, FL 33142</p></div>
     <div><h4>Laboratory</h4><div><a href="specialty-gas-mixtures.html">Certified Gas Mixtures</a></div><div>EPA Protocol / PGVP</div><div><a href="uhp-gases.html">UHP & Research Grade</a></div><div>Reactive & Corrosive</div><div>Hydrocarbon Blends</div><div>Medical & Laser</div></div>
     <div><h4>Products</h4><div><a href="liquid-helium-mri.html">Liquid Helium / MRI</a></div><div><a href="helium-gas.html">Helium Gas Cylinders</a></div><div><a href="calibration-gas.html">Calibration Gas</a></div><div><a href="bulk-gas-latin-america.html">Bulk Cryogenic</a></div><div><a href="specialty-gas-mixtures.html">Specialty Mixtures</a></div></div>
-    <div><h4>Contact</h4><p><a href="tel:+13054551220" class="contact-link">(305) 455-1220</a><br><a href="mailto:sales@wsmsupplier.com" class="contact-link">sales@wsmsupplier.com</a><br>wsmspecialtygases.com</p><div style="margin-top:10px;display:inline-block;font-size:9px;font-weight:700;color:#001f45;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:12px;background:#c8d200">WhatsApp for LATAM</div></div>
+    <div><h4>Contact</h4><p>(305) 455-1220<br>sales@wsmsupplier.com<br>wsmspecialtygases.com</p><div style="margin-top:10px;display:inline-block;font-size:9px;font-weight:700;color:#001f45;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:12px;background:#c8d200">WhatsApp for LATAM</div></div>
   </div>
   <div class="footer-bottom">© 2026 WSM Supplier LLC · All Rights Reserved · Miami, FL · USA</div>
 </footer>

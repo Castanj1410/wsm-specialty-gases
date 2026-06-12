@@ -1,101 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) - WSM Specialty Gases -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SB05WHFMML"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-SB05WHFMML', {
-    'page_title': document.title,
-    'page_location': window.location.href
-  });
-
-  // ═══ CUSTOM EVENT TRACKING (WSM CONVERSIONS) ═══
-  document.addEventListener('DOMContentLoaded', function() {
-
-    // 1. PHONE CLICK TRACKING (high-value conversion)
-    document.querySelectorAll('a[href^="tel:"]').forEach(function(link) {
-      link.addEventListener('click', function() {
-        gtag('event', 'phone_click', {
-          'event_category': 'Lead',
-          'event_label': link.getAttribute('href').replace('tel:', ''),
-          'value': 30
-        });
-      });
-    });
-
-    // 2. EMAIL CLICK TRACKING
-    document.querySelectorAll('a[href^="mailto:"]').forEach(function(link) {
-      link.addEventListener('click', function() {
-        gtag('event', 'email_click', {
-          'event_category': 'Lead',
-          'event_label': link.getAttribute('href').replace('mailto:', ''),
-          'value': 20
-        });
-      });
-    });
-
-    // 3. FORM SUBMIT TRACKING — handled inline in the form's success callback
-    //    (see sendQuote function below — fires only when email is actually sent via Resend API)
-
-    // 4. CTA CLICK TRACKING (Get a Quote, Request Quote, Read More buttons)
-    var ctaSelectors = [
-      'a.nav-cta', 'a.btn-p', 'a.btn-primary', 'a.cta-btn',
-      'button.quote-btn', '.insights-cta', 'a[href*="quote"]'
-    ];
-    document.querySelectorAll(ctaSelectors.join(',')).forEach(function(cta) {
-      cta.addEventListener('click', function() {
-        var label = (cta.textContent || cta.innerText || 'Unknown').trim().substring(0, 50);
-        gtag('event', 'cta_click', {
-          'event_category': 'Engagement',
-          'event_label': label,
-          'value': 5
-        });
-      });
-    });
-
-    // 5. ENGAGED VISIT (>2 minutes on page)
-    setTimeout(function() {
-      gtag('event', 'engaged_visit', {
-        'event_category': 'Engagement',
-        'event_label': document.title,
-        'value': 5
-      });
-    }, 120000); // 2 minutes
-
-    // 6. SCROLL DEPTH TRACKING (25%, 50%, 75%, 100%)
-    var scrollMilestones = {25: false, 50: false, 75: false, 100: false};
-    function checkScrollDepth() {
-      var docHeight = Math.max(
-        document.body.scrollHeight, document.body.offsetHeight,
-        document.documentElement.clientHeight, document.documentElement.scrollHeight,
-        document.documentElement.offsetHeight
-      );
-      var winHeight = window.innerHeight || document.documentElement.clientHeight;
-      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      var scrollPercent = ((scrollTop + winHeight) / docHeight) * 100;
-
-      Object.keys(scrollMilestones).forEach(function(milestone) {
-        if (!scrollMilestones[milestone] && scrollPercent >= parseInt(milestone)) {
-          scrollMilestones[milestone] = true;
-          gtag('event', 'scroll_depth', {
-            'event_category': 'Engagement',
-            'event_label': milestone + '%',
-            'value': parseInt(milestone) / 25
-          });
-        }
-      });
-    }
-    var scrollTimer;
-    window.addEventListener('scroll', function() {
-      clearTimeout(scrollTimer);
-      scrollTimer = setTimeout(checkScrollDepth, 200);
-    });
-  });
-</script>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="WSM Specialty Gases — ISO/IEC 17025 & ISO 17034 accredited specialty gas laboratory in Miami, FL. Specialty gas mixtures, EPA protocol gas, calibration gas, ultra high purity gases, liquid helium for MRI. Proveedor de gases especiales — USA & Latin America.">
@@ -270,35 +175,6 @@ img{max-width:100%}
 .quote-input:focus{border-color:var(--blue);background:#fff;box-shadow:0 0 0 3px rgba(0,86,184,0.08)}
 .quote-btn{width:100%;padding:14px;border-radius:8px;border:none;background:var(--lime);color:var(--blue-dd);font-family:inherit;font-size:14px;font-weight:800;cursor:pointer;margin-top:6px;transition:all 0.25s;letter-spacing:0.5px}
 .quote-btn:hover{background:var(--lime-l);box-shadow:0 4px 16px rgba(200,210,0,0.3);transform:translateY(-1px)}
-
-/* INSIGHTS / LATEST NEWS */
-.insights-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:36px;align-items:center;background:var(--white);border:1px solid var(--gray);border-radius:14px;padding:32px;transition:all 0.3s;position:relative;overflow:hidden}
-.insights-grid:hover{border-color:var(--blue);box-shadow:0 16px 48px rgba(0,86,184,0.12);transform:translateY(-3px)}
-.insights-grid::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:linear-gradient(180deg,var(--lime),var(--blue));opacity:0.85}
-.insights-content{padding-left:8px}
-.insights-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(192,57,43,0.08);border:1px solid rgba(192,57,43,0.25);border-radius:20px;padding:5px 14px;margin-bottom:14px;font-size:9.5px;font-weight:700;color:#c0392b;letter-spacing:1.8px;text-transform:uppercase}
-.insights-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:#c0392b;animation:pulseBadge 2s ease-in-out infinite}
-@keyframes pulseBadge{0%,100%{opacity:1}50%{opacity:0.4}}
-.insights-title{font-size:clamp(20px,2.2vw,26px);font-weight:900;color:var(--blue-d);letter-spacing:-0.5px;line-height:1.2;margin-bottom:12px}
-.insights-title span{color:var(--blue)}
-.insights-desc{font-size:14px;color:var(--tm);line-height:1.65;margin-bottom:18px}
-.insights-meta{display:flex;align-items:center;gap:14px;font-size:11px;color:var(--tl);margin-bottom:20px;flex-wrap:wrap}
-.insights-meta-item{display:flex;align-items:center;gap:5px}
-.insights-meta-item::before{content:'';width:3px;height:3px;border-radius:50%;background:var(--tl)}
-.insights-meta-item:first-child::before{display:none}
-.insights-cta{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--blue-dd);background:var(--lime);padding:11px 22px;border-radius:6px;transition:all 0.25s;box-shadow:0 4px 14px rgba(200,210,0,0.25)}
-.insights-cta:hover{background:var(--lime-l);transform:translateX(3px);box-shadow:0 6px 20px rgba(200,210,0,0.35)}
-.insights-cta svg{transition:transform 0.25s}
-.insights-cta:hover svg{transform:translateX(3px)}
-.insights-visual{aspect-ratio:4/3;background:linear-gradient(135deg,var(--blue-dd) 0%,var(--blue-d) 50%,var(--blue) 100%);border-radius:10px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
-.insights-visual::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 30% 30%, rgba(200,210,0,0.18) 0%, transparent 60%)}
-.insights-visual::after{content:'';position:absolute;bottom:-40%;right:-20%;width:70%;height:140%;background:radial-gradient(ellipse, rgba(255,255,255,0.06) 0%, transparent 70%);transform:rotate(-15deg)}
-.insights-visual-content{position:relative;z-index:2;text-align:center;padding:24px}
-.insights-visual-icon{font-size:56px;margin-bottom:8px;filter:drop-shadow(0 4px 16px rgba(0,0,0,0.3))}
-.insights-visual-stat{font-size:clamp(36px,4.5vw,52px);font-weight:900;color:var(--lime);letter-spacing:-2px;line-height:1;margin-bottom:6px}
-.insights-visual-label{font-size:11px;font-weight:700;color:rgba(255,255,255,0.85);letter-spacing:2px;text-transform:uppercase}
-.insights-visual-sub{font-size:10px;color:rgba(255,255,255,0.55);margin-top:8px;letter-spacing:1px}
-@media (max-width:768px){.insights-grid{grid-template-columns:1fr;gap:24px;padding:24px}.insights-content{padding-left:4px}.insights-visual{order:-1;aspect-ratio:16/10}}
 
 /* FOOTER */
 .footer{background:linear-gradient(180deg,var(--blue-d),var(--blue-dd));padding:48px 24px 24px;color:rgba(255,255,255,0.6);position:relative}
@@ -546,20 +422,6 @@ img{max-width:100%}
   ]
 }
 </script>
-
-<style>
-/* Contact links — inherit text styling, no underline by default */
-a.contact-link, a.contact-link:visited {
-  color: inherit;
-  text-decoration: none;
-  border-bottom: 1px dotted currentColor;
-  transition: opacity 0.2s ease;
-}
-a.contact-link:hover {
-  opacity: 0.7;
-  border-bottom-style: solid;
-}
-</style>
 </head>
 <body>
 
@@ -575,7 +437,6 @@ a.contact-link:hover {
     <a href="uhp-gases.html">UHP Gases</a>
     <a href="calibration-gas.html">Calibration Gas</a>
     <a href="bulk-gas-latin-america.html">Bulk Supply</a>
-    <a href="insights.html">Insights</a>
     <a href="#quote" class="nav-cta">Get a Quote</a>
   </div>
 </div></nav>
@@ -759,42 +620,6 @@ a.contact-link:hover {
 </div></section>
 
 
-<!-- INSIGHTS / LATEST NEWS -->
-<section id="insights" class="section section-g"><div class="mx">
-  <div class="center">
-    <div class="label"><div class="label-line"></div><span class="label-text">Industry Insights</span></div>
-    <h2 class="s-title">Latest from Our Team</h2>
-    <p class="s-desc">Stay informed on supply chain shifts, regulatory updates, and operational guidance from the WSM specialty gas laboratory.</p>
-  </div>
-
-  <a href="helium-shortage-2026.html" style="display:block;text-decoration:none;color:inherit;max-width:1000px;margin:0 auto">
-    <div class="insights-grid">
-      <div class="insights-content">
-        <div class="insights-badge">Industry Alert · May 2026</div>
-        <h3 class="insights-title">Helium Shortage 2026: <span>What MRI Facilities Need to Know</span></h3>
-        <p class="insights-desc">Global helium supply has been reduced by approximately 30% following the Qatar disruption. Major suppliers are cutting allocations and adding facilities to waitlists. WSM HeliStream is currently accepting new MRI customers nationwide — no waitlist, scheduled and emergency fills.</p>
-        <div class="insights-meta">
-          <span class="insights-meta-item">May 2, 2026</span>
-          <span class="insights-meta-item">8 min read</span>
-          <span class="insights-meta-item">HeliStream</span>
-        </div>
-        <span class="insights-cta">Read Full Article
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </span>
-      </div>
-      <div class="insights-visual">
-        <div class="insights-visual-content">
-          <div class="insights-visual-icon">⚠️</div>
-          <div class="insights-visual-stat">30%</div>
-          <div class="insights-visual-label">Supply Reduction</div>
-          <div class="insights-visual-sub">Global Helium Market · 2026</div>
-        </div>
-      </div>
-    </div>
-  </a>
-</div></section>
-
-
 <!-- RELATED SERVICES -->
 <section class="related">
   <h2>Our Five Business Lines</h2>
@@ -821,88 +646,19 @@ a.contact-link:hover {
     <label class="quote-label">Email</label><input class="quote-input" id="qEmail" type="email" placeholder="email@company.com" required>
     <label class="quote-label">Phone / WhatsApp</label><input class="quote-input" id="qPhone" placeholder="+1 (305) ...">
     <label class="quote-label">Product Needed</label><input class="quote-input" id="qProduct" placeholder="e.g. EPA Protocol Mix, UHP Argon, Helium for MRI..." required>
-    <button type="submit" class="quote-btn" id="qSubmit">Submit Quote Request</button>
-    <div id="qStatus" style="margin-top:14px;padding:12px;border-radius:8px;font-size:13px;font-weight:600;display:none;text-align:center"></div>
+    <button type="submit" class="quote-btn">Submit Quote Request</button>
     </form>
   </div>
 <script>
-async function sendQuote(e){
+function sendQuote(e){
   e.preventDefault();
-
-  var btn = document.getElementById('qSubmit');
-  var status = document.getElementById('qStatus');
-  var originalBtnText = btn.textContent;
-
-  // Disable button and show loading state
-  btn.disabled = true;
-  btn.textContent = 'Sending...';
-  btn.style.opacity = '0.6';
-  status.style.display = 'none';
-
-  // Collect form data
-  var data = {
-    company: document.getElementById('qCompany').value.trim(),
-    email: document.getElementById('qEmail').value.trim(),
-    phone: document.getElementById('qPhone').value.trim(),
-    product: document.getElementById('qProduct').value.trim()
-  };
-
-  try {
-    var response = await fetch('/api/quote', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
-    });
-
-    var result = await response.json();
-
-    if (response.ok && result.success) {
-      // ✓ SUCCESS — email was actually sent
-      status.style.display = 'block';
-      status.style.background = '#e8f5e9';
-      status.style.color = '#1b5e20';
-      status.style.border = '1px solid #66bb6a';
-      status.innerHTML = '✓ Quote request received. Our team will respond within 24 hours.';
-
-      // Reset form
-      document.getElementById('quoteForm').reset();
-
-      // Reset button
-      btn.disabled = false;
-      btn.textContent = originalBtnText;
-      btn.style.opacity = '1';
-
-      // Track conversion in GA4 (only on actual success)
-      if (typeof gtag === 'function') {
-        gtag('event', 'form_submit', {
-          'event_category': 'Lead',
-          'event_label': 'Quote Request',
-          'value': 50
-        });
-      }
-
-      // Scroll status into view
-      status.scrollIntoView({ behavior: 'smooth', block: 'center' });
-
-    } else {
-      // ✗ ERROR from API
-      throw new Error(result.error || 'Failed to send quote request');
-    }
-
-  } catch (err) {
-    // ✗ Network error or API error
-    status.style.display = 'block';
-    status.style.background = '#ffebee';
-    status.style.color = '#b71c1c';
-    status.style.border = '1px solid #ef5350';
-    status.innerHTML = '✗ Could not send your request. Please call <a href="tel:+13054551220" style="color:#b71c1c;font-weight:700">(305) 455-1220</a> or email <a href="mailto:sales@wsmsupplier.com" style="color:#b71c1c;font-weight:700">sales@wsmsupplier.com</a> directly.';
-
-    btn.disabled = false;
-    btn.textContent = originalBtnText;
-    btn.style.opacity = '1';
-
-    console.error('Quote form error:', err);
-  }
+  var c=document.getElementById('qCompany').value;
+  var em=document.getElementById('qEmail').value;
+  var ph=document.getElementById('qPhone').value;
+  var pr=document.getElementById('qProduct').value;
+  var subject='Quote Request from '+c;
+  var body='Company: '+c+'%0D%0AEmail: '+em+'%0D%0APhone: '+ph+'%0D%0AProduct: '+pr;
+  window.location.href='mailto:sales@wsmsupplier.com?subject='+encodeURIComponent(subject)+'&body='+body;
 }
 </script>
 </div></section>
@@ -911,10 +667,10 @@ async function sendQuote(e){
 <div class="lime-bar"></div>
 <footer class="footer">
   <div class="footer-grid">
-    <div><img src="wsm-logo.png" alt="WSM Specialty Gas" style="height:44px;width:auto;margin-bottom:12px;filter:brightness(0) invert(1)"><p>ISO/IEC 17025 & ISO 17034 Accredited Laboratory<br>PJLA #125017 · ILAC-MRA<br>3535 NW 60th St, Miami, FL 33142</p></div>
+    <div><div style="display:inline-block;background:#fff;padding:8px 14px;border-radius:8px;margin-bottom:12px"><img src="wsm-logo.png" alt="WSM Specialty Gases" style="height:40px;width:auto;display:block"></div><p>ISO/IEC 17025 & ISO 17034 Accredited Laboratory<br>PJLA #125017 · ILAC-MRA<br>3535 NW 60th St, Miami, FL 33142</p></div>
     <div><h4>Laboratory</h4><div>Certified Gas Mixtures</div><div>EPA Protocol / PGVP</div><div>UHP & Research Grade</div><div>Reactive & Corrosive</div><div>Hydrocarbon Blends</div><div>Medical & Laser</div></div>
     <div><h4>Products</h4><div>Liquid Helium / MRI</div><div>Helium Gas Cylinders</div><div>Calibration Gas</div><div>Bulk Cryogenic</div><div>Specialty Mixtures</div></div>
-    <div><h4>Contact</h4><p><a href="tel:+13054551220" class="contact-link">(305) 455-1220</a><br><a href="mailto:sales@wsmsupplier.com" class="contact-link">sales@wsmsupplier.com</a><br>wsmspecialtygases.com</p><div style="margin-top:10px;display:inline-block;font-size:9px;font-weight:700;color:var(--blue-dd);letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:12px;background:var(--lime)">WhatsApp for LATAM</div></div>
+    <div><h4>Contact</h4><p>(305) 455-1220<br>sales@wsmsupplier.com<br>wsmspecialtygases.com</p><div style="margin-top:10px;display:inline-block;font-size:9px;font-weight:700;color:var(--blue-dd);letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:12px;background:var(--lime)">WhatsApp for LATAM</div></div>
   </div>
   <div class="footer-bottom">© 2026 WSM Supplier LLC · All Rights Reserved · Miami, FL · USA</div>
 </footer>
